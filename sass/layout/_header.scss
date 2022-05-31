@@ -44,6 +44,10 @@
     line-height: 120%;
     margin-bottom: 1.25rem;
 
+    span {
+      color: $color-primary-secondary;
+    }
+
     @media screen and (min-width: 767px) {
       font-size: 5.2rem;
     }
