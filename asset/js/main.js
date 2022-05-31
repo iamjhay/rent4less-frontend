@@ -124,7 +124,7 @@ window.addEventListener("scroll", scrollUp);
 const sr = ScrollReveal({
   origin: "top",
   distance: "80px",
-  duration: 2500,
+  duration: 2000,
   delay: 400,
   //   reset: true,
 });
@@ -134,5 +134,13 @@ sr.reveal(`.header__description`, { delay: 500 });
 sr.reveal(`.header__search`, { delay: 600 });
 sr.reveal(`.header__value`, { delay: 700 });
 sr.reveal(`.header__images`, { delay: 800, origin: "bottom" });
+sr.reveal(`.destination__item`, {
+  origin: "top",
+  interval: 200,
+});
+sr.reveal(`.destination__button`, {
+  origin: "bottom",
+  delay: 200,
+});
 sr.reveal(`.value__images`, { origin: "left" });
 sr.reveal(`.value__content`, { origin: "right" });
