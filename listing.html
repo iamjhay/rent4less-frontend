@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="/asset/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="/asset/css/swiper-bundle.min.css" />
+
+    <!--=============== LIGHTBOX CSS ===============-->
+    <link rel="stylesheet" href="/asset/css/lightbox.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="/asset/css/style.css" />
+
+    <title>Rent4Less</title>
+  </head>
+  <body class="bg-grey-light">
+    <div class="secondary__nav">
+      <nav class="container secondary__navigation">
+        <div class="secondary__nav--logo">
+          <img src="/asset/img/rent4less-logo-small.png" alt="" />
+        </div>
+
+        <!-- <ul class="secondary__nav--lists">
+          <li class="secondary__nav--list">
+            <a href="#" class="secondary__nav--link">About</a>
+          </li>
+          <li class="secondary__nav--list">
+            <a href="#" class="secondary__nav--link">Faq</a>
+          </li>
+          <li class="secondary__nav--list">
+            <a href="#" class="secondary__nav--link">Gallery</a>
+          </li>
+          <li class="secondary__nav--list">
+            <a href="#" class="secondary__nav--link">Contact</a>
+          </li>
+        </ul> -->
+
+        <ul class="secondary__nav--lists">
+          <li class="secondary__nav--list">
+            <a
+              href="https://wa.me/message/DPX4GUMWGJ7SC1"
+              class="skype-link"
+              target="_blank"
+            >
+              <span class="">
+                <!-- whatsapp-image /> -->
+                <img src="/asset/img/whatsapp.svg" alt="whatsapp img" />
+              </span>
+            </a>
+          </li>
+          <li class="secondary__nav--list dropdown">
+            <div>
+              <div class="secondary__nav--list contact">
+                <div class="nav__image">
+                  <img src="/asset/img/contact-min.jpg" alt="" />
+                  <div>
+                    <span>you can call us for information</span>
+                    <p>+234 8121825297</p>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <ul class="secondary__nav--lists dropdown__lists">
+                    <li class="secondary__nav--list">
+                      <a
+                        href="https://wa.me/message/DPX4GUMWGJ7SC1"
+                        class="secondary__nav--link dropdown__item"
+                        ><span
+                          ><img src="/asset/img/whatsapp.svg" alt="" /></span
+                        >+234 8121825297</a
+                      >
+                    </li>
+                    <li class="secondary__nav--list">
+                      <a
+                        href="tel:+234 812 182 5297"
+                        class="secondary__nav--link dropdown__item"
+                        ><span><i class="bx bxs-phone"></i></span>+234
+                        8121825297</a
+                      >
+                    </li>
+                    <li class="secondary__nav--list">
+                      <a
+                        href="tel:+234 812 182 5297"
+                        class="secondary__nav--link dropdown__item"
+                      >
+                        <span><i class="bx bxs-phone"></i></span>+234
+                        8121825297</a
+                      >
+                    </li>
+                    <li class="secondary__nav--list">
+                      <a
+                        href="tel:+234 812 182 5297"
+                        class="secondary__nav--link dropdown__item"
+                      >
+                        <span><i class="bx bxs-phone"></i></span>+234
+                        8121825297</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="secondary__nav--list account">
+            <span><i class="bx bxs-user-circle"></i></span>
+            <button>
+              <span>Jhaydrille7575@gmail.com</span>
+              <!-- <span> Account<i class="bx bx-chevron-down"></i></span> -->
+            </button>
+            <div class="dropdown">
+              <ul class="secondary__nav--lists dropdown__lists">
+                <li>sign in to access exclusive members deals</li>
+                <li class="secondary__nav--list">
+                  <a href="#" class="secondary__nav--link btn button"
+                    >Sign In</a
+                  >
+                </li>
+                <li>New Members? <a href="#">Sign In</a></li>
+              </ul>
+              <ul class="secondary__nav--lists dropdown__lists">
+                <li>Are you sure you want to leave now?</li>
+                <li class="secondary__nav--list">
+                  <a href="#" class="secondary__nav--link btn button"
+                    >Sign Out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--=============== PROPERTY LISTINGS ===============-->
+    <main class="main">
+      <div class="main__wrapper">
+        <section class="section description">
+          <h3 class="description__heading">3,352 Property in Lagos</h3>
+          <h5 class="description__subheading">
+            Select & book from 3,352 Property near Lagos
+          </h5>
+          <p class="description__text">
+            Book a great hotel in Lagos. Hotels.ng has luxury hotels, cheap
+            hotels, lodges, airbnbs in Lagos, short-let apartments and more. All
+            at the best rates that are only available online!
+          </p>
+        </section>
+        <section class="section filter">
+          <div class="filter__wrapper">
+            <div class="filter__header">
+              <i class="bx bx-filter"></i>
+              <h2>Search Filter</h2>
+            </div>
+            <div class="filter__body">
+              <div class="filter__range">
+                <div class="filter__range--title">
+                  <label for="Name" class="filter__range--title-name"
+                    >Property Type</label
+                  >
+                </div>
+                <label class="filter__range--type">
+                  <a
+                    href="http://127.0.0.1:5501/index.html"
+                    class="filter__link"
+                    type="_blank"
+                  >
+                    <input
+                      type="checkbox"
+                      data-href="http://127.0.0.1:5501/index.html"
+                      id=""
+                    />
+                    <span>Estate</span>
+                  </a>
+                </label>
+                <label class="filter__range--type">
+                  <a
+                    href="http://127.0.0.1:5501/index.html"
+                    class="filter__link"
+                    type="_blank"
+                  >
+                    <input
+                      type="checkbox"
+                      data-href="http://127.0.0.1:5501/index.html"
+                      id=""
+                    />
+                    <span>Shared</span>
+                  </a>
+                </label>
+                <label class="filter__range--type">
+                  <a
+                    href="http://127.0.0.1:5501/index.html"
+                    class="filter__link"
+                    type="_blank"
+                  >
+                    <input
+                      type="checkbox"
+                      data-href="http://127.0.0.1:5501/index.html"
+                      id=""
+                    />
+                    <span>Exclusive</span>
+                  </a>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter__wrapper">
+            <div class="filter__header">
+              <i class="bx bxs-location-plus"></i>
+              <h2>Search Other Area</h2>
+            </div>
+            <div class="filter__body">
+              <div class="filter__range">
+                <label class="filter__range--type">
+                  <a
+                    href="http://127.0.0.1:5501/index.html"
+                    class="filter__link"
+                    type="_blank"
+                  >
+                    <input
+                      type="checkbox"
+                      data-href="http://127.0.0.1:5501/index.html"
+                      id=""
+                    />
+                    <span>Ikorodu</span>
+                    <br />
+                    <li class="filter__range--number">142 properties</li>
+                  </a>
+                </label>
+                <label class="filter__range--type">
+                  <a
+                    href="http://127.0.0.1:5501/index.html"
+                    class="filter__link"
+                    type="_blank"
+                  >
+                    <input
+                      type="checkbox"
+                      data-href="http://127.0.0.1:5501/index.html"
+                      id=""
+                    />
+                    <span>Ikorodu</span>
+                    <br />
+                    <li class="filter__range--number">142 properties</li>
+                  </a>
+                </label>
+                <label class="filter__range--type">
+                  <a
+                    href="http://127.0.0.1:5501/index.html"
+                    class="filter__link"
+                    type="_blank"
+                  >
+                    <input
+                      type="checkbox"
+                      data-href="http://127.0.0.1:5501/index.html"
+                      id=""
+                    />
+                    <span>Ikorodu</span>
+                    <br />
+                    <li class="filter__range--number">142 properties</li>
+                  </a>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section listing">
+          <div class="listing__wrapper">
+            <!--=============== PROPERTY FILTER VERTICAL ===============-->
+            <ul class="listing__tab">
+              <li class="list-half">
+                <i class="bx bx-grid-alt"></i>
+              </li>
+              <li class="list-full active">
+                <i class="bx bxs-notification"></i>
+              </li>
+            </ul>
+            <nav class="filter__nav--pill">
+              <a href="#" class="btn button active">Search All</a>
+              <a href="#" class="btn">Exclusives</a>
+              <a href="#" class="btn">Shared</a>
+              <a href="#" class="btn">Estate</a>
+            </nav>
+            <div class="listing__container">
+              <div class="cards">
+                <div class="cards__image">
+                  <a href="#" class="hidden">Reserve Now</a>
+                  <img src="/asset/img/place-1.jpg" alt="" />
+                </div>
+                <div class="cards__body">
+                  <div class="cards__body--title">
+                    <span class="cards__body--highlight letter-spacing-2"
+                      >Exclusive</span
+                    >
+                    <div class="cards__body--price">$40,000</div>
+                  </div>
+                  <h6>
+                    <a href="#">vila in coral gables</a>
+                  </h6>
+                  <div class="cards__body--description">
+                    <i class="bx bxs-map"></i>
+                    <p class="text-capitalize">west flaminggo road, Ikorodu</p>
+                  </div>
+                  <ul class="cards__body--list">
+                    <li class="cards__body--item">
+                      Bath <span> <i class="bx bx-bath"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Bed <span> <i class="bx bx-bed"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Rooms <span> <i class="bx bxs-door-open"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Area <span> <i class="bx bx-trip"></i>1450</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="cards__footer">
+                  <p class="cards__footer--initials">A</p>
+                  <p class="cards__footer--price">$35,000</p>
+                  <a href="#" class="btn button__outlined">Reserve Now</a>
+                </div>
+              </div>
+              <div class="cards">
+                <div class="cards__image">
+                  <a href="#" class="hidden">Reserve Now</a>
+                  <img src="/asset/img/place-2.jpg" alt="" />
+                </div>
+                <div class="cards__body">
+                  <div class="cards__body--title">
+                    <span class="cards__body--highlight letter-spacing-2"
+                      >Exclusive</span
+                    >
+                    <div class="cards__body--price">$40,000</div>
+                  </div>
+                  <h6>
+                    <a href="#">vila in coral gables</a>
+                  </h6>
+                  <div class="cards__body--description">
+                    <i class="bx bxs-map"></i>
+                    <p class="text-capitalize">west flaminggo road, Ikorodu</p>
+                  </div>
+                  <ul class="cards__body--list">
+                    <li class="cards__body--item">
+                      Bath <span> <i class="bx bx-bath"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Bed <span> <i class="bx bx-bed"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Rooms <span> <i class="bx bxs-door-open"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Area <span> <i class="bx bx-trip"></i>1450</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="cards__footer">
+                  <p class="cards__footer--initials">A</p>
+                  <p class="cards__footer--price">$35,000</p>
+                  <a href="#" class="btn button__outlined">Reserve Now</a>
+                </div>
+              </div>
+              <div class="cards">
+                <div class="cards__image">
+                  <a href="#" class="hidden">Reserve Now</a>
+                  <img src="/asset/img/place-3.jpg" alt="" />
+                </div>
+                <div class="cards__body">
+                  <div class="cards__body--title">
+                    <span class="cards__body--highlight letter-spacing-2"
+                      >Exclusive</span
+                    >
+                    <div class="cards__body--price">$40,000</div>
+                  </div>
+                  <h6>
+                    <a href="#">vila in coral gables</a>
+                  </h6>
+                  <div class="cards__body--description">
+                    <i class="bx bxs-map"></i>
+                    <p class="text-capitalize">west flaminggo road, Ikorodu</p>
+                  </div>
+                  <ul class="cards__body--list">
+                    <li class="cards__body--item">
+                      Bath <span> <i class="bx bx-bath"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Bed <span> <i class="bx bx-bed"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Rooms <span> <i class="bx bxs-door-open"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Area <span> <i class="bx bx-trip"></i>1450</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="cards__footer">
+                  <p class="cards__footer--initials">A</p>
+                  <p class="cards__footer--price">$35,000</p>
+                  <a href="#" class="btn button__outlined">Reserve Now</a>
+                </div>
+              </div>
+              <div class="cards">
+                <div class="cards__image">
+                  <a href="#" class="hidden">Reserve Now</a>
+                  <img src="/asset/img/place-4.jpg" alt="" />
+                </div>
+                <div class="cards__body">
+                  <div class="cards__body--title">
+                    <span class="cards__body--highlight letter-spacing-2"
+                      >Exclusive</span
+                    >
+                    <div class="cards__body--price">$40,000</div>
+                  </div>
+                  <h6>
+                    <a href="#">vila in coral gables</a>
+                  </h6>
+                  <div class="cards__body--description">
+                    <i class="bx bxs-map"></i>
+                    <p class="text-capitalize">west flaminggo road, Ikorodu</p>
+                  </div>
+                  <ul class="cards__body--list">
+                    <li class="cards__body--item">
+                      Bath <span> <i class="bx bx-bath"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Bed <span> <i class="bx bx-bed"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Rooms <span> <i class="bx bxs-door-open"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Area <span> <i class="bx bx-trip"></i>1450</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="cards__footer">
+                  <p class="cards__footer--initials">A</p>
+                  <p class="cards__footer--price">$35,000</p>
+                  <a href="#" class="btn button__outlined">Reserve Now</a>
+                </div>
+              </div>
+              <div class="cards">
+                <div class="cards__image">
+                  <a href="#" class="hidden">Reserve Now</a>
+                  <img src="/asset/img/place-6.jpg" alt="" />
+                </div>
+                <div class="cards__body">
+                  <div class="cards__body--title">
+                    <span class="cards__body--highlight letter-spacing-2"
+                      >Exclusive</span
+                    >
+                    <div class="cards__body--price">$40,000</div>
+                  </div>
+                  <h6>
+                    <a href="#">vila in coral gables</a>
+                  </h6>
+                  <div class="cards__body--description">
+                    <i class="bx bxs-map"></i>
+                    <p class="text-capitalize">west flaminggo road, Ikorodu</p>
+                  </div>
+                  <ul class="cards__body--list">
+                    <li class="cards__body--item">
+                      Bath <span> <i class="bx bx-bath"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Bed <span> <i class="bx bx-bed"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Rooms <span> <i class="bx bxs-door-open"></i>2</span>
+                    </li>
+                    <li class="cards__body--item">
+                      Area <span> <i class="bx bx-trip"></i>1450</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="cards__footer">
+                  <p class="cards__footer--initials">A</p>
+                  <p class="cards__footer--price">$35,000</p>
+                  <a href="#" class="btn button__outlined">Reserve Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="/asset/js/listing.js"></script>
+  </body>
+</html>

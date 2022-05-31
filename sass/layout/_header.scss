@@ -1,0 +1,180 @@
+.header {
+  background-image: linear-gradient(
+      170deg,
+      hsl(0, 0%, 22%) 0%,
+      hsla(0, 0%, 6%, 0.701) 30%
+    ),
+    url(/asset/img//hotel-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 8.5rem 0 2rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 100%;
+    padding-top: 8rem;
+    row-gap: 8rem;
+
+    @media screen and (min-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 2rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-top: 10rem;
+      column-gap: 2rem;
+    }
+  }
+
+  &__data {
+    @media screen and (min-width: 767px) {
+      padding-bottom: 2rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__title {
+    font-size: 4.2rem;
+    text-transform: capitalize;
+    color: $color-white;
+    line-height: 120%;
+    margin-bottom: 1.25rem;
+
+    @media screen and (min-width: 767px) {
+      font-size: 5.2rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 6.2rem;
+    }
+  }
+
+  &__description {
+    color: $color-grey-light-1;
+    font-size: $default-font-size;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: $bp-small) {
+      max-width: 450px;
+    }
+
+    @media screen and (min-width: $bp-largest) {
+      max-width: 550px;
+    }
+  }
+
+  &__search {
+    background-color: $color-white;
+    padding: 0.35rem 0.35rem 0.35rem 0.75rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.75rem;
+    border: 3px solid $color-grey-light-1;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: $bp-small) {
+      max-width: 450px;
+    }
+
+    @media screen and (min-width: $bp-largest) {
+      max-width: 550px;
+    }
+
+    i {
+      font-size: 2.25rem;
+      color: $color-grey-light-2;
+    }
+
+    input {
+      width: 90%;
+      background-color: $color-white;
+      color: var(--text-color);
+      margin: 0 0.5rem;
+
+      &::placeholder {
+        color: $color-grey-dark-2;
+      }
+    }
+  }
+
+  &__value {
+    display: flex;
+    column-gap: 6rem;
+
+    @media screen and (max-width: $bp-smallest) {
+      column-gap: 2rem;
+    }
+
+    &-number {
+      color: $color-white;
+      font-size: 3rem;
+      font-weight: 700;
+
+      span {
+        color: $color-secondary-dark;
+      }
+    }
+
+    &-description {
+      display: flex;
+      color: $color-grey-light-2;
+      font-size: 1.4rem;
+    }
+  }
+
+  @include BorderedImage($translateY: 20%);
+
+  &__orbe {
+    width: 265px;
+    height: 284px;
+    background: linear-gradient(
+      180deg,
+      hsl(0, 0%, 16%) 93%,
+      hsl(0, 0%, 67%) 100%
+    );
+    border-radius: 135px 135px 0 0;
+
+    @media screen and (max-width: 320px) {
+      width: 240px;
+      height: 264px;
+    }
+
+    @media screen and (min-width: 767px) {
+      align-self: flex-end;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 504px;
+      height: 611px;
+      align-self: flex-start;
+      border-radius: 256px 256px 0 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 125px 125px 12px 12px;
+    display: inline-flex;
+    align-items: flex-end;
+    bottom: -1.5rem;
+    box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.25);
+
+    @media screen and (max-width: 320px) {
+      width: 220px;
+      height: 280px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 472px;
+      height: 634px;
+      border-radius: 236px 236px 12px 12px;
+    }
+  }
+}

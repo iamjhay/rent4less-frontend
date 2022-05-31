@@ -1,0 +1,25 @@
+{
+  "name": "rent4less",
+  "version": "1.0.0",
+  "description": "Rent4Less by Alpha Mead is a commercial rental scheme designed to support individuals with flexible, pay-as-you-use rental programme.",
+  "main": "main.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss asset/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamjhay/rent4less-frontend.git"
+  },
+  "keywords": [
+    "Rent4less-frontend"
+  ],
+  "author": "John Edet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamjhay/rent4less-frontend/issues"
+  },
+  "homepage": "https://github.com/iamjhay/rent4less-frontend#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

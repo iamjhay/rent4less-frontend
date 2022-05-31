@@ -1,0 +1,64 @@
+/*=============== BUTTON ===============*/
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 16px;
+  box-shadow: 0 4px 8px rgba($color-primary-secondary, 0.25);
+  font-size: $default-font-size;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    $color-primary-light,
+    $color-primary-secondary,
+    0.25
+  );
+}
+
+.button {
+  background: linear-gradient(
+    101deg,
+    $color-primary-light,
+    $color-primary-secondary
+  );
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba($color-primary-secondary, 0.25);
+
+  &:hover {
+    background: transparent;
+    border: 1px solid $color-primary-secondary;
+    color: $color-primary-secondary;
+    border-radius: 0;
+  }
+}
+
+.button__outlined {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid $color-primary-secondary;
+  color: $color-primary-secondary;
+
+  &:hover {
+    background: linear-gradient(
+      101deg,
+      $color-primary-light,
+      $color-primary-secondary
+    );
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba($color-primary-secondary, 0.25);
+  }
+}
+
+/*=============== SECTION BUTTON ===============*/
+.destination__button,
+.exclusive__button {
+  margin-top: 5rem;
+  transition: 0.4s;
+}

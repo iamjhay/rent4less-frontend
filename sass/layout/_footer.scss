@@ -1,0 +1,129 @@
+.footer {
+  background-color: #1e2529;
+  padding-bottom: 2rem;
+
+  i {
+    font-size: 2.4rem;
+  }
+
+  .container {
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.5fr;
+    gap: 2rem;
+  }
+
+  &__item {
+    color: $color-white;
+  }
+
+  &__list {
+    li {
+      font-size: $default-font-size;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-primary-secondary;
+        }
+      }
+    }
+  }
+
+  &__location {
+    justify-self: center;
+
+    &--logo {
+      margin-bottom: 6rem;
+      text-align: center;
+      img {
+        height: 4.5rem;
+      }
+    }
+
+    &--address {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+
+      span {
+        margin-left: 2rem;
+        font-size: $default-font-size;
+      }
+    }
+  }
+
+  &__subscribe {
+    span {
+      font-size: $default-font-size;
+    }
+
+    &--description {
+      font-size: $default-font-size;
+      margin: 2rem 0;
+    }
+
+    &--form {
+      display: flex;
+      align-items: center;
+      border: 1px solid $color-grey-light-2;
+
+      input {
+        width: 100%;
+        height: 4rem;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0 1rem;
+        font-size: $default-font-size;
+        background-color: #1e2529;
+        color: #fff;
+      }
+
+      button {
+        width: 4rem;
+        height: 4rem;
+        border: none;
+        background-color: $color-primary-light;
+        color: #1e2529;
+        font-size: $default-font-size;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+
+        i {
+          color: $color-grey-light-2;
+          transform: rotate(-35deg);
+        }
+
+        &:hover {
+          background-color: $color-grey-light-2;
+
+          i {
+            color: $color-primary-light;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    grid-column: 1 / -1;
+    border-top: 1px solid $color-grey-dark-2;
+    width: 100%;
+    font-size: $default-font-size;
+    color: $color-grey-light-2;
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 4rem;
+
+    p {
+      font-size: 1.4rem;
+      color: $color-grey-light-2;
+    }
+  }
+}

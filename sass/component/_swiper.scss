@@ -1,0 +1,37 @@
+/* Swiper class */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 4rem;
+  width: initial;
+  height: initial;
+  background-color: $color-primary-light;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: $color-white;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: $color-primary-secondary;
+  color: $color-white;
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
+  outline: 1rem solid $color-primary-light;
+  outline-offset: 0.5rem;
+}
+
+.swiper-button-prev {
+  left: calc(100% - 8rem);
+}
+.swiper-button-next {
+  right: 0;
+}
