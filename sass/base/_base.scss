@@ -164,4 +164,17 @@ button {
     [center-start] repeat(8, 1fr)
     [center-end] minmax(6rem, 1fr)
     [full-end];
+
+  &__list {
+    overflow: initial;
+  }
+
+  &__wrapper {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 4rem;
+    row-gap: 2rem;
+  }
 }
