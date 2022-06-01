@@ -617,7 +617,7 @@ button {
       color: #eee; }
 
 .header {
-  background-image: linear-gradient(170deg, #383838 0%, rgba(15, 15, 15, 0.701) 30%), url(asset/img//hotel-1.jpg);
+  background-image: linear-gradient(170deg, #383838 0%, rgba(15, 15, 15, 0.701) 30%), url(asset/img/hotel-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
