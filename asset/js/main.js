@@ -1,3 +1,12 @@
+/*=============== SHOW SCROLL UP ===============*/
+function scrollUp() {
+  const scrollup = document.getElementById("scroll-up");
+  // When the scroll is greater than 350 viewport height, add the scroll-header class to the header tag
+  if (this.scrollY >= 350) scrollup.classList.add("show-scroll");
+  else scrollup.classList.remove("show-scroll");
+}
+window.addEventListener("scroll", scrollUp);
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader() {
   const navbar = document.getElementById("navbar");
@@ -81,10 +90,10 @@ const swiperFeatured = new Swiper(".featured__container", {
 });
 
 /*=============== VALUE ACCORDION ===============*/
-const accordionItems = document.querySelectorAll(".value__accordion-item");
+const accordionItems = document.querySelectorAll(".faq__accordion-item");
 
 accordionItems.forEach((item) => {
-  const accordionHeader = item.querySelector(".value__accordion-header");
+  const accordionHeader = item.querySelector(".faq__accordion-header");
 
   accordionHeader.addEventListener("click", () => {
     const openItem = document.querySelector(".accordion-open");
@@ -98,7 +107,7 @@ accordionItems.forEach((item) => {
 });
 
 const toggleItem = (item) => {
-  const accordionContent = item.querySelector(".value__accordion-content");
+  const accordionContent = item.querySelector(".faq__accordion-content");
 
   if (item.classList.contains("accordion-open")) {
     accordionContent.removeAttribute("style");
@@ -110,15 +119,6 @@ const toggleItem = (item) => {
 };
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
-/*=============== SHOW SCROLL UP ===============*/
-function scrollUp() {
-  const scrollup = document.getElementById("scroll-up");
-  // When the scroll is greater than 350 viewport height, add the scroll-header class to the header tag
-  if (this.scrollY >= 350) scrollup.classList.add("show-scroll");
-  else scrollup.classList.remove("show-scroll");
-}
-window.addEventListener("scroll", scrollUp);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
@@ -142,5 +142,5 @@ sr.reveal(`.destination__button`, {
   origin: "bottom",
   delay: 200,
 });
-sr.reveal(`.value__images`, { origin: "left" });
-sr.reveal(`.value__content`, { origin: "right" });
+sr.reveal(`.faq__images`, { origin: "left" });
+sr.reveal(`.faq__content`, { origin: "right" });

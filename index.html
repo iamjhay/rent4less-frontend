@@ -32,7 +32,7 @@
     <!--==================== NAVBAR ====================-->
     <div class="navbar" id="navbar">
       <nav class="nav container">
-        <a href="#" class="nav__logo">
+        <a href="/" class="nav__logo">
           <img
             src="asset/img/rent4less-logo-small.png"
             alt="rent4less-logo-small"
@@ -42,26 +42,23 @@
         <div class="nav__menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link">
+              <a href="/index.html" class="nav__link">
                 <i class="bx bx-home-alt-2"></i>
                 <span>Home</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="#popular" class="nav__link">
+              <a href="#about" class="nav__link">
                 <i class="bx bx-building-house"></i>
                 <span>About</span>
               </a>
             </li>
 
-            <!-- Theme Change Button -->
-            <i class="bx bx-moon change-theme" id="theme-button"></i>
-
             <li class="nav__item">
-              <a href="#value" class="nav__link">
+              <a href="#faq" class="nav__link">
                 <i class="bx bx-award"></i>
-                <span>Value</span>
+                <span>Faq</span>
               </a>
             </li>
 
@@ -75,11 +72,11 @@
         </div>
 
         <!-- Theme Change Button -->
-        <!-- <i class="bx bx-moon change-theme" id="theme-button"></i> -->
 
-        <div>
-          <!-- <a href="#" class="btn button nav__button">Sign Up</a> -->
-          <a href="#" class="btn button__outlined nav__button">Log In</a>
+        <div class="sign">
+          <a href="#" class="nav__button">Sign Up</a>
+          <a href="#" class="nav__button nav__button--outlined">Log In</a>
+          <i class="bx bx-moon change-theme" id="theme-button"></i>
         </div>
       </nav>
     </div>
@@ -154,7 +151,8 @@
           <h2 class="section__title">Explore City <span>.</span></h2>
 
           <div class="destination__container">
-            <div class="destination__item">
+            <!-- start loop from here -->
+            <a href="/city.html" class="destination__item">
               <div class="destination__img">
                 <img src="asset/img/city4.jpg" alt="destination" />
               </div>
@@ -162,7 +160,8 @@
                 <h3 class="destination__title">Ikeja</h3>
                 <p class="destination__description">70 Properties</p>
               </div>
-            </div>
+            </a>
+            <!-- stop loop from here -->
 
             <div class="destination__item">
               <div class="destination__img">
@@ -230,9 +229,12 @@
               </div>
             </div>
           </div>
+
+          <!-- start explore city button -->
           <a href="/city.html" class="btn button__outlined destination__button"
             >Explore City</a
           >
+          <!-- end explore city button -->
         </div>
       </section>
 
@@ -244,7 +246,8 @@
 
           <div class="popular__container swiper">
             <div class="swiper-wrapper">
-              <article class="popular__card swiper-slide">
+              <!-- start loop from here -->
+              <a href="/city.html" class="popular__card swiper-slide">
                 <div class="popular__img">
                   <img src="asset/img/popular1.jpg" alt="popular__img" />
                 </div>
@@ -259,7 +262,9 @@
                     #9876
                   </p>
                 </div>
-              </article>
+              </a>
+              <!-- end loop from here -->
+
               <article class="popular__card swiper-slide">
                 <div class="popular__img">
                   <img src="asset/img/popular2.jpg" alt="popular__img" />
@@ -345,7 +350,8 @@
 
           <div class="featured__container swiper">
             <div class="swiper-wrapper">
-              <article class="featured__card swiper-slide">
+              <!-- start loop of featured section -->
+              <a href="#" class="featured__card swiper-slide">
                 <div class="featured__badge">
                   <span class="letter-spacing-2">featured</span>
                 </div>
@@ -376,7 +382,9 @@
                     </li>
                   </ul>
                 </div>
-              </article>
+              </a>
+              <!-- end loop for featured section -->
+
               <article class="featured__card swiper-slide">
                 <div class="featured__badge">
                   <span class="letter-spacing-2">featured</span>
@@ -494,6 +502,7 @@
                 <a href="#" class="btn button__outlined">View Now</a>
               </div>
             </article>
+
             <article class="exclusive__card">
               <div class="exclusive__img">
                 <img src="asset/img/gal-3.jpeg" alt="exclusive__img" />
@@ -507,6 +516,7 @@
                 <a href="#" class="btn button__outlined">View Now</a>
               </div>
             </article>
+
             <article class="exclusive__card">
               <div class="exclusive__img">
                 <img src="asset/img/gal-5.jpeg" alt="exclusive__img" />
@@ -520,6 +530,7 @@
                 <a href="#" class="btn button__outlined">View Now</a>
               </div>
             </article>
+
             <article class="exclusive__card">
               <div class="exclusive__img">
                 <img src="asset/img/gal-6.jpeg" alt="exclusive__img" />
@@ -799,39 +810,39 @@
           </div>
         </div>
       </section>
-      <!--==================== VALUE ====================-->
-      <section class="value section" id="value">
-        <div class="value__container">
-          <div class="value__images">
-            <div class="value__orbe"></div>
-            <div class="value__img">
-              <img src="asset/img/value.jpg" alt="value__img" />
+      <!--==================== Faq ====================-->
+      <section class="faq section" id="faq">
+        <div class="faq__container">
+          <div class="faq__images">
+            <div class="faq__orbe"></div>
+            <div class="faq__img">
+              <img src="asset/img/value.jpg" alt="faq__img" />
             </div>
           </div>
-          <div class="value__content">
-            <div class="value__data">
+          <div class="faq__content">
+            <div class="faq__data">
               <span class="section__subtitle">Faqs</span>
               <h2 class="section__title">
                 Frequently Asked Questions<span>.</span>
               </h2>
-              <p class="value__description">
+              <p class="faq__description">
                 We always ready to help by providing the best service for you.
                 We believe a good place to live can make your life better.
               </p>
             </div>
-            <div class="value__accordion">
-              <div class="value__accordion-item">
-                <header class="value__accordion-header">
-                  <i class="bx bxs-shield-x value__accordion-icon"></i>
-                  <h3 class="value__accordion-title">
+            <div class="faq__accordion">
+              <div class="faq__accordion-item">
+                <header class="faq__accordion-header">
+                  <i class="bx bxs-shield-x faq__accordion-icon"></i>
+                  <h3 class="faq__accordion-title">
                     Best interest rates on the market
                   </h3>
-                  <div class="value__accordion-arrow">
+                  <div class="faq__accordion-arrow">
                     <i class="bx bxs-down-arrow"></i>
                   </div>
                 </header>
-                <div class="value__accordion-content">
-                  <p class="value__accordion-description">
+                <div class="faq__accordion-content">
+                  <p class="faq__accordion-description">
                     Price we provides is the best for you, we guarantee no price
                     changes on your property due to various unexpected costs
                     that may come.
@@ -839,18 +850,16 @@
                 </div>
               </div>
 
-              <div class="value__accordion-item">
-                <header class="value__accordion-header">
-                  <i class="bx bxs-x-square value__accordion-icon"></i>
-                  <h3 class="value__accordion-title">
-                    Prevent unstable prices
-                  </h3>
-                  <div class="value__accordion-arrow">
+              <div class="faq__accordion-item">
+                <header class="faq__accordion-header">
+                  <i class="bx bxs-x-square faq__accordion-icon"></i>
+                  <h3 class="faq__accordion-title">Prevent unstable prices</h3>
+                  <div class="faq__accordion-arrow">
                     <i class="bx bxs-down-arrow"></i>
                   </div>
                 </header>
-                <div class="value__accordion-content">
-                  <p class="value__accordion-description">
+                <div class="faq__accordion-content">
+                  <p class="faq__accordion-description">
                     Price we provides is the best for you, we guarantee no price
                     changes on your property due to various unexpected costs
                     that may come.
@@ -858,18 +867,18 @@
                 </div>
               </div>
 
-              <div class="value__accordion-item">
-                <header class="value__accordion-header">
-                  <i class="bx bxs-bar-chart-square value__accordion-icon"></i>
-                  <h3 class="value__accordion-title">
+              <div class="faq__accordion-item">
+                <header class="faq__accordion-header">
+                  <i class="bx bxs-bar-chart-square faq__accordion-icon"></i>
+                  <h3 class="faq__accordion-title">
                     Best prices on the market
                   </h3>
-                  <div class="value__accordion-arrow">
+                  <div class="faq__accordion-arrow">
                     <i class="bx bxs-down-arrow"></i>
                   </div>
                 </header>
-                <div class="value__accordion-content">
-                  <p class="value__accordion-description">
+                <div class="faq__accordion-content">
+                  <p class="faq__accordion-description">
                     Price we provides is the best for you, we guarantee no price
                     changes on your property due to various unexpected costs
                     that may come.
@@ -877,16 +886,16 @@
                 </div>
               </div>
 
-              <div class="value__accordion-item">
-                <header class="value__accordion-header">
-                  <i class="bx bxs-check-square value__accordion-icon"></i>
-                  <h3 class="value__accordion-title">Security of your data</h3>
-                  <div class="value__accordion-arrow">
+              <div class="faq__accordion-item">
+                <header class="faq__accordion-header">
+                  <i class="bx bxs-check-square faq__accordion-icon"></i>
+                  <h3 class="faq__accordion-title">Security of your data</h3>
+                  <div class="faq__accordion-arrow">
                     <i class="bx bxs-down-arrow"></i>
                   </div>
                 </header>
-                <div class="value__accordion-content">
-                  <p class="value__accordion-description">
+                <div class="faq__accordion-content">
+                  <p class="faq__accordion-description">
                     Price we provides is the best for you, we guarantee no price
                     changes on your property due to various unexpected costs
                     that may come.
@@ -899,10 +908,10 @@
       </section>
 
       <!--==================== CONTACT ====================-->
-      <section class="contact section" id="contact"></section>
+      <!-- <section class="contact section" id="contact"></section> -->
 
       <!--==================== SUBSCRIBE ====================-->
-      <section class="subscribe section"></section>
+      <!-- <section class="subscribe section"></section> -->
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -925,7 +934,7 @@
           </div>
           <div class="footer__location--address">
             <i class="bx bxs-map-alt"></i>
-            <span>4 Mobolaji Johnson avenue, Ikoyi , Lagos. Nigeria</span>
+            <span>6 Mobolaji Johnson avenue, Ikoyi , Lagos. Nigeria</span>
           </div>
           <div class="footer__location--address">
             <i class="bx bx-phone"></i>
@@ -946,7 +955,7 @@
               special offers.
             </p>
             <form class="footer__subscribe--form">
-              <input type="text" placeholder="Email address" />
+              <input type="email" placeholder="Email address" />
               <button><i class="bx bx-send"></i></button>
             </form>
           </div>

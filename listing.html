@@ -145,14 +145,26 @@
     </div>
 
     <!--=============== PROPERTY LISTINGS ===============-->
-    <main class="main main__list">
+    <main class="main main__list listings">
+      <!-- search functionality goes here -->
+      <section class="search">
+        <div class="search__wrapper">
+          <form action="">
+            <input type="text" placeholder="Search By Location" required />
+            <i class="bx bx-search"></i>
+            <button>Search</button>
+          </form>
+        </div>
+      </section>
+      <!-- search functionality ends here -->
+
       <div class="main__wrapper">
         <section class="section email">
           <div class="email__container">
             <form class="form__container">
               <label for="text">Stay Updated with our latest rates</label>
               <div class="form__control">
-                <input type="text" placeholder="Email Address" required />
+                <input type="email" placeholder="Email Address" required />
                 <button>Subscribe</button>
               </div>
             </form>
@@ -164,12 +176,12 @@
             Select & book from 3,352 Property near Lagos
           </h5>
           <p class="description__text">
-            Book a great hotel in Lagos. Hotels.ng has luxury hotels, cheap
-            hotels, lodges, airbnbs in Lagos, short-let apartments and more. All
-            at the best rates that are only available online!
+            Book a great property in Lagos. Rent4Less has luxury Properties,
+            cheap houses, lodges, estate in Lagos, shared apartments and more.
+            All at the best rates that are only available online! Start Today
+            and get amazing discounts on all purcahses.
           </p>
         </section>
-
         <section class="section filter">
           <div class="filter__wrapper">
             <div class="filter__header">
@@ -351,9 +363,11 @@
               </li>
             </ul>
             <nav class="filter__nav--pill">
-              <a href="#" class="btn button active">All</a>
-              <a href="#" class="btn">Exclusives</a>
-              <a href="#" class="btn">Shared</a>
+              <a href="#" class="filter__btn active">All</a>
+              <a href="#" class="filter__btn filter__btn--outlined"
+                >Exclusives</a
+              >
+              <a href="#" class="filter__btn filter__btn--outlined">Shared</a>
             </nav>
             <div class="listing__container">
               <div class="cards">
