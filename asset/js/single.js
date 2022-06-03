@@ -15,3 +15,11 @@ const MainSwiper = new Swiper(".mainSwiper", {
     swiper: thumbSwiper,
   },
 });
+
+const ShowMore = document.getElementById("show-more"),
+  ShowMoreBtn = document.getElementById("show-more-btn");
+
+ShowMoreBtn.addEventListener("click", () => {
+  ShowMore.classList.add("visible");
+  ShowMoreBtn.classList.add("hide");
+});
