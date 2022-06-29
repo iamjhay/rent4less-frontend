@@ -1744,7 +1744,7 @@ button {
     background-repeat: no-repeat;
     background: #fff; }
   .login__right {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 80%), url(/asset/img/hotel-1.jpg);
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 80%), url(../../asset/img/hotel-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1770,7 +1770,7 @@ button {
   display: grid;
   height: 100vh;
   width: 100%;
-  background-image: url(/asset/img/onboading-bg.png);
+  background-image: url(../../asset/img/onboading-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
