@@ -51,9 +51,27 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
-/*=============== SWIPER POPULAR ===============*/
 
-/*==================== SWIPER JS ====================*/
+/*=============== START TENANT / LANDLORD ===============*/
+// MixitUp query for the "TENANTS & LANDLORDS" filters
+let mixerSingles = mixitup(".deal__pills--wrapper", {
+  selectors: {
+    target: ".deal__content",
+  },
+  animation: {
+    duration: 1000,
+    effects: "fade translateY(100%)",
+    reverseOut: true,
+    nudge: false,
+  },
+});
+
+// Default Filter Single when page loads
+mixerSingles.filter(".tenants");
+
+/*=============== END TENANT / LANDLORD ===============*/
+
+/*==================== START SWIPER JS ====================*/
 
 //  Popular Container
 const swiperPopular = new Swiper(".popular__container", {
@@ -88,6 +106,8 @@ const swiperFeatured = new Swiper(".featured__container", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+/*==================== END SWIPER JS ====================*/
 
 /*=============== VALUE ACCORDION ===============*/
 const accordionItems = document.querySelectorAll(".faq__accordion-item");

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="asset/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
+
+    <!--=============== LIGHTBOX CSS ===============-->
+    <link rel="stylesheet" href="asset/css/lightbox.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="asset/css/style.css" />
+
+    <title>Rent4Less</title>
+  </head>
+  <body>
+    <!--==================== SPINNER ====================-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <!--==================== LOGIN CONTAINER ====================-->
+    <div class="login">
+      <section class="login__left">
+        <div class="login__form login__form--container">
+          <div class="login__form--logo">
+            <a href="/" class="nav__logo">
+              <img
+                src="asset/img/rent4less-logo-small.png"
+                alt="rent4less-logo-small"
+              />
+            </a>
+          </div>
+          <div class="login__form--message">
+            <h2>Welcome Back!</h2>
+            <p>Sign in by entering the information below</p>
+          </div>
+          <div class="login__form--wrapper">
+            <form action="" autocomplete="off" class="process__form">
+              <fieldset class="process__form-div">
+                <input
+                  type="text"
+                  class="process__form-input"
+                  placeholder=" "
+                  required
+                />
+                <label for="username" class="process__form-label"
+                  >Username</label
+                >
+              </fieldset>
+              <fieldset class="process__form-div">
+                <input
+                  type="password"
+                  class="process__form-input"
+                  placeholder=" "
+                  required
+                />
+                <label for="password" class="process__form-label"
+                  >Password</label
+                >
+              </fieldset>
+              <div class="login__form--wrapper-remember">
+                <span class="check">
+                  <input
+                    type="checkbox"
+                    v-model="remember"
+                    id="rememberme"
+                    name="rememberme"
+                  />
+                  <label for="rememberme">Remember Me</label>
+                </span>
+                <span>
+                  <a href="">Forgotten Password?</a>
+                </span>
+              </div>
+              <button
+                href="/signup.html"
+                type="submit"
+                class="button letter-spacing-1"
+              >
+                Sign In
+              </button>
+              <div class="login__form--wrapper-new">
+                <p>
+                  Don't have an account?
+                  <a href="/signup.html">Create one here</a>
+                  .
+                </p>
+              </div>
+            </form>
+            <span class="login__form--copy">&copy; 2022 Rent4Less</span>
+          </div>
+        </div>
+      </section>
+      <section class="login__right"></section>
+    </div>
+
+    <!--================ INLINE SCRIPT ===============-->
+    <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+      window.addEventListener("load", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script>
+  </body>
+</html>

@@ -29,6 +29,11 @@
     <title>Rent4Less</title>
   </head>
   <body>
+    <!--==================== SPINNER ====================-->
+    <!-- <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div> -->
+
     <!--==================== NAVBAR ====================-->
     <div class="navbar" id="navbar">
       <nav class="nav container">
@@ -74,8 +79,10 @@
         <!-- Theme Change Button -->
 
         <div class="sign">
-          <a href="#" class="nav__button">Sign Up</a>
-          <a href="#" class="nav__button nav__button--outlined">Log In</a>
+          <a href="/signup.html" class="nav__button">Sign Up</a>
+          <a href="/login.html" class="nav__button nav__button--outlined"
+            >Log In</a
+          >
           <i class="bx bx-moon change-theme" id="theme-button"></i>
         </div>
       </nav>
@@ -102,7 +109,7 @@
               placeholder="Search by location..."
               class="header__search-input"
             />
-            <button href="#" class="btn button">Search</button>
+            <a href="/city.html" class="btn button">Search</a>
           </form>
 
           <div class="header__value">
@@ -142,6 +149,67 @@
 
     <!--==================== MAIN ====================-->
     <main class="main">
+      <!--==================== BECOME A TENANT / LANDLORD ====================-->
+      <div class="section deals">
+        <div class="deals__img--container">
+          <img src="asset/img/place-7.jpg" alt="home" />
+          <div class="deal__wrapper deal__wrapper--1">
+            <div class="deal__wrapper--1-icon">
+              <i class="bx bx-play-circle"></i>
+            </div>
+            <div class="deal__wrapper--text">
+              <p class="letter-spacing-1">Physical home tour</p>
+              <span>we provide you with physical home tour</span>
+            </div>
+          </div>
+          <div class="deal__wrapper deal__wrapper--2">
+            <div class="deal__wrapper--text">
+              <p class="letter-spacing-1">Find the best deals</p>
+              <span>browse thousands of properties</span>
+            </div>
+            <div class="deal__wrapper--2-icon">
+              <i class="bx bx-home-circle"></i>
+            </div>
+          </div>
+        </div>
+        <div class="deals__detail--container">
+          <div class="deal__pills">
+            <ul>
+              <li data-filter=".tenants" class="deal__pills--item">
+                For tenants
+              </li>
+              <li data-filter=".landlords" class="deal__pills--item">
+                For landlords
+              </li>
+            </ul>
+          </div>
+          <div class="deal__pills--wrapper">
+            <div class="deal__content tenants">
+              <h3>We Make it Easy for tenants and landlords</h3>
+              <p>
+                whether it's selling your current home, getting financing or
+                renting a new home, we make it easy and efficient. The best
+                part? you'll save a bunch of money and time with our services
+              </p>
+            </div>
+            <div class="deal__content landlords">
+              <h3>We Make it Easy for tenants and landlords</h3>
+              <p>
+                whether it's selling your current home, getting financing or
+                renting a new home, we make it easy and efficient. The best
+                part? you'll save a bunch of money and time with our services
+              </p>
+            </div>
+          </div>
+
+          <!-- start tenants / landlord button -->
+          <a href="/signup.html" class="btn button destination__button"
+            >Get started</a
+          >
+          <!-- start tenants / landlord button -->
+        </div>
+      </div>
+
       <!--==================== DESTINATION ====================-->
       <section class="destination section">
         <div class="destination__wrapper">
@@ -254,8 +322,8 @@
 
                 <div class="popular__data">
                   <h3 class="popular__title">
-                    <span><i class="bx bx-home-circle"></i></span> Garden City
-                    Assat
+                    <span><i class="bx bx-home-circle"></i></span> Chevy View
+                    Estate
                   </h3>
                   <p class="popular__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
@@ -272,8 +340,8 @@
 
                 <div class="popular__data">
                   <h3 class="popular__title">
-                    <span><i class="bx bx-home-circle"></i></span>Gables
-                    Luxurious House
+                    <span><i class="bx bx-home-circle"></i></span>FBN, Marion
+                    Court, Estate
                   </h3>
                   <p class="popular__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
@@ -288,8 +356,8 @@
 
                 <div class="popular__data">
                   <h3 class="popular__title">
-                    <span><i class="bx bx-home-circle"></i></span>Garden Orchard
-                    City
+                    <span><i class="bx bx-home-circle"></i></span>Lekki Serviced
+                    Flats
                   </h3>
                   <p class="popular__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
@@ -304,8 +372,7 @@
 
                 <div class="popular__data">
                   <h3 class="popular__title">
-                    <span><i class="bx bx-home-circle"></i></span>Luxurious City
-                    Garden
+                    <span><i class="bx bx-home-circle"></i></span>Ashton Court
                   </h3>
                   <p class="popular__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
@@ -361,10 +428,9 @@
 
                 <div class="featured__data">
                   <div>
-                    <h3 class="featured__title">Garden City Assat</h3>
+                    <h3 class="featured__title">Chevy View Estate</h3>
                     <p class="featured__description">
-                      Street The Garden City Of Miraflores, Lima - Perú Av. Sol
-                      #9876
+                      12 Chevy view, Lima - Perú Av. Sol #9876
                     </p>
                   </div>
                   <ul class="featured__content">
@@ -394,7 +460,7 @@
                 </div>
 
                 <div class="featured__data">
-                  <h3 class="featured__title">Gables Luxurious House</h3>
+                  <h3 class="featured__title">FBN, Marion Court, Estate</h3>
                   <p class="featured__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
                     #9876
@@ -581,7 +647,11 @@
       <section class="about section" id="about">
         <div class="about__img">
           <div class="about__img-1">
-            <img src="asset/img/gal-2.jpeg" alt="about" class="about__images" />
+            <img
+              src="asset/img/video-overlay.jpg"
+              alt="about"
+              class="about__images"
+            />
           </div>
           <div class="about__img-2">
             <img src="asset/img/gal-3.jpeg" alt="about" class="about__images" />
@@ -973,8 +1043,22 @@
       <i class="bx bx-chevrons-up"></i>
     </a>
 
+    <!--================ INLINE SCRIPT ===============-->
+    <!-- <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+      window.addEventListener("load", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script> -->
+
     <!--=============== SCROLLREVEAL ===============-->
     <script src="asset/js/scrollreveal.min.js"></script>
+
+    <!--=============== MIXITUP JS ===============-->
+    <script src="asset/js/mixitup.js"></script>
 
     <!--=============== SWIPER JS ===============-->
     <script src="asset/js/swiper-bundle.min.js"></script>
@@ -984,5 +1068,10 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="asset/js/main.js"></script>
+
+    <script
+      src="//code.tidio.co/gobd0ylyixf3p6qfl2mkxjksrybphifl.js"
+      async
+    ></script>
   </body>
 </html>

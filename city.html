@@ -22,10 +22,15 @@
     <title>Rent4Less</title>
   </head>
   <body>
+    <!--==================== SPINNER ====================-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
     <!--==================== NAVBAR ====================-->
     <div class="navbar" id="navbar">
       <nav class="nav container">
-        <a href="/index.html" class="nav__logo">
+        <a href="/" class="nav__logo">
           <img
             src="asset/img/rent4less-logo-small.png"
             alt="rent4less-logo-small"
@@ -42,19 +47,16 @@
             </li>
 
             <li class="nav__item">
-              <a href="#popular" class="nav__link">
+              <a href="#about" class="nav__link">
                 <i class="bx bx-building-house"></i>
                 <span>About</span>
               </a>
             </li>
 
-            <!-- Theme Change Button -->
-            <i class="bx bx-moon change-theme" id="theme-button"></i>
-
             <li class="nav__item">
-              <a href="#value" class="nav__link">
+              <a href="#faq" class="nav__link">
                 <i class="bx bx-award"></i>
-                <span>Value</span>
+                <span>Faq</span>
               </a>
             </li>
 
@@ -68,11 +70,11 @@
         </div>
 
         <!-- Theme Change Button -->
-        <!-- <i class="bx bx-moon change-theme" id="theme-button"></i> -->
 
-        <div>
-          <a href="#" class="btn button nav__button">Sign Up</a>
-          <a href="#" class="btn button__outlined nav__button">Log In</a>
+        <div class="sign">
+          <a href="#" class="nav__button">Sign Up</a>
+          <a href="#" class="nav__button nav__button--outlined">Log In</a>
+          <i class="bx bx-moon change-theme" id="theme-button"></i>
         </div>
       </nav>
     </div>
@@ -351,11 +353,23 @@
           >
         </div>
       </section>
+
       <!--========== SCROLL UP ==========-->
       <a href="#" class="scrollup" id="scroll-up">
         <i class="bx bx-chevrons-up"></i>
       </a>
     </main>
+
+    <!--================ INLINE SPINNER SCRIPT ===============-->
+    <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+      window.addEventListener("load", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script>
 
     <!--=============== MAIN JS ===============-->
     <script src="asset/js/main.js"></script>

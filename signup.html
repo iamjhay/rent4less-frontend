@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="asset/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
+
+    <!--=============== LIGHTBOX CSS ===============-->
+    <link rel="stylesheet" href="asset/css/lightbox.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="asset/css/style.css" />
+
+    <title>Rent4Less | Sign Up</title>
+  </head>
+  <body>
+    <!--==================== SPINNER ====================-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <!--==================== LOGIN CONTAINER ====================-->
+    <div class="signup">
+      <div class="signup__form signup__form--container">
+        <div class="signup__form--logo">
+          <a href="/" class="nav__logo">
+            <img
+              src="asset/img/rent4less-logo-small.png"
+              alt="rent4less-logo-small"
+            />
+          </a>
+        </div>
+        <div class="signup__form--message">
+          <h2>Getting Started!</h2>
+          <p>Sign up today and find your dream home.</p>
+        </div>
+        <div class="signup__form--wrapper">
+          <form
+            action=""
+            autocomplete="off"
+            class="process__form signup__form--content"
+          >
+            <div class="process__form-container">
+              <fieldset class="process__form-div">
+                <input
+                  type="text"
+                  class="process__form-input"
+                  placeholder=" "
+                  required
+                />
+                <label for="first name" class="process__form-label"
+                  >First Name</label
+                >
+              </fieldset>
+              <fieldset class="process__form-div">
+                <input
+                  type="text"
+                  class="process__form-input"
+                  placeholder=" "
+                  required
+                />
+                <label for="last name" class="process__form-label"
+                  >Last Name</label
+                >
+              </fieldset>
+            </div>
+            <div class="process__form-container">
+              <fieldset class="process__form-div">
+                <input
+                  type="email"
+                  class="process__form-input"
+                  placeholder=" "
+                  required
+                />
+                <label for="email" class="process__form-label"
+                  >Email Address</label
+                >
+              </fieldset>
+              <fieldset class="process__form-div">
+                <input
+                  type="tel"
+                  class="process__form-input"
+                  placeholder=" "
+                  required
+                />
+                <label for="tel" class="process__form-label"
+                  >Phone Number</label
+                >
+              </fieldset>
+            </div>
+            <div class="process__form-container mb-2">
+              <p class="process__form--radio-text">
+                Select which service you are looking at:
+              </p>
+
+              <div class="process__form--radio-group-container">
+                <div class="process__form--radio-group">
+                  <input
+                    type="radio"
+                    checked
+                    class="process__form--radio-input"
+                    id="tenant"
+                    name="size"
+                    required
+                  />
+                  <label for="tenant" class="process__form--radio-label">
+                    <span class="process__form--radio-button"></span>
+                    Tenant
+                  </label>
+                </div>
+                <div class="process__form--radio-group">
+                  <input
+                    type="radio"
+                    class="process__form--radio-input"
+                    id="Landlord"
+                    name="size"
+                    required
+                  />
+                  <label for="Landlord" class="process__form--radio-label">
+                    <span class="process__form--radio-button"></span>
+                    Landlord
+                  </label>
+                </div>
+              </div>
+            </div>
+            <fieldset class="process__form-div">
+              <input
+                type="text"
+                class="process__form-input"
+                placeholder=" "
+                required
+              />
+              <label for="username" class="process__form-label">Username</label>
+            </fieldset>
+            <div class="process__form-container">
+              <fieldset class="process__form-div">
+                <input
+                  type="password"
+                  class="process__form-input password"
+                  placeholder=" "
+                  required
+                />
+                <label for="password" class="process__form-label"
+                  >Password</label
+                >
+                <i class="bx bxs-low-vision password-show"></i>
+              </fieldset>
+              <fieldset class="process__form-div">
+                <input
+                  type="password"
+                  class="process__form-input confirm-password"
+                  placeholder=" "
+                  required
+                />
+                <label for="password" class="process__form-label"
+                  >Confirm Password</label
+                >
+                <i class="bx bxs-low-vision confirm-password-show"></i>
+              </fieldset>
+            </div>
+            <button type="submit" class="button letter-spacing-1">
+              Sign Up
+            </button>
+            <div class="signup__form--wrapper-new">
+              <p>
+                Already have an account?
+                <a href="/login.html">Sign in here</a>
+                .
+              </p>
+            </div>
+          </form>
+          <span class="login__form--copy">&copy; 2022 Rent4Less</span>
+        </div>
+      </div>
+    </div>
+
+    <!--================ INLINE SCRIPT ===============-->
+    <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+      const showPassword = document.querySelector(".password-show");
+      const showConfirmPassword = document.querySelector(
+        ".confirm-password-show"
+      );
+      const passwordInput = document.querySelector(".password");
+      const ConfirmpasswordInput = document.querySelector(".confirm-password");
+
+      showPassword.addEventListener("click", () => {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          showPassword.classList.replace("bxs-low-vision", "bxs-show");
+        } else {
+          passwordInput.type = "password";
+          showPassword.classList.replace("bxs-show", "bxs-low-vision");
+        }
+      });
+
+      showConfirmPassword.addEventListener("click", () => {
+        if (ConfirmpasswordInput.type === "password") {
+          ConfirmpasswordInput.type = "text";
+          showConfirmPassword.classList.replace("bxs-low-vision", "bxs-show");
+        } else {
+          ConfirmpasswordInput.type = "password";
+          showConfirmPassword.classList.replace("bxs-show", "bxs-low-vision");
+        }
+      });
+
+      window.addEventListener("load", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script>
+  </body>
+</html>

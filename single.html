@@ -17,11 +17,40 @@
       rel="stylesheet"
     />
 
+    <!--=============== FONTAWESOME ===============-->
+    <script
+      src="https://kit.fontawesome.com/c4547e53d0.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
 
     <!--=============== LIGHTBOX CSS ===============-->
     <link rel="stylesheet" href="asset/css/lightbox.css" />
+
+    <!-- Calendly badge widget begin -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Calendly.initBadgeWidget({
+          url: "https://calendly.com/jhaydrille75/schedule-an-inspection?hide_gdpr_banner=1&primary_color=7ed56f",
+          text: "Request a tour",
+          color: "#7ed56f",
+          textColor: "#ffffff",
+          branding: false,
+        });
+      };
+    </script>
+    <!-- Calendly badge widget end -->
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="asset/css/style.css" />
@@ -29,13 +58,25 @@
     <title>Rent4Less</title>
   </head>
   <body>
+    <!--==================== SPINNER ====================-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- =============== SECONDARY NAV ============= -->
     <div class="secondary__nav">
-      <nav class="container secondary__navigation">
-        <div class="secondary__nav--logo">
-          <img src="asset/img/rent4less-logo-small.png" alt="" />
-        </div>
+      <nav class="secondary__navigation">
+        <a href="/" class="secondary__nav--logo">
+          <img
+            src="asset/img/rent4less-logo-small.png"
+            alt="rent4less-logo-small"
+          />
+        </a>
 
         <!-- <ul class="secondary__nav--lists">
+          <li class="secondary__nav--list">
+            <a href="#" class="secondary__nav--link">Home</a>
+          </li>
           <li class="secondary__nav--list">
             <a href="#" class="secondary__nav--link">About</a>
           </li>
@@ -57,9 +98,9 @@
               class="skype-link"
               target="_blank"
             >
-              <span class="">
-                <!-- whatsapp-image /> -->
-                <img src="asset/img/whatsapp.svg" alt="whatsapp img" />
+              <span class="whatsapp">
+                <!-- whatsapp-icon /> -->
+                <i class="bx bxl-whatsapp"></i>
               </span>
             </a>
           </li>
@@ -79,7 +120,8 @@
                       <a
                         href="https://wa.me/message/DPX4GUMWGJ7SC1"
                         class="secondary__nav--link dropdown__item"
-                        ><span><img src="asset/img/whatsapp.svg" alt="" /></span
+                        ><span class="whatsapp">
+                          <i class="bx bxl-whatsapp"></i></span
                         >+234 8121825297</a
                       >
                     </li>
@@ -87,8 +129,9 @@
                       <a
                         href="tel:+234 812 182 5297"
                         class="secondary__nav--link dropdown__item"
-                        ><span><i class="bx bxs-phone"></i></span>+234
-                        8121825297</a
+                        ><span class="secondary__nav--icon"
+                          ><i class="bx bxs-phone"></i></span
+                        >+234 8121825297</a
                       >
                     </li>
                     <li class="secondary__nav--list">
@@ -96,8 +139,9 @@
                         href="tel:+234 812 182 5297"
                         class="secondary__nav--link dropdown__item"
                       >
-                        <span><i class="bx bxs-phone"></i></span>+234
-                        8121825297</a
+                        <span class="secondary__nav--icon"
+                          ><i class="bx bxs-phone"></i></span
+                        >+234 8121825297</a
                       >
                     </li>
                     <li class="secondary__nav--list">
@@ -105,8 +149,9 @@
                         href="tel:+234 812 182 5297"
                         class="secondary__nav--link dropdown__item"
                       >
-                        <span><i class="bx bxs-phone"></i></span>+234
-                        8121825297</a
+                        <span class="secondary__nav--icon"
+                          ><i class="bx bxs-phone"></i></span
+                        >+234 8121825297</a
                       >
                     </li>
                   </ul>
@@ -114,14 +159,24 @@
               </div>
             </div>
           </li>
+          <li class="secondary__nav--list">
+            <a href="cart.html">
+              <span class="secondary__nav--icon">
+                <i class="bx bx-cart cart"></i>
+                <span>2</span>
+              </span>
+            </a>
+          </li>
           <li class="secondary__nav--list account">
-            <span><i class="bx bxs-user-circle"></i></span>
+            <span class="secondary__nav--icon"
+              ><i class="bx bxs-user-circle"></i
+            ></span>
             <button>
-              <span>Jhaydrille7575@gmail.com</span>
-              <!-- <span> Account<i class="bx bx-chevron-down"></i></span> -->
+              <!-- <span>Jhaydrille7575@gmail.com</span> -->
+              <span> Account<i class="bx bx-chevron-down"></i></span>
             </button>
             <div class="dropdown">
-              <ul class="secondary__nav--lists dropdown__lists">
+              <!-- <ul class="secondary__nav--lists dropdown__lists">
                 <li>sign in to access exclusive members deals</li>
                 <li class="secondary__nav--list">
                   <a href="#" class="secondary__nav--link btn button"
@@ -129,7 +184,7 @@
                   >
                 </li>
                 <li>New Members? <a href="#">Sign Up</a></li>
-              </ul>
+              </ul> -->
               <ul class="secondary__nav--lists dropdown__lists">
                 <li>Are you sure you want to leave now?</li>
                 <li class="secondary__nav--list">
@@ -143,8 +198,11 @@
         </ul>
       </nav>
     </div>
+
+    <!-- =============== MAIN ============= -->
     <main class="main main__single">
       <div class="main__wrapper">
+        <!-- SINGLE PHOTOS -->
         <div class="section single">
           <div class="swiper single__slider mainSwiper">
             <div class="single__slider--description">
@@ -197,6 +255,7 @@
             </div>
           </div>
         </div>
+        <!-- SINGLE DATA -->
         <div class="single__data">
           <div class="single__detail">
             <div class="text">
@@ -246,12 +305,7 @@
                 master suite is surrounded by handcrafted milkwork and features
                 incredible walk-in closet and storage space.
               </p>
-              <a
-                href="#propertydetails"
-                class="show__more--button"
-                id="show-more-btn"
-                >Read More</a
-              >
+              <a class="show__more--button" id="show-more-btn">Read More</a>
             </div>
           </div>
           <div class="single__description mb-3">
@@ -309,17 +363,17 @@
           <div class="single__description mb-3">
             <h6 class="text-capitalize description__heading">Features</h6>
             <ul class="single__feature">
-              <li><i class="bx bxs-checkbox-checked"></i> Air Conditioning</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Pets Allow</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Window Covering</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Swiming Pool</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Air Conditioning</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Free WiFi</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Central Heating</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Gym</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Car Parking</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Spa & Massage</li>
-              <li><i class="bx bxs-checkbox-checked"></i> Alarm</li>
+              <li><i class="bx bxs-check-shield"></i> Air Conditioning</li>
+              <li><i class="bx bxs-check-shield"></i> Pets Allow</li>
+              <li><i class="bx bxs-check-shield"></i> Window Covering</li>
+              <li><i class="bx bxs-check-shield"></i> Swiming Pool</li>
+              <li><i class="bx bxs-check-shield"></i> Air Conditioning</li>
+              <li><i class="bx bxs-check-shield"></i> Free WiFi</li>
+              <li><i class="bx bxs-check-shield"></i> Central Heating</li>
+              <li><i class="bx bxs-check-shield"></i> Gym</li>
+              <li><i class="bx bxs-check-shield"></i> Car Parking</li>
+              <li><i class="bx bxs-check-shield"></i> Spa & Massage</li>
+              <li><i class="bx bxs-check-shield"></i> Alarm</li>
             </ul>
           </div>
           <div class="single__description mb-3">
@@ -368,11 +422,11 @@
                   <p><i class="bx bxs-map"></i> 2.5 km</p>
                 </li>
                 <li>
-                  <span>Eladia's Kids </span>
+                  <span>Brooklyn Brainery</span>
                   <p><i class="bx bxs-map"></i> 3.5 km</p>
                 </li>
                 <li>
-                  <span>Eladia's Kids </span>
+                  <span>Wikdom Senior High Scool</span>
                   <p><i class="bx bxs-map"></i> 2.5 km</p>
                 </li>
               </ul>
@@ -401,118 +455,623 @@
             </div>
           </div>
         </div>
+        <!-- SINGLE SIDEBAR -->
         <div class="single__sidebar section">
           <div class="single__sidebar--wrapper">
             <div class="single__sidebar--header">
               <div class="single__sidebar--header--title">
                 <figure>
-                  <img src="asset/img/agent-1.jpeg" alt="agent-1" />
+                  <img
+                    src="asset/img/Alpha-Mead-Group-Logo.png"
+                    alt="agent-1"
+                  />
                 </figure>
               </div>
               <div class="single__sidebar--header--agent-info">
-                <h4 class="text-capitalize">Alpha Mead</h4>
+                <h4 class="text-capitalize letter-spacing-1">Rent4Less</h4>
                 <div>
                   <i class="bx bx-phone-call"></i>
                   <a href="#">+234 813-813-813</a>
                 </div>
                 <div>
                   <i class="bx bx-envelope"></i>
-                  <a href="#">Jhaydrille75@amfacilities.com</a>
+                  <a href="#">info@rent4less.com</a>
                 </div>
               </div>
             </div>
 
             <div class="single__sidebar--body">
-              <h6 class="text-Capitalize">
-                Book rooms in House 9 Apartments online
-              </h6>
-              <div class="single__sidebar--body-content">
-                <div class="single__sidebar--body-content-main">
+              <!-- If you have an Item in your cart display this -->
+              <!-- <div class="single__sidebar--body-empty">
+                <div class="img-full">
+                  <img src="asset/img/add-to-cart.png" alt="empty-booking" />
+                </div>
+                <h4>Hurray</h4>
+                <p>
+                  You have 2 items in your cart
+                  <a class="text-capitalize" href="cart.html">go to cart</a>
+                </p>
+
+                <a id="start__booking" class="text-capitalize">
+                  continue Booking
+                </a>
+              </div>
+
+              <div class="single__sidebar--subheader">
+                <h3 class="letter-spacing-2">Your Choices</h3>
+                <ul>
+                  <li class="text-uppercase letter-spacing-1">
+                    <i class="bx bxs-badge-check"></i> flexible to reschedule
+                  </li>
+                  <li class="text-uppercase letter-spacing-1">
+                    <i class="bx bxs-badge-check"></i> free cancellation
+                  </li>
+                  <li class="text-uppercase letter-spacing-1">
+                    <i class="bx bxs-badge-check"></i> No Prepayment Needed
+                  </li>
+                </ul>
+              </div> -->
+
+              <!-- End here -->
+
+              <!-- If you have no item in your cart display this-->
+              <div class="single__sidebar--body-empty">
+                <div class="img-empty">
+                  <img src="/asset/img/empty-booking.png" alt="empty-booking" />
+                </div>
+                <h4>No Bookings yet</h4>
+                <p>You currently do not have any bookings.</p>
+
+                <a id="start__booking" class="text-capitalize">
+                  start Booking
+                </a>
+              </div>
+              <!-- end here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- =============== SLIDING WIDGET ============= -->
+    <div class="sliding__widget" id="showBookings">
+      <div class="sliding__widget--wrapper">
+        <div class="sliding__widget--filters">
+          <span
+            data-filter=".shared-single"
+            class="sliding__widget--filter-item letter-spacing-1 text-capitalize active"
+            >Search Rooms</span
+          >
+          <span
+            data-filter=".exclusives-single"
+            class="sliding__widget--filter-item letter-spacing-1 text-capitalize"
+            >Search Apartment</span
+          >
+        </div>
+
+        <div class="sliding__widget--container">
+          <div
+            class="sliding__widget--container-item sliding__widget--container-shared shared-single"
+          >
+            <div class="room__type">
+              <h3 class="room__type--title text-capitalize letter-spacing-1">
+                1 bedroom
+              </h3>
+              <div class="room__type--content shared-single">
+                <div class="room__type--content-main">
                   <div class="room-img">
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
-                  <div class="room-details">
+                  <div class="room__details">
                     <h5 class="text-capitalize mb-5">
-                      <a href="#">Studio Room</a>
+                      <a href="#">Mini</a>
+                      <span class="room__type--remaining"
+                        ><i class="bx bx-radio-circle-marked"></i> 4 rooms
+                        remaining</span
+                      >
                     </h5>
-                    <div class="room-discount-price">
-                      <span>
-                        <sup>&#8358;</sup>
-                        <span>25,000</span>
-                      </span>
-                    </div>
-                    <div class="room-discount-badge">
-                      <span> 37% off only on Rent4less.com</span>
-                    </div>
-                    <div class="room-original-price">
-                      <span>
-                        <sup>&#8358;</sup>
-                        <span>15,750</span>
-                      </span>
+
+                    <p class="room__details--info">
+                      Complete with a private bathroom equipped with a shower
+                      and free toiletries, the rooms at the hotel have a
+                      flat-screen TV and air conditioning, and certain rooms are
+                      equipped with a seating area.
+                    </p>
+
+                    <ul class="room__type--features">
+                      <li><i class="bx bx-check"></i> Free toiletries</li>
+                      <li><i class="bx bx-check"></i> Bathrobe</li>
+                      <li><i class="bx bx-check"></i> Safe</li>
+                      <li><i class="bx bx-check"></i> Wardrobe or closet</li>
+                    </ul>
+
+                    <div class="room__details--price">
+                      <div class="room-discount-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>25,000</span>
+                        </span>
+                      </div>
+                      <div class="room-discount-badge">
+                        <span> 37% off only on Rent4less.com</span>
+                      </div>
+                      <div class="room-original-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>15,750</span>
+                        </span>
+                      </div>
                     </div>
                   </div>
+
                   <div class="room-button">
-                    <a href="" class="">Select Room</a>
+                    <span class="add-to-cart">Select Room</span>
+                    <span class="added">Added To Cart</span>
+                    <i class="bx bxs-cart-alt cart-icon"></i>
+                    <i class="bx bx-shopping-bag cart-item"></i>
                   </div>
                 </div>
               </div>
-              <div class="single__sidebar--body-content">
-                <div class="single__sidebar--body-content-main">
+            </div>
+            <div class="room__type">
+              <h3 class="room__type--title text-capitalize letter-spacing-1">
+                2 bedroom
+              </h3>
+              <div class="room__type--content shared-single">
+                <div class="room__type--content-main">
                   <div class="room-img">
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
-                  <div class="room-details">
+                  <div class="room__details">
                     <h5 class="text-capitalize mb-5">
-                      <a href="#">Studio Room</a>
+                      <a href="#">Mini</a>
+                      <span class="room__type--remaining"
+                        ><i class="bx bx-radio-circle-marked"></i> 5 rooms
+                        remaining</span
+                      >
                     </h5>
-                    <div class="room-discount-price">
-                      <span>
-                        <sup>&#8358;</sup>
-                        <span>25,000</span>
-                      </span>
-                    </div>
-                    <div class="room-discount-badge">
-                      <span> 37% off only on Rent4less.com</span>
-                    </div>
-                    <div class="room-original-price">
-                      <span>
-                        <sup>&#8358;</sup>
-                        <span>15,750</span>
-                      </span>
+
+                    <p class="room__details--info">
+                      Complete with a private bathroom equipped with a shower
+                      and free toiletries, the rooms at the hotel have a
+                      flat-screen TV and air conditioning, and certain rooms are
+                      equipped with a seating area.
+                    </p>
+
+                    <ul class="room__type--features">
+                      <li><i class="bx bx-check"></i> Free toiletries</li>
+                      <li><i class="bx bx-check"></i> Bathrobe</li>
+                      <li><i class="bx bx-check"></i> Safe</li>
+                      <li><i class="bx bx-check"></i> Wardrobe or closet</li>
+                    </ul>
+
+                    <div class="room__details--price">
+                      <div class="room-discount-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>25,000</span>
+                        </span>
+                      </div>
+                      <div class="room-discount-badge">
+                        <span> 37% off only on Rent4less.com</span>
+                      </div>
+                      <div class="room-original-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>15,750</span>
+                        </span>
+                      </div>
                     </div>
                   </div>
+
                   <div class="room-button">
-                    <a href="" class="">Select Room</a>
+                    <span class="add-to-cart">Select Room</span>
+                    <span class="added">Added To Cart</span>
+                    <i class="bx bxs-cart-alt cart-icon"></i>
+                    <i class="bx bx-shopping-bag cart-item"></i>
+                  </div>
+                </div>
+                <div class="room__type--content-main">
+                  <div class="room-img">
+                    <img src="asset/img/popular1.jpg" alt="single-img" />
+                  </div>
+                  <div class="room__details">
+                    <h5 class="text-capitalize mb-5">
+                      <a href="#">Deluxe</a>
+                      <span class="room__type--remaining"
+                        ><i class="bx bx-radio-circle-marked"></i> 5 property
+                        remaining</span
+                      >
+                    </h5>
+
+                    <p class="room__details--info">
+                      Complete with a private bathroom equipped with a shower
+                      and free toiletries, the rooms at the hotel have a
+                      flat-screen TV and air conditioning, and certain rooms are
+                      equipped with a seating area.
+                    </p>
+
+                    <ul class="room__type--features">
+                      <li><i class="bx bx-check"></i> Free toiletries</li>
+                      <li><i class="bx bx-check"></i> Bathrobe</li>
+                      <li><i class="bx bx-check"></i> Safe</li>
+                      <li><i class="bx bx-check"></i> Wardrobe or closet</li>
+                    </ul>
+
+                    <div class="room__details--price">
+                      <div class="room-discount-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>25,000</span>
+                        </span>
+                      </div>
+                      <div class="room-discount-badge">
+                        <span> 37% off only on Rent4less.com</span>
+                      </div>
+                      <div class="room-original-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>15,750</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="room-button">
+                    <span class="add-to-cart">Select Room</span>
+                    <span class="added">Added To Cart</span>
+                    <i class="bx bxs-cart-alt cart-icon"></i>
+                    <i class="bx bx-shopping-bag cart-item"></i>
                   </div>
                 </div>
               </div>
-              <div class="single__sidebar--body-content">
-                <div class="single__sidebar--body-content-main">
+            </div>
+            <div class="room__type">
+              <h3 class="room__type--title text-capitalize letter-spacing-1">
+                3 bedroom
+              </h3>
+              <div class="room__type--content shared-single">
+                <div class="room__type--content-main">
                   <div class="room-img">
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
-                  <div class="room-details">
+                  <div class="room__details">
                     <h5 class="text-capitalize mb-5">
-                      <a href="#">Studio Room</a>
+                      <a href="#">Mini</a>
+                      <span class="room__type--remaining"
+                        ><i class="bx bx-radio-circle-marked"></i> 15 property
+                        remaining</span
+                      >
                     </h5>
-                    <div class="room-discount-price">
-                      <span>
-                        <sup>&#8358;</sup>
-                        <span>25,000</span>
-                      </span>
-                    </div>
-                    <div class="room-discount-badge">
-                      <span> 37% off only on Rent4less.com</span>
-                    </div>
-                    <div class="room-original-price">
-                      <span>
-                        <sup>&#8358;</sup>
-                        <span>15,750</span>
-                      </span>
+
+                    <p class="room__details--info">
+                      Complete with a private bathroom equipped with a shower
+                      and free toiletries, the rooms at the hotel have a
+                      flat-screen TV and air conditioning, and certain rooms are
+                      equipped with a seating area.
+                    </p>
+
+                    <ul class="room__type--features">
+                      <li><i class="bx bx-check"></i> Free toiletries</li>
+                      <li><i class="bx bx-check"></i> Bathrobe</li>
+                      <li><i class="bx bx-check"></i> Safe</li>
+                      <li><i class="bx bx-check"></i> Wardrobe or closet</li>
+                    </ul>
+
+                    <div class="room__details--price">
+                      <div class="room-discount-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>25,000</span>
+                        </span>
+                      </div>
+                      <div class="room-discount-badge">
+                        <span> 37% off only on Rent4less.com</span>
+                      </div>
+                      <div class="room-original-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>15,750</span>
+                        </span>
+                      </div>
                     </div>
                   </div>
+
                   <div class="room-button">
-                    <a href="" class="">Select Room</a>
+                    <span class="add-to-cart">Select Room</span>
+                    <span class="added">Added To Cart</span>
+                    <i class="bx bxs-cart-alt cart-icon"></i>
+                    <i class="bx bx-shopping-bag cart-item"></i>
+                  </div>
+                </div>
+                <div class="room__type--content-main">
+                  <div class="room-img">
+                    <img src="asset/img/popular1.jpg" alt="single-img" />
+                  </div>
+                  <div class="room__details">
+                    <h5 class="text-capitalize mb-5">
+                      <a href="#">Deluxe</a>
+                      <span class="room__type--remaining"
+                        ><i class="bx bx-radio-circle-marked"></i> 5 property
+                        remaining</span
+                      >
+                    </h5>
+
+                    <p class="room__details--info">
+                      Complete with a private bathroom equipped with a shower
+                      and free toiletries, the rooms at the hotel have a
+                      flat-screen TV and air conditioning, and certain rooms are
+                      equipped with a seating area.
+                    </p>
+
+                    <ul class="room__type--features">
+                      <li><i class="bx bx-check"></i> Free toiletries</li>
+                      <li><i class="bx bx-check"></i> Bathrobe</li>
+                      <li><i class="bx bx-check"></i> Safe</li>
+                      <li><i class="bx bx-check"></i> Wardrobe or closet</li>
+                    </ul>
+
+                    <div class="room__details--price">
+                      <div class="room-discount-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>25,000</span>
+                        </span>
+                      </div>
+                      <div class="room-discount-badge">
+                        <span> 37% off only on Rent4less.com</span>
+                      </div>
+                      <div class="room-original-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>15,750</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="room-button">
+                    <span class="add-to-cart">Select Room</span>
+                    <span class="added">Added To Cart</span>
+                    <i class="bx bxs-cart-alt cart-icon"></i>
+                    <i class="bx bx-shopping-bag cart-item"></i>
+                  </div>
+                </div>
+                <div class="room__type--content-main">
+                  <div class="room-img">
+                    <img src="asset/img/popular1.jpg" alt="single-img" />
+                  </div>
+                  <div class="room__details">
+                    <h5 class="text-capitalize mb-5">
+                      <a href="#">Executive</a>
+                      <span class="room__type--remaining"
+                        ><i class="bx bx-radio-circle-marked"></i> 6 property
+                        remaining</span
+                      >
+                    </h5>
+
+                    <p class="room__details--info">
+                      Complete with a private bathroom equipped with a shower
+                      and free toiletries, the rooms at the hotel have a
+                      flat-screen TV and air conditioning, and certain rooms are
+                      equipped with a seating area.
+                    </p>
+
+                    <ul class="room__type--features">
+                      <li><i class="bx bx-check"></i> Free toiletries</li>
+                      <li><i class="bx bx-check"></i> Bathrobe</li>
+                      <li><i class="bx bx-check"></i> Safe</li>
+                      <li><i class="bx bx-check"></i> Wardrobe or closet</li>
+                    </ul>
+
+                    <div class="room__details--price">
+                      <div class="room-discount-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>25,000</span>
+                        </span>
+                      </div>
+                      <div class="room-discount-badge">
+                        <span> 37% off only on Rent4less.com</span>
+                      </div>
+                      <div class="room-original-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>15,750</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="room-button">
+                    <span class="add-to-cart">Select Room</span>
+                    <span class="added">Added To Cart</span>
+                    <i class="bx bxs-cart-alt cart-icon"></i>
+                    <i class="bx bx-shopping-bag cart-item"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sliding__widget--container-item sliding__widget--container-exclusive exclusives-single"
+          >
+            <div class="room__type">
+              <h3 class="room__type--title text-capitalize letter-spacing-1">
+                1 bedroom
+              </h3>
+              <div class="room__type--content shared-single">
+                <div class="room__type--content-main">
+                  <div class="room-img">
+                    <img src="asset/img/popular1.jpg" alt="single-img" />
+                  </div>
+                  <div class="room__details">
+                    <h5 class="text-capitalize mb-5">
+                      <a href="#">Exclusive</a>
+                      <span class="room__type--remaining"
+                        ><i class="bx bx-radio-circle-marked"></i> 25 property
+                        remaining</span
+                      >
+                    </h5>
+
+                    <p class="room__details--info">
+                      Complete with a private bathroom equipped with a shower
+                      and free toiletries, the rooms at the hotel have a
+                      flat-screen TV and air conditioning, and certain rooms are
+                      equipped with a seating area.
+                    </p>
+
+                    <ul class="room__type--features">
+                      <li><i class="bx bxs-car-garage"></i> Car Garage</li>
+                      <li><i class="bx bx-bath"></i> Bathrobe</li>
+                      <li><i class="bx bx-closet"></i> Closet</li>
+                      <li><i class="bx bx-swim"></i> Swimming Pool</li>
+                    </ul>
+
+                    <div class="room__details--price">
+                      <div class="room-discount-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>25,000</span>
+                        </span>
+                      </div>
+                      <div class="room-discount-badge">
+                        <span> 37% off only on Rent4less.com</span>
+                      </div>
+                      <div class="room-original-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>15,750</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="room-button">
+                    <span class="add-to-cart">Select Room</span>
+                    <span class="added">Added To Cart</span>
+                    <i class="bx bxs-cart-alt cart-icon"></i>
+                    <i class="bx bx-shopping-bag cart-item"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="room__type">
+              <h3 class="room__type--title text-capitalize letter-spacing-1">
+                2 bedroom
+              </h3>
+              <div class="room__type--content shared-single">
+                <div class="room__type--content-main">
+                  <div class="room-img">
+                    <img src="asset/img/popular1.jpg" alt="single-img" />
+                  </div>
+                  <div class="room__details">
+                    <h5 class="text-capitalize mb-5">
+                      <a href="#">Deluxe</a>
+                      <span class="room__type--remaining"
+                        ><i class="bx bx-radio-circle-marked"></i> 5 property
+                        remaining</span
+                      >
+                    </h5>
+
+                    <p class="room__details--info">
+                      Complete with a private bathroom equipped with a shower
+                      and free toiletries, the rooms at the hotel have a
+                      flat-screen TV and air conditioning, and certain rooms are
+                      equipped with a seating area.
+                    </p>
+
+                    <ul class="room__type--features">
+                      <li><i class="bx bxs-car-garage"></i> Car Garage</li>
+                      <li><i class="bx bx-bath"></i> Bathrobe</li>
+                      <li><i class="bx bx-closet"></i> Closet</li>
+                      <li><i class="bx bx-swim"></i> Swimming Pool</li>
+                    </ul>
+
+                    <div class="room__details--price">
+                      <div class="room-discount-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>25,000</span>
+                        </span>
+                      </div>
+                      <div class="room-discount-badge">
+                        <span> 37% off only on Rent4less.com</span>
+                      </div>
+                      <div class="room-original-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>15,750</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="room-button">
+                    <span class="add-to-cart">Select Room</span>
+                    <span class="added">Added To Cart</span>
+                    <i class="bx bxs-cart-alt cart-icon"></i>
+                    <i class="bx bx-shopping-bag cart-item"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="room__type">
+              <h3 class="room__type--title text-capitalize letter-spacing-1">
+                3 bedroom
+              </h3>
+              <div class="room__type--content shared-single">
+                <div class="room__type--content-main">
+                  <div class="room-img">
+                    <img src="asset/img/popular1.jpg" alt="single-img" />
+                  </div>
+                  <div class="room__details">
+                    <h5 class="text-capitalize mb-5">
+                      <a href="#">Exclusive</a>
+                      <span class="room__type--remaining"
+                        ><i class="bx bx-radio-circle-marked"></i> 5 property
+                        remaining</span
+                      >
+                    </h5>
+
+                    <p class="room__details--info">
+                      Complete with a private bathroom equipped with a shower
+                      and free toiletries, the rooms at the hotel have a
+                      flat-screen TV and air conditioning, and certain rooms are
+                      equipped with a seating area.
+                    </p>
+
+                    <ul class="room__type--features">
+                      <li><i class="bx bxs-car-garage"></i> Car Garage</li>
+                      <li><i class="bx bx-bath"></i> Bathrobe</li>
+                      <li><i class="bx bx-closet"></i> Closet</li>
+                      <li><i class="bx bx-swim"></i> Swimming Pool</li>
+                    </ul>
+
+                    <div class="room__details--price">
+                      <div class="room-discount-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>25,000</span>
+                        </span>
+                      </div>
+                      <div class="room-discount-badge">
+                        <span> 37% off only on Rent4less.com</span>
+                      </div>
+                      <div class="room-original-price">
+                        <span>
+                          <sup>&#8358;</sup>
+                          <span>15,750</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="room-button">
+                    <span class="add-to-cart">Select Room</span>
+                    <span class="added">Added To Cart</span>
+                    <i class="bx bxs-cart-alt cart-icon"></i>
+                    <i class="bx bx-shopping-bag cart-item"></i>
                   </div>
                 </div>
               </div>
@@ -520,10 +1079,44 @@
           </div>
         </div>
       </div>
-    </main>
+      <i class="bx bx-x close-btn" id="close-btn"></i>
+    </div>
+
+    <!--================ INLINE PROPERTYTEXT SCRIPT ===============-->
+    <script>
+      let propertyText = document.querySelectorAll(".room__type--remaining");
+      propertyText.forEach((element) => {
+        const ElementText = element.textContent.slice(0, 3);
+        const realText = parseInt(ElementText, 10);
+
+        if (realText > 5) {
+          element.classList.add("color-green");
+        }
+
+        if (realText <= 5) {
+          element.classList.add("color-red");
+        }
+      });
+    </script>
+
+    <!--================ INLINE SPINNER SCRIPT ===============-->
+    <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+      window.addEventListener("load", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script>
+
+    <!--=================== CALENDLY ===============-->
 
     <!--=============== SWIPER JS ===============-->
     <script src="asset/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP JS ===============-->
+    <script src="asset/js/mixitup.js"></script>
 
     <!--=============== SINGLE JS ===============-->
     <script src="asset/js/single.js"></script>
