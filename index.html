@@ -30,9 +30,9 @@
   </head>
   <body>
     <!--==================== SPINNER ====================-->
-    <!-- <div class="spinner-wrapper">
+    <div class="spinner-wrapper">
       <div class="spinner"></div>
-    </div> -->
+    </div>
 
     <!--==================== NAVBAR ====================-->
     <div class="navbar" id="navbar">
@@ -44,47 +44,71 @@
           />
         </a>
 
-        <div class="nav__menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="/index.html" class="nav__link">
-                <i class="bx bx-home-alt-2"></i>
-                <span>Home</span>
-              </a>
-            </li>
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu--lists">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
 
-            <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="bx bx-building-house"></i>
-                <span>About</span>
-              </a>
-            </li>
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bxs-dashboard"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
 
-            <li class="nav__item">
-              <a href="#faq" class="nav__link">
-                <i class="bx bx-award"></i>
-                <span>Faq</span>
-              </a>
-            </li>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
+                </a>
+              </li>
 
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="bx bx-phone"></i>
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
+              <li class="nav__item">
+                <a href="/city.html" class="nav__link">
+                  <i class="bx bx-search-alt"></i>
+                  <span>Search</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  <i class="bx bxs-news"></i>
+                  <span>Blogs</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="bx bxs-contact"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__theme">
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </div>
+
+            <i class="bx bx-x nav__close" id="nav-close"></i>
+          </div>
         </div>
 
         <!-- Theme Change Button -->
 
         <div class="sign">
-          <a href="/signup.html" class="nav__button">Sign Up</a>
-          <a href="/login.html" class="nav__button nav__button--outlined"
+          <a href="/signup.html" class="nav__button">Become A landlord</a>
+          <a href="/signup.html" class="nav__button">Become A Tenant</a>
+          <!-- <a href="/login.html" class="nav__button nav__button--outlined"
             >Log In</a
-          >
-          <i class="bx bx-moon change-theme" id="theme-button"></i>
+          > -->
+          <i class="bx bxs-widget" id="nav-toggle"></i>
         </div>
+        <!-- <i class="bx bx-menu"></i> -->
       </nav>
     </div>
 
@@ -93,13 +117,13 @@
       <div class="header__container container grid">
         <div class="header__data">
           <h1 class="header__title">
-            discover<br />
-            Most <span>Suitable</span> <br />
-            Property
+            Welcome to the <br />
+            #1 <span>Monthly</span> <br />
+            Rental Platform
           </h1>
           <p class="header__description">
-            Find a variety of properties that suit you very easily, forget all
-            difficulties in finding a residence for you.
+            You can hear comfort and flexibility call your name when you open
+            our doors.
           </p>
 
           <form action="" class="header__search">
@@ -152,8 +176,8 @@
       <!--==================== BECOME A TENANT / LANDLORD ====================-->
       <div class="section deals">
         <div class="deals__img--container">
-          <img src="asset/img/place-7.jpg" alt="home" />
-          <div class="deal__wrapper deal__wrapper--1">
+          <img src="asset/img/dancing-their-way.jpg" alt="home" />
+          <!-- <div class="deal__wrapper deal__wrapper--1">
             <div class="deal__wrapper--1-icon">
               <i class="bx bx-play-circle"></i>
             </div>
@@ -161,7 +185,7 @@
               <p class="letter-spacing-1">Physical home tour</p>
               <span>we provide you with physical home tour</span>
             </div>
-          </div>
+          </div> -->
           <div class="deal__wrapper deal__wrapper--2">
             <div class="deal__wrapper--text">
               <p class="letter-spacing-1">Find the best deals</p>
@@ -185,27 +209,32 @@
           </div>
           <div class="deal__pills--wrapper">
             <div class="deal__content tenants">
-              <h3>We Make it Easy for tenants and landlords</h3>
+              <h3>Join the Community of Tenants who Pay Rent Monthly</h3>
               <p>
-                whether it's selling your current home, getting financing or
-                renting a new home, we make it easy and efficient. The best
-                part? you'll save a bunch of money and time with our services
+                Indulge in a wholesome living experience where you get all you
+                need in a stress-free manner. You also get:
               </p>
+              <div class="lists">
+                <li>No Agency Fee</li>
+                <li>No Commission Payment</li>
+                <li>Just Pay & Pack In</li>
+              </div>
             </div>
             <div class="deal__content landlords">
-              <h3>We Make it Easy for tenants and landlords</h3>
+              <h3>Sit back. Relax. Let Your Money do the Work</h3>
               <p>
-                whether it's selling your current home, getting financing or
-                renting a new home, we make it easy and efficient. The best
-                part? you'll save a bunch of money and time with our services
+                Explore the endless possibilities of consistent earnings by
+                getting on our Guaranteed Rental Income Programme (GRIP) Today.
+                All you need do is list your property while we take care of the
+                rest. From getting tenants to verifying their profiles and
+                maintaining your property, we’ve got you covered.
               </p>
+              <div class="lists"></div>
             </div>
           </div>
 
           <!-- start tenants / landlord button -->
-          <a href="/signup.html" class="btn button destination__button"
-            >Get started</a
-          >
+          <a href="/signup.html" class="btn button">Get started</a>
           <!-- start tenants / landlord button -->
         </div>
       </div>
@@ -219,7 +248,6 @@
           <h2 class="section__title">Explore City <span>.</span></h2>
 
           <div class="destination__container">
-            <!-- start loop from here -->
             <a href="/city.html" class="destination__item">
               <div class="destination__img">
                 <img src="asset/img/city4.jpg" alt="destination" />
@@ -229,7 +257,6 @@
                 <p class="destination__description">70 Properties</p>
               </div>
             </a>
-            <!-- stop loop from here -->
 
             <div class="destination__item">
               <div class="destination__img">
@@ -413,7 +440,7 @@
           <span class="section__subtitle"
             >Handpicked TopNotch Properties By Our Team.</span
           >
-          <h2 class="section__title">Featured Properties<span>.</span></h2>
+          <h2 class="section__title">Hot Deals<span>.</span></h2>
 
           <div class="featured__container swiper">
             <div class="swiper-wrapper">
@@ -547,7 +574,8 @@
       </section>
 
       <!--==================== EXCLUSIVE PICKS ====================-->
-      <section class="exclusive section" id="exclusive">
+
+      <!-- <section class="exclusive section" id="exclusive">
         <div class="exclusive__wrapper">
           <span class="section__subtitle"
             >Most Exclusive Properties By Our Team.</span
@@ -641,7 +669,7 @@
             >See All Exclusive Deals</a
           >
         </div>
-      </section>
+      </section> -->
 
       <!--==================== ABOUT ====================-->
       <section class="about section" id="about">
@@ -654,7 +682,11 @@
             />
           </div>
           <div class="about__img-2">
-            <img src="asset/img/gal-3.jpeg" alt="about" class="about__images" />
+            <img
+              src="asset/img/young-millennials.jpg"
+              alt="about"
+              class="about__images"
+            />
           </div>
         </div>
         <div class="about__content">
@@ -1044,7 +1076,7 @@
     </a>
 
     <!--================ INLINE SCRIPT ===============-->
-    <!-- <script>
+    <script>
       const spinnerWrapper = document.querySelector(".spinner-wrapper");
 
       window.addEventListener("load", () => {
@@ -1052,7 +1084,7 @@
         document.body.scrollTop = 0; // For Safari
         spinnerWrapper.parentElement.removeChild(spinnerWrapper);
       });
-    </script> -->
+    </script>
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src="asset/js/scrollreveal.min.js"></script>

@@ -64,7 +64,10 @@ closeBtn.addEventListener("click", () => {
 });
 
 // CREATING ANIMATED CART BUTTON
-const cartButtons = document.querySelectorAll(".room-button");
+const cartButtons = document.querySelectorAll(".room-button"),
+  toast = document.querySelector(".toast"),
+  closeIcon = document.querySelector(".close"),
+  progress = document.querySelector(".progress");
 
 cartButtons.forEach((button) => {
   button.addEventListener("click", cartClick);
@@ -72,10 +75,22 @@ cartButtons.forEach((button) => {
 
 function cartClick() {
   let button = this;
+  let timer1, timer2;
   button.classList.add("clicked");
   button.classList.add("disabled");
+  toast.classList.add("active");
+  progress.classList.add("active");
+
+  timer1 = setTimeout(() => {
+    toast.classList.remove("active");
+  }, 5000); //1s = 1000 milliseconds
+
+  timer2 = setTimeout(() => {
+    progress.classList.remove("active");
+  }, 5300);
+
   setTimeout(() => {
     button.classList.remove("clicked");
     button.classList.remove("disabled");
-  }, 3000);
+  }, 5300);
 }
