@@ -1,6 +1,10 @@
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
+  navTheme = document.getElementById("nav__theme"),
+  toast = document.querySelector(".toast"),
+  Message = document.querySelector(".message-text"),
+  progress = document.querySelector(".progress"),
   navClose = document.getElementById("nav-close");
 
 /*===== MENU SHOW ======*/
@@ -15,6 +19,40 @@ if (navToggle) {
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show__menu");
+  });
+}
+
+if (navTheme) {
+  navTheme.addEventListener("click", () => {
+    navMenu.classList.remove("show__menu");
+    console.log(navTheme.childNodes[1].classList.value);
+    if (navTheme.childNodes[1].classList.contains("bx-sun")) {
+      let timer1, timer2;
+      Message.textContent = "Dark Mode Activated";
+      toast.classList.add("active");
+      progress.classList.add("active");
+
+      timer1 = setTimeout(() => {
+        toast.classList.remove("active");
+      }, 5000); //1s = 1000 milliseconds
+
+      timer2 = setTimeout(() => {
+        progress.classList.remove("active");
+      }, 5300);
+    } else {
+      let timer1, timer2;
+      Message.textContent = "Light Mode Activated";
+      toast.classList.add("active");
+      progress.classList.add("active");
+
+      timer1 = setTimeout(() => {
+        toast.classList.remove("active");
+      }, 5000); //1s = 1000 milliseconds
+
+      timer2 = setTimeout(() => {
+        progress.classList.remove("active");
+      }, 5300);
+    }
   });
 }
 
@@ -92,7 +130,7 @@ let mixerSingles = mixitup(".deal__pills--wrapper", {
     target: ".deal__content",
   },
   animation: {
-    duration: 1000,
+    duration: 100,
     effects: "fade",
     reverseOut: true,
     nudge: false,

@@ -34,6 +34,20 @@
       <div class="spinner"></div>
     </div>
 
+    <!-- ======= TOAST ANIMATION ====== -->
+    <div class="toast">
+      <div class="toast-content">
+        <i class="bx bxs-check-circle check"></i>
+        <div class="message">
+          <span class="message-text text-1"></span>
+        </div>
+      </div>
+      <i class="bx bx-x close"></i>
+
+      <div class="progress"></div>
+    </div>
+    <!-- ======= END TOAST ANIMATION ====== -->
+
     <!--==================== NAVBAR ====================-->
     <div class="navbar" id="navbar">
       <nav class="nav container">
@@ -90,7 +104,7 @@
               </li>
             </ul>
 
-            <div class="nav__theme">
+            <div class="nav__theme" id="nav__theme">
               <i class="bx bx-moon change-theme" id="theme-button"></i>
             </div>
 
@@ -234,7 +248,7 @@
       </div>
 
       <!--==================== DESTINATION ====================-->
-      <section class="destination section bg-green px-2 my-6 border-sm">
+      <section class="destination section bg-green border-sm">
         <div
           class="destination__wrapper d-flex justify-between align-items-center"
         >
@@ -326,7 +340,9 @@
           </div> -->
 
           <!-- start explore city button -->
-          <a href="/city.html" class="btn btn-white">Explore Cities</a>
+          <a href="/city.html" class="btn button destination__button mt-0"
+            >Explore Cities</a
+          >
           <!-- end explore city button -->
         </div>
       </section>
@@ -1076,7 +1092,7 @@
     <script>
       const spinnerWrapper = document.querySelector(".spinner-wrapper");
 
-      window.addEventListener("load", () => {
+      window.addEventListener("DOMContentLoaded", () => {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         document.body.scrollTop = 0; // For Safari
         spinnerWrapper.parentElement.removeChild(spinnerWrapper);
