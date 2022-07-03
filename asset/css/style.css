@@ -348,8 +348,18 @@ button {
 .text-capitalize {
   text-transform: capitalize; }
 
-.color-white {
-  color: white !important; }
+.border-sm {
+  border-radius: 1rem; }
+
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+
+.pb-0 {
+  padding-bottom: 0 !important; }
+
+.my-6 {
+  margin: 6rem 0; }
 
 .mb-3 {
   margin-bottom: 3rem !important; }
@@ -360,8 +370,8 @@ button {
 .mb-1 {
   margin-bottom: 1rem !important; }
 
-.pb-0 {
-  padding-bottom: 0 !important; }
+.mb-0 {
+  margin-bottom: 0; }
 
 .ml-auto {
   margin-left: auto; }
@@ -369,14 +379,36 @@ button {
 .d-flex {
   display: flex; }
 
+.d-block {
+  display: block; }
+
 .justify-between {
   justify-content: space-between; }
+
+.align-items-center {
+  align-items: center; }
 
 .color-red {
   color: #ec2525; }
 
 .color-green {
   color: #6aba50; }
+
+.color-white {
+  color: white !important; }
+
+.bg-green {
+  background-image: linear-gradient(to left bottom, #7ed56f, #6aba50); }
+
+.btn-white {
+  background-color: #fff;
+  color: #7ed56f;
+  transition: transform 0.4s;
+  font-size: 1.8rem !important; }
+  .btn-white:hover {
+    transform: scale(1.02);
+    background-color: rgba(238, 238, 238, 0.9);
+    color: #7ed56f; }
 
 /*=============== BUTTON ===============*/
 .btn {
@@ -1528,21 +1560,33 @@ button {
       .header__search input::placeholder {
         color: #999; }
   .header__value {
-    display: flex;
-    column-gap: 6rem; }
-    @media screen and (max-width: 20em) {
-      .header__value {
-        column-gap: 2rem; } }
-    .header__value-number {
-      color: #fff;
-      font-size: 3rem;
-      font-weight: 700; }
-      .header__value-number span {
-        color: #ed6538; }
+    display: flex; }
+    .header__value img {
+      width: 5rem;
+      height: 5rem;
+      object-fit: cover;
+      border-radius: 50%; }
+      .header__value img:not(:first-child) {
+        border: 2px solid #eee;
+        box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.15);
+        margin-left: -2rem; }
     .header__value-description {
       display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #333;
       color: #eee;
-      font-size: 1.4rem; }
+      margin-left: -2rem;
+      font-size: 1.4rem;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%; }
+  .header__followers {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #f7f7f7; }
+    .header__followers a {
+      color: inherit; }
   .header__images {
     position: relative;
     display: flex;
