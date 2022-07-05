@@ -219,9 +219,17 @@ body {
         color: #6aba50; }
     body.dark-theme .navbar .nav__close {
       right: 10.5rem; }
+      @media only screen and (max-width: 75em) {
+        body.dark-theme .navbar .nav__close {
+          right: 3rem; } }
       @media only screen and (max-width: 62.5em) {
         body.dark-theme .navbar .nav__close {
-          right: 2.5rem; } }
+          right: 1rem; } }
+      @media only screen and (max-width: 25em) {
+        body.dark-theme .navbar .nav__close {
+          top: 3rem;
+          right: 1.8rem;
+          font-size: 4.5rem; } }
     body.dark-theme .navbar .nav__menu--lists {
       background-color: #38322e; }
     body.dark-theme .navbar .nav__link:hover span {
@@ -1864,6 +1872,9 @@ button {
     display: flex;
     flex-direction: column;
     background-color: #fff; }
+    @media only screen and (max-width: 75em) {
+      .nav__menu--lists {
+        width: 45%; } }
     @media only screen and (max-width: 62.5em) {
       .nav__menu--lists {
         width: 50%; } }
@@ -1884,14 +1895,20 @@ button {
     color: #fff;
     transition: all 0.4s;
     cursor: pointer; }
+    @media only screen and (max-width: 75em) {
+      .nav__close {
+        right: 3rem; } }
     @media only screen and (max-width: 62.5em) {
       .nav__close {
-        right: 2rem; } }
+        right: 1rem; } }
     @media only screen and (max-width: 25em) {
       .nav__close {
         top: 3rem;
-        right: 2.5rem;
+        right: 1.8rem;
         font-size: 4.5rem; } }
+    @media only screen and (max-width: 20em) {
+      .nav__close {
+        right: 1.5rem; } }
     .nav__close:hover {
       transform: translateY(-0.4rem); }
     .nav__close:active {
