@@ -221,7 +221,7 @@ body {
       right: 10.5rem; }
       @media only screen and (max-width: 62.5em) {
         body.dark-theme .navbar .nav__close {
-          right: 1.5rem; } }
+          right: 2.5rem; } }
     body.dark-theme .navbar .nav__menu--lists {
       background-color: #38322e; }
     body.dark-theme .navbar .nav__link:hover span {
@@ -293,9 +293,13 @@ button {
 
 .container {
   max-width: 1300px;
-  margin-left: 4rem;
-  margin-right: 4rem; }
-  @media only screen and (max-width: 37.5em) {
+  margin-left: auto;
+  margin-right: auto; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin-left: 4rem;
+      margin-right: 4rem; } }
+  @media only screen and (max-width: 62.5em) {
     .container {
       margin-left: 2rem;
       margin-right: 2rem; } }
@@ -336,7 +340,7 @@ button {
       grid-template-columns: [full-start] 4rem [center-start] repeat(8, 1fr) [center-end] 4rem [full-end]; } }
   @media only screen and (max-width: 25em) {
     .main {
-      grid-template-columns: [full-start] 2rem [center-start] repeat(8, 1fr) [center-end] 2rem [full-end]; } }
+      grid-template-columns: [full-start] 3rem [center-start] repeat(8, 1fr) [center-end] 3rem [full-end]; } }
   .main__list, .main__single, .main__cart {
     overflow: initial; }
   .main__estate {
@@ -1886,7 +1890,7 @@ button {
     @media only screen and (max-width: 25em) {
       .nav__close {
         top: 3rem;
-        right: 2rem;
+        right: 2.5rem;
         font-size: 4.5rem; } }
     .nav__close:hover {
       transform: translateY(-0.4rem); }
