@@ -321,7 +321,7 @@ button {
     color: #6aba50; }
   .section__description {
     font-size: 1.6rem;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 3.5rem; }
 
 .main {
   overflow: hidden;
@@ -332,6 +332,9 @@ button {
   @media only screen and (max-width: 75em) {
     .main {
       grid-template-columns: [full-start] 4rem [center-start] repeat(8, 1fr) [center-end] 4rem [full-end]; } }
+  @media only screen and (max-width: 20em) {
+    .main {
+      grid-template-columns: [full-start] 2rem [center-start] repeat(8, 1fr) [center-end] 2rem [full-end]; } }
   .main__list, .main__single, .main__cart {
     overflow: initial; }
   .main__estate {
@@ -358,6 +361,9 @@ button {
 
 .text-capitalize {
   text-transform: capitalize; }
+
+.text-center {
+  text-align: center; }
 
 .border-sm {
   border-radius: 1rem; }
@@ -1574,7 +1580,8 @@ button {
       padding-top: 14rem; } }
   @media only screen and (max-width: 50em) {
     .header {
-      padding-top: 8.5rem; } }
+      padding-top: 8.5rem;
+      padding-bottom: 4rem; } }
   .header__container {
     display: grid;
     grid-template-columns: 100%;
@@ -1582,15 +1589,15 @@ button {
     row-gap: 8rem; }
     @media screen and (min-width: 767px) {
       .header__container {
-        grid-template-columns: repeat(2, 1fr);
-        padding-top: 2rem; } }
+        grid-template-columns: repeat(2, 1fr); } }
     @media screen and (min-width: 1024px) {
       .header__container {
         padding-top: 10rem;
         column-gap: 2rem; } }
   @media screen and (min-width: 767px) {
     .header__data {
-      padding-bottom: 2rem; } }
+      padding-bottom: 2rem;
+      width: max-content; } }
   @media screen and (min-width: 1024px) {
     .header__data {
       padding-bottom: 4rem; } }
@@ -1670,6 +1677,11 @@ button {
     color: #f7f7f7; }
     .header__followers a {
       color: #7ed56f; }
+      @media only screen and (max-width: 37.5em) {
+        .header__followers a {
+          font-size: 1.6rem;
+          display: inline-block;
+          padding-top: 1rem; } }
       .header__followers a:hover {
         color: #6aba50; }
   .header__images {
@@ -2606,6 +2618,9 @@ button {
         .deals__img--container .deal__wrapper {
           width: 250px;
           justify-content: space-between; } }
+      @media only screen and (max-width: 25em) {
+        .deals__img--container .deal__wrapper {
+          width: 220px; } }
       .deals__img--container .deal__wrapper--1 {
         top: 20%;
         left: -12%;
@@ -2616,8 +2631,9 @@ button {
         @media only screen and (max-width: 37.5em) {
           .deals__img--container .deal__wrapper--1 {
             display: flex;
-            top: -10%;
-            left: 3%; } }
+            left: 50%;
+            transform: translateX(-50%);
+            top: -13%; } }
         .deals__img--container .deal__wrapper--1-icon {
           background-color: rgba(106, 186, 80, 0.3);
           color: #6aba50;
@@ -2786,13 +2802,28 @@ button {
   .popular__card {
     overflow: hidden;
     width: 380px;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 3rem;
+    position: relative; }
     @media only screen and (max-width: 62.5em) {
       .popular__card {
         width: 300px; } }
     @media only screen and (max-width: 37.5em) {
       .popular__card {
         width: 320px; } }
+    @media only screen and (max-width: 37.5em) {
+      .popular__card {
+        border-radius: 0rem; }
+        .popular__card::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 0 0 1rem 1rem;
+          background-color: rgba(21, 21, 21, 0.65);
+          z-index: 1; } }
   .popular__img {
     width: auto;
     height: 305px;
@@ -2830,7 +2861,6 @@ button {
     bottom: 2rem;
     left: 0;
     color: #fff;
-    padding: 2rem;
     visibility: hidden;
     opacity: 0;
     transform: translateY(10rem);
@@ -2839,9 +2869,16 @@ button {
     transition-delay: 0.3s; }
     @media only screen and (max-width: 37.5em) {
       .popular__data {
+        left: 1rem;
         visibility: visible;
         opacity: 1;
         transform: translateY(0rem); } }
+    @media only screen and (max-width: 25em) {
+      .popular__data {
+        padding: 0; } }
+    @media only screen and (max-width: 20em) {
+      .popular__data {
+        padding: 0; } }
   .popular__title {
     padding: 0rem 2rem;
     font-size: 2rem;
@@ -2856,13 +2893,17 @@ button {
     padding: 0rem 2rem;
     font-size: 1.5rem;
     margin-bottom: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .popular__description {
+        max-width: 230px; } }
 
 .featured {
   grid-column: center-start / center-end; }
   .featured__wrapper {
     position: relative; }
-  .featured__container {
-    padding: 1rem 1.5rem; }
+  @media only screen and (max-width: 25em) {
+    .featured__container {
+      padding: 1rem 1.5rem; } }
   .featured__card {
     overflow: hidden;
     width: 380px;
@@ -2873,6 +2914,17 @@ button {
     @media only screen and (max-width: 37.5em) {
       .featured__card {
         width: 320px; } }
+    @media only screen and (max-width: 37.5em) {
+      .featured__card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 1rem 1rem;
+        background-color: rgba(21, 21, 21, 0.65);
+        z-index: 1; } }
   .featured__card:hover .featured__img::after {
     background-color: rgba(21, 21, 21, 0.8); }
   .featured__card:hover .featured__img img {
@@ -2938,6 +2990,12 @@ button {
     transition: all 0.4s;
     overflow: hidden;
     width: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      .featured__data {
+        left: 0rem; } }
+    @media only screen and (max-width: 20em) {
+      .featured__data {
+        padding: 0 2rem; } }
   .featured__title {
     padding: 0rem 2rem;
     font-size: 2rem;
@@ -2952,6 +3010,9 @@ button {
     padding: 0rem 2rem;
     font-size: 1.5rem;
     margin-bottom: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .featured__description {
+        max-width: 230px; } }
   .featured__content {
     display: flex;
     overflow: hidden;
@@ -2965,6 +3026,19 @@ button {
     transition: all 0.6s; }
     @media only screen and (max-width: 37.5em) {
       .featured__content {
+        justify-content: flex-start;
+        gap: 3rem; } }
+    @media only screen and (max-width: 25em) {
+      .featured__content {
+        width: 100%;
+        gap: 5rem;
+        border-radius: 0; } }
+    @media only screen and (max-width: 20em) {
+      .featured__content {
+        width: 100%;
+        gap: 4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .featured__content {
         visibility: visible;
         opacity: 1;
         height: 6rem;
@@ -2975,6 +3049,8 @@ button {
       align-items: center;
       font-size: 1.6rem;
       transition: 0.4s; }
+      .featured__content-item:last-child {
+        overflow: hidden; }
       .featured__content-item span {
         display: block; }
         .featured__content-item span i {
@@ -3045,6 +3121,9 @@ button {
     padding: 0rem 2rem;
     font-size: 1.5rem;
     margin-bottom: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .exclusive__description {
+        max-width: 230px; } }
   .exclusive__title {
     font-size: 1.6rem;
     background-color: #6aba50;
