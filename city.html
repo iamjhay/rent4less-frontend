@@ -37,328 +37,501 @@
           />
         </a>
 
-        <div class="nav__menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="/index.html" class="nav__link">
-                <i class="bx bx-home-alt-2"></i>
-                <span>Home</span>
-              </a>
-            </li>
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu--lists">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
 
-            <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="bx bx-building-house"></i>
-                <span>About</span>
-              </a>
-            </li>
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bxs-dashboard"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
 
-            <li class="nav__item">
-              <a href="#faq" class="nav__link">
-                <i class="bx bx-award"></i>
-                <span>Faq</span>
-              </a>
-            </li>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
+                </a>
+              </li>
 
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="bx bx-phone"></i>
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
+              <li class="nav__item">
+                <a href="/city.html" class="nav__link">
+                  <i class="bx bx-search-alt"></i>
+                  <span>Search</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  <i class="bx bxs-news"></i>
+                  <span>Blogs</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="bx bxs-contact"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__theme" id="nav__theme">
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </div>
+
+            <i class="bx bx-x nav__close" id="nav-close"></i>
+          </div>
         </div>
 
         <!-- Theme Change Button -->
 
         <div class="sign">
-          <a href="#" class="nav__button">Sign Up</a>
-          <a href="#" class="nav__button nav__button--outlined">Log In</a>
-          <i class="bx bx-moon change-theme" id="theme-button"></i>
+          <div class="sign-content">
+            <a href="/signup.html" class="nav__button">Become A landlord</a>
+            <a href="/signup.html" class="nav__button">Become A Tenant</a>
+          </div>
+          <i class="bx bxs-widget" id="nav-toggle"></i>
         </div>
       </nav>
     </div>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
-      <!--==================== SEARCH ====================-->
-      <section class="search section">
-        <div class="search__wrapper">
-          <form action="">
-            <input type="text" placeholder="Search By Location" required />
-            <i class="bx bx-search"></i>
-            <button>Search</button>
-          </form>
-        </div>
-      </section>
+    <img src="asset/img/bg-mask-1x.png" alt="mask-1" class="mask-1" />
 
-      <!--==================== DESTINATION ====================-->
-      <section class="destination section">
-        <div class="destination__wrapper">
-          <span class="section__subtitle"
-            >Which City Do You Want To Book A Property?</span
-          >
-          <h2 class="section__title">Explore City <span>.</span></h2>
-
-          <div class="destination__container">
-            <a href="/estate.html" class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/city4.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Ikeja</h3>
-                <p class="destination__description">70 Properties</p>
-              </div>
-            </a>
-
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/city5.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Ikoyi</h3>
-                <p class="destination__description">120 Properties</p>
-              </div>
-            </div>
-
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/city6.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Lekki</h3>
-                <p class="destination__description">50 Properties</p>
-              </div>
-            </div>
-
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/city7.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Festac</h3>
-                <p class="destination__description">100 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/borabora.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Gbagada</h3>
-                <p class="destination__description">150 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/bali.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Victoria Island</h3>
-                <p class="destination__description">40 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/community-1.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Ibadan</h3>
-                <p class="destination__description">80 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/community-2.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Ketu</h3>
-                <p class="destination__description">60 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-1.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Suruler</h3>
-                <p class="destination__description">80 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-2.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Mushin</h3>
-                <p class="destination__description">30 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-3.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Yaba</h3>
-                <p class="destination__description">22 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-4.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Ajah</h3>
-                <p class="destination__description">180 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-5.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">MaryLand</h3>
-                <p class="destination__description">140 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-6.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Epe</h3>
-                <p class="destination__description">30 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-7.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Badagry</h3>
-                <p class="destination__description">100 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-8.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Obalende</h3>
-                <p class="destination__description">32 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-9.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Oshodi</h3>
-                <p class="destination__description">99 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-10.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Oniru</h3>
-                <p class="destination__description">55 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-11.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Alimosho</h3>
-                <p class="destination__description">42 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-12.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Palmgroove</h3>
-                <p class="destination__description">45 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/gal-13.jpeg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Ketu</h3>
-                <p class="destination__description">60 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/place-1.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Ojota</h3>
-                <p class="destination__description">13 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/place-2.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Ifako-Ijaye</h3>
-                <p class="destination__description">35 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/place-3.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Shomolu</h3>
-                <p class="destination__description">39 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/place-4.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Agege</h3>
-                <p class="destination__description">135 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/place-6.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Ketu</h3>
-                <p class="destination__description">60 Properties</p>
-              </div>
-            </div>
-            <div class="destination__item">
-              <div class="destination__img">
-                <img src="asset/img/place-7.jpg" alt="destination" />
-              </div>
-              <div class="destination__content">
-                <h3 class="destination__title">Akoka</h3>
-                <p class="destination__description">55 Properties</p>
-              </div>
+    <!--==================== HEADER ====================-->
+    <header class="city" id="city ">
+      <div class="city__data">
+        <div class="city__title">
+          <div class="city__title--wrapper">
+            <h3>Discover</h3>
+            <div class="flip">
+              <span>Cities</span>
+              <span>Estates</span>
+              <span>Rooms</span>
+              <span>Apartment</span>
+              <span>Cities</span>
             </div>
           </div>
-          <a href="#" class="btn button__outlined destination__button"
-            >Load More</a
-          >
+          <h3>Where we Operate Fully</h3>
         </div>
-      </section>
+        <p class="city__description">
+          You can hear comfort and flexibility call your name when you open our
+          doors.
+        </p>
+      </div>
 
-      <!--========== SCROLL UP ==========-->
-      <a href="#" class="scrollup" id="scroll-up">
-        <i class="bx bx-chevrons-up"></i>
-      </a>
-    </main>
+      <div class="city__images">
+        <img src="asset/img/MAP.png" alt="city__img" />
+
+        <div class="cities__1 tooltip"></div>
+        <div class="cities cities__1">
+          <img src="asset/img/Rectangle-1.png" alt="city-1" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__2 tooltip"></div>
+        <div class="cities cities__2">
+          <img src="asset/img/Rectangle-2.png" alt="city-2" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__3 tooltip"></div>
+        <div class="cities cities__3">
+          <img src="asset/img/Rectangle-3.png" alt="city-3" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__4 tooltip"></div>
+        <div class="cities cities__4">
+          <img src="asset/img/popular1.jpg" alt="city-3" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__5 tooltip"></div>
+        <div class="cities cities__5">
+          <img src="asset/img/popular1.jpg" alt="city-3" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__6 tooltip"></div>
+        <div class="cities cities__6">
+          <img src="asset/img/Rectangle-1.png" alt="city-1" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__7 tooltip"></div>
+        <div class="cities cities__7">
+          <img src="asset/img/Rectangle-2.png" alt="city-2" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__8 tooltip"></div>
+        <div class="cities cities__8">
+          <img src="asset/img/Rectangle-3.png" alt="city-3" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__9 tooltip"></div>
+        <div class="cities cities__9">
+          <img src="asset/img/popular1.jpg" alt="city-3" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__10 tooltip"></div>
+        <div class="cities cities__10">
+          <img src="asset/img/popular1.jpg" alt="city-3" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__11 tooltip"></div>
+        <div class="cities cities__11">
+          <img src="asset/img/Rectangle-1.png" alt="city-1" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__12 tooltip"></div>
+        <div class="cities cities__12">
+          <img src="asset/img/Rectangle-2.png" alt="city-2" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__13 tooltip"></div>
+        <div class="cities cities__13">
+          <img src="asset/img/Rectangle-3.png" alt="city-3" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__14 tooltip"></div>
+        <div class="cities cities__14">
+          <img src="asset/img/popular1.jpg" alt="city-3" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+
+        <div class="cities__15 tooltip"></div>
+        <div class="cities cities__15">
+          <img src="asset/img/popular1.jpg" alt="city-3" />
+          <div class="cities__content">
+            <h3>Palm Harbor</h3>
+            <span>ikeja</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--==================== CITIES ====================-->
+    <section class="city__list container section">
+      <span class="section__subtitle"
+        >Which City Do You Want To Book A Property?</span
+      >
+      <h2 class="section__title">Cities <span>.</span></h2>
+
+      <div class="city__list--wrapper">
+        <a href="" class="city__list--wrapper-article">
+          <h4>Property in Ikeja</h4>
+          <p>325 properties</p>
+        </a>
+        <a href="" class="city__list--wrapper-article">
+          <h4>Property in Ikeja</h4>
+          <p>325 properties</p>
+        </a>
+        <a href="" class="city__list--wrapper-article">
+          <h4>Property in Ikeja</h4>
+          <p>325 properties</p>
+        </a>
+        <a href="" class="city__list--wrapper-article">
+          <h4>Property in Ikeja</h4>
+          <p>325 properties</p>
+        </a>
+        <a href="" class="city__list--wrapper-article">
+          <h4>Property in Ikeja</h4>
+          <p>325 properties</p>
+        </a>
+        <a href="" class="city__list--wrapper-article">
+          <h4>Property in Ikeja</h4>
+          <p>325 properties</p>
+        </a>
+        <a href="" class="city__list--wrapper-article">
+          <h4>Property in Ikeja</h4>
+          <p>325 properties</p>
+        </a>
+      </div>
+    </section>
+
+    <!--==================== ESTATE ====================-->
+    <section class="city__estate section container">
+      <span class="section__subtitle"
+        >A selection of the best Estate deals, only available today</span
+      >
+      <h2 class="section__title">Top Estate Deals <span>.</span></h2>
+
+      <div class="city__estate--wrapper">
+        <a href="/" class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a href="/" class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+      <div class="container">
+        <div class="footer__item">
+          <ul class="footer__list">
+            <li><a href="#"> About </a></li>
+            <li><a href="#"> Gallery </a></li>
+            <li><a href="#"> Faq </a></li>
+            <li><a href="#"> Contact Us </a></li>
+            <li><a href="#"> Property </a></li>
+            <li><a href="#"> Tenancy Terms </a></li>
+            <li><a href="#"> Privacy Terms </a></li>
+            <li><a href="#"> Terms & Condition </a></li>
+          </ul>
+        </div>
+        <div class="footer__item footer__location">
+          <div class="footer__location--logo">
+            <img src="asset/img/rent4less-logo-small.png" alt="logo" />
+          </div>
+          <div class="footer__location--address">
+            <i class="bx bxs-map-alt"></i>
+            <span>6 Mobolaji Johnson avenue, Ikoyi , Lagos. Nigeria</span>
+          </div>
+          <div class="footer__location--address">
+            <i class="bx bx-phone"></i>
+            <span>+234 90 8456 3508, +234 81 2182 5297</span>
+          </div>
+          <div class="footer__location--address">
+            <i class="bx bxs-map-alt"></i>
+            <span>sales@rent4less.com, reservation@rent4less.com</span>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__subscribe">
+            <span class="section__subtitle letter-spacing-3 text-uppercase"
+              >Newsletter</span
+            >
+            <p class="footer__subscribe--description">
+              Subscribe to our email newsletter to receive updates and news on
+              special offers.
+            </p>
+            <form class="footer__subscribe--form">
+              <input type="email" placeholder="Email address" />
+              <button><i class="bx bx-send"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__copyright">
+          <p>Copyright © 2022 Rent4Less</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-chevrons-up"></i>
+    </a>
 
     <!--================ INLINE SPINNER SCRIPT ===============-->
     <script>
