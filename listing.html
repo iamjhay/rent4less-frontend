@@ -30,7 +30,7 @@
   </head>
   <body class="bg-grey-light">
     <div class="secondary__nav">
-      <nav class="secondary__navigation">
+      <nav class="nav secondary__navigation">
         <a href="/" class="secondary__nav--logo">
           <img
             src="asset/img/rent4less-logo-small.png"
@@ -38,23 +38,59 @@
           />
         </a>
 
-        <!-- <ul class="secondary__nav--lists">
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Home</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">About</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Faq</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Gallery</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Contact</a>
-          </li>
-        </ul> -->
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu--lists">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bxs-dashboard"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/city.html" class="nav__link">
+                  <i class="bx bx-search-alt"></i>
+                  <span>Search</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  <i class="bx bxs-news"></i>
+                  <span>Blogs</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="bx bxs-contact"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__theme" id="nav__theme">
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </div>
+
+            <i class="bx bx-x nav__close" id="nav-close"></i>
+          </div>
+        </div>
 
         <ul class="secondary__nav--lists">
           <li class="secondary__nav--list">
@@ -132,6 +168,7 @@
               </span>
             </a>
           </li>
+
           <li class="secondary__nav--list account">
             <span class="secondary__nav--icon"
               ><i class="bx bxs-user-circle"></i
@@ -160,6 +197,10 @@
               </ul>
             </div>
           </li>
+
+          <div class="sign">
+            <i class="bx bxs-widget color-light-black" id="nav-toggle"></i>
+          </div>
         </ul>
       </nav>
     </div>
@@ -167,7 +208,7 @@
     <!--=============== PROPERTY LISTINGS ===============-->
     <main class="main main__list listings">
       <!-- search functionality goes here -->
-      <section class="search">
+      <!-- <section class="search">
         <div class="search__wrapper">
           <form action="">
             <input type="text" placeholder="Search By Location" required />
@@ -175,7 +216,7 @@
             <button>Search</button>
           </form>
         </div>
-      </section>
+      </section> -->
       <!-- search functionality ends here -->
 
       <div class="main__wrapper">
@@ -191,15 +232,14 @@
           </div>
         </section>
         <section class="section description">
-          <h3 class="description__heading">3,352 Property in Lagos</h3>
+          <h3 class="description__heading">3,352 Property in Ikeja</h3>
           <h5 class="description__subheading">
-            Select & book from 3,352 Property near Lagos
+            Rooms and apartments for your comfort from 3,352 Property @ Ikeja
           </h5>
           <p class="description__text">
-            Book a great property in Lagos. Rent4Less has luxury Properties,
-            cheap houses, lodges, estate in Lagos, shared apartments and more.
-            All at the best rates that are only available online! Start Today
-            and get amazing discounts on all purcahses.
+            Experience free-living like never before with Rent4Less. From shared
+            living to exclusive apartments, we have specially curated a list of
+            abodes to meet your needs and provide a wholesome living experience.
           </p>
         </section>
         <section class="section filter">
@@ -374,6 +414,8 @@
         <section class="section listing">
           <div class="listing__wrapper">
             <!--=============== PROPERTY FILTER VERTICAL ===============-->
+
+            <!-- listings -->
             <ul class="listing__tab">
               <li class="list-half">
                 <i class="bx bx-grid-alt"></i>
@@ -382,10 +424,6 @@
                 <i class="bx bxs-notification"></i>
               </li>
             </ul>
-
-            <nav class="filter__nav--pill">
-              <li class="filter__btn active" data-filter=".all">All</li>
-            </nav>
 
             <div class="listing__container">
               <div class="cards all exclusives">
@@ -631,6 +669,7 @@
                 </div>
               </div>
             </div>
+
             <nav class="listing__pagination">
               <ul class="pagination">
                 <li class="disabled">
