@@ -51,11 +51,17 @@ function activeLists() {
 slidingFilterItem.forEach((l) => l.addEventListener("click", activeLists));
 
 //Function to show sliderWidget when Clicking the startbooking button
+const mainSingle = document.getElementById("main__single");
 const startBooking = document.getElementById("start__booking");
+const startBookingMobile = document.getElementById("start__booking-mobile");
 const sliderWidget = document.querySelector(".sliding__widget");
 const closeBtn = document.getElementById("close-btn");
 
 startBooking.addEventListener("click", () => {
+  sliderWidget.classList.add("sliding__widget--active");
+});
+
+startBookingMobile.addEventListener("click", () => {
   sliderWidget.classList.add("sliding__widget--active");
 });
 
@@ -64,10 +70,10 @@ closeBtn.addEventListener("click", () => {
 });
 
 // CREATING ANIMATED CART BUTTON
-const cartButtons = document.querySelectorAll(".room-button"),
-  toast = document.querySelector(".toast"),
-  closeIcon = document.querySelector(".close"),
-  progress = document.querySelector(".progress");
+const cartButtons = document.querySelectorAll(".room-button");
+// toast = document.querySelector(".toast"),
+// closeIcon = document.querySelector(".close"),
+// progress = document.querySelector(".progress");
 
 cartButtons.forEach((button) => {
   button.addEventListener("click", cartClick);
@@ -94,3 +100,22 @@ function cartClick() {
     button.classList.remove("disabled");
   }, 5300);
 }
+
+// POPUP
+const popupContent = document.querySelector(".popup__content");
+const popupFilterImage = document.querySelector(".popup__filter--image");
+const popupFilterDescription = document.querySelector(
+  ".popup__filter--description"
+);
+
+// function for popupModeActivated
+function popupModeActivated() {
+  popupContent.classList.add("popup__activated");
+}
+
+function removePopupModeActivated() {
+  popupContent.classList.remove("popup__activated");
+}
+
+popupFilterDescription.addEventListener("click", popupModeActivated);
+popupFilterImage.addEventListener("click", removePopupModeActivated);
