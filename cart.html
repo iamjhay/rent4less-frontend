@@ -25,11 +25,35 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="asset/css/style.css" />
 
+    <!-- Calendly badge widget begin -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Calendly.initBadgeWidget({
+          url: "https://calendly.com/jhaydrille75/schedule-an-inspection?hide_gdpr_banner=1&primary_color=7ed56f",
+          text: "Schedule Inspection",
+          color: "#7ed56f",
+          textColor: "#ffffff",
+          branding: false,
+        });
+      };
+    </script>
+    <!-- Calendly badge widget end -->
+
     <title>Rent4Less</title>
   </head>
   <body>
+    <!-- =============== SECONDARY NAV ============= -->
     <div class="secondary__nav">
-      <nav class="secondary__navigation">
+      <nav class="nav secondary__navigation">
         <a href="/" class="secondary__nav--logo">
           <img
             src="asset/img/rent4less-logo-small.png"
@@ -37,23 +61,59 @@
           />
         </a>
 
-        <!-- <ul class="secondary__nav--lists">
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Home</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">About</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Faq</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Gallery</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Contact</a>
-          </li>
-        </ul> -->
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu--lists">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bxs-dashboard"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/city.html" class="nav__link">
+                  <i class="bx bx-search-alt"></i>
+                  <span>Search</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  <i class="bx bxs-news"></i>
+                  <span>Blogs</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="bx bxs-contact"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__theme" id="nav__theme">
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </div>
+
+            <i class="bx bx-x nav__close" id="nav-close"></i>
+          </div>
+        </div>
 
         <ul class="secondary__nav--lists">
           <li class="secondary__nav--list">
@@ -131,6 +191,7 @@
               </span>
             </a>
           </li>
+
           <li class="secondary__nav--list account">
             <span class="secondary__nav--icon"
               ><i class="bx bxs-user-circle"></i
@@ -159,6 +220,10 @@
               </ul>
             </div>
           </li>
+
+          <div class="sign">
+            <i class="bx bxs-widget color-light-black" id="nav-toggle"></i>
+          </div>
         </ul>
       </nav>
     </div>
@@ -398,7 +463,12 @@
               </div>
 
               <div class="cart__side-checkout-main-button">
-                <button class="order-button">Confirm Order</button>
+                <a
+                  href="checkout.html"
+                  class="order-button order-button-secondary"
+                  >Confirm Order</a
+                >
+                <a id="open-modal" class="order-button">Schedule Inspection</a>
               </div>
             </div>
           </div>
@@ -542,6 +612,22 @@
       </section>
     </div>
 
+    <div class="modal show-modal">
+      <div class="modal__container show-modal" id="modal-container">
+        <div class="modal__content">
+          <div class="modal__close close-modal" title="Close">
+            <i class="bx bx-x"></i>
+          </div>
+
+          <img
+            src="asset/img/property-inspection.png"
+            alt=""
+            class="modal__img"
+          />
+        </div>
+      </div>
+    </div>
+
     <!--==================== FOOTER ====================-->
     <footer class="footer section">
       <div class="container">
@@ -603,6 +689,9 @@
 
     <!--=============== SWIPER JS ===============-->
     <script src="asset/js/swiper-bundle.min.js"></script>
+
+    <!--=============== NAVIGATION JS ===============-->
+    <script src="asset/js/navigation.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="asset/js/cart.js"></script>

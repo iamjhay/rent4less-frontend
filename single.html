@@ -29,29 +29,6 @@
     <!--=============== LIGHTBOX CSS ===============-->
     <link rel="stylesheet" href="asset/css/lightbox.css" />
 
-    <!-- Calendly badge widget begin -->
-    <!-- <link
-      href="https://assets.calendly.com/assets/external/widget.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      type="text/javascript"
-      async
-    ></script>
-    <script type="text/javascript">
-      window.onload = function () {
-        Calendly.initBadgeWidget({
-          url: "https://calendly.com/jhaydrille75/schedule-an-inspection?hide_gdpr_banner=1&primary_color=7ed56f",
-          text: "Request a tour",
-          color: "#7ed56f",
-          textColor: "#ffffff",
-          branding: false,
-        });
-      };
-    </script> -->
-    <!-- Calendly badge widget end -->
-
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="asset/css/style.css" />
 
@@ -1367,7 +1344,7 @@
     <script>
       const spinnerWrapper = document.querySelector(".spinner-wrapper");
 
-      window.addEventListener("load", () => {
+      window.addEventListener("DOMContentLoaded", () => {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         document.body.scrollTop = 0; // For Safari
         spinnerWrapper.parentElement.removeChild(spinnerWrapper);
