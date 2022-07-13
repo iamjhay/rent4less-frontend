@@ -236,3 +236,30 @@ sr.reveal(`.destination__button`, {
 });
 sr.reveal(`.faq__images`, { origin: "left" });
 sr.reveal(`.faq__content`, { origin: "right" });
+
+//LAZY LOADING IMAGES
+const imgTargets = document.querySelectorAll("img[data-src]");
+console.log(imgTargets);
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  //Remove the data-src attribute to load the image
+  entry.target.src = entry.target.dataset.src;
+
+  //Remove the observer after image is loaded
+  entry.target.addEventListener("load", () => {
+    entry.target.classList.remove("lazy-img");
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+});
+
+imgTargets.forEach((img) => imgObserver.observe(img));

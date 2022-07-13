@@ -119,3 +119,15 @@ function removePopupModeActivated() {
 
 popupFilterDescription.addEventListener("click", popupModeActivated);
 popupFilterImage.addEventListener("click", removePopupModeActivated);
+
+//LAZY LOADING IMAGES
+const popupTargets = document.querySelectorAll(".popup__images");
+const popupImg = document.querySelector(".popup__images img");
+console.log(popupTargets);
+
+popupTargets.forEach((popuptarget) => {
+  //Remove the observer after image is loaded
+  popupImg.addEventListener("load", () => {
+    popuptarget.classList.remove("lazy");
+  });
+});

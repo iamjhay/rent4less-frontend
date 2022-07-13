@@ -14,6 +14,12 @@ const swiperFeatured = new Swiper(".featured__container", {
   },
 });
 
+/*=============== HIDE CALENDLY ON PAGE LOAD ===============*/
+window.addEventListener("load", (e) => {
+  const calendlyWidget = document.querySelector(".calendly-badge-widget");
+  calendlyWidget.classList.add("calendly-badge-hide");
+});
+
 /*=============== SHOW MODAL ===============*/
 const showModal = (openButton, modalContent) => {
   const openBtn = document.getElementById(openButton),
@@ -23,19 +29,35 @@ const showModal = (openButton, modalContent) => {
     openBtn.addEventListener("click", () => {
       const calendlyWidget = document.querySelector(".calendly-badge-widget");
       modalContainer.classList.add("show-modal");
-      calendlyWidget.classList.remove("remove-widget");
+      calendlyWidget.classList.remove("calendly-badge-hide");
     });
   }
 };
 showModal("open-modal", "modal-container");
 
-/*=============== close MODAL ===============*/
+/*=============== CLOSE MODAL ===============*/
 const closeBtn = document.querySelector(".close-modal");
-
 function closeModal() {
   const modalContainer = document.getElementById("modal-container");
   const calendlyWidget = document.querySelector(".calendly-badge-widget");
   modalContainer.classList.remove("show-modal");
-  calendlyWidget.classList.add("remove-widget");
+  calendlyWidget.classList.add("calendly-badge-hide");
 }
 closeBtn.addEventListener("click", closeModal);
+
+/*=============== COPY TEXT ===============*/
+const copyTextareaBtn = document.querySelector(".textareacopybtn");
+
+copyTextareaBtn.addEventListener("click", function (event) {
+  let copyTextarea = document.querySelector(".copytextarea");
+  copyTextarea.focus();
+  copyTextarea.select();
+
+  try {
+    const successful = document.execCommand("copy");
+    const msg = successful ? "successful" : "unsuccessful";
+    console.log("Copying text command was " + msg);
+  } catch (err) {
+    console.log("Oops, unable to copy");
+  }
+});
