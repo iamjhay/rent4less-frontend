@@ -89,16 +89,16 @@ function cartClick() {
 
   timer1 = setTimeout(() => {
     toast.classList.remove("active");
-  }, 5000); //1s = 1000 milliseconds
+  }, 2000); //1s = 1000 milliseconds
 
   timer2 = setTimeout(() => {
     progress.classList.remove("active");
-  }, 5300);
+  }, 2300);
 
   setTimeout(() => {
     button.classList.remove("clicked");
     button.classList.remove("disabled");
-  }, 5300);
+  }, 2300);
 }
 
 // POPUP

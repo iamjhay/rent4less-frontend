@@ -63,22 +63,24 @@
               <fieldset class="process__form-div">
                 <input
                   type="text"
+                  id="firstName"
                   class="process__form-input"
                   placeholder=" "
                   required
                 />
-                <label for="first name" class="process__form-label"
+                <label for="firstName" class="process__form-label"
                   >First Name</label
                 >
               </fieldset>
               <fieldset class="process__form-div">
                 <input
                   type="text"
+                  id="lastName"
                   class="process__form-input"
                   placeholder=" "
                   required
                 />
-                <label for="last name" class="process__form-label"
+                <label for="lastName" class="process__form-label"
                   >Last Name</label
                 >
               </fieldset>
@@ -87,6 +89,7 @@
               <fieldset class="process__form-div">
                 <input
                   type="email"
+                  id="email"
                   class="process__form-input"
                   placeholder=" "
                   required
@@ -97,7 +100,8 @@
               </fieldset>
               <fieldset class="process__form-div">
                 <input
-                  type="tel"
+                  type="number"
+                  id="tel"
                   class="process__form-input"
                   placeholder=" "
                   required
@@ -107,7 +111,8 @@
                 >
               </fieldset>
             </div>
-            <div class="process__form-container mb-2">
+            <!-- this is for radio buttons -->
+            <!-- <div class="process__form-container mb-2">
               <p class="process__form--radio-text">
                 Select which service you are looking at:
               </p>
@@ -141,10 +146,11 @@
                   </label>
                 </div>
               </div>
-            </div>
+            </div> -->
             <fieldset class="process__form-div">
               <input
                 type="text"
+                id="username"
                 class="process__form-input"
                 placeholder=" "
                 required
@@ -155,6 +161,7 @@
               <fieldset class="process__form-div">
                 <input
                   type="password"
+                  id="password"
                   class="process__form-input password"
                   placeholder=" "
                   required
@@ -167,11 +174,12 @@
               <fieldset class="process__form-div">
                 <input
                   type="password"
+                  id="confirmPassword"
                   class="process__form-input confirm-password"
                   placeholder=" "
                   required
                 />
-                <label for="password" class="process__form-label"
+                <label for="confirmPassword" class="process__form-label"
                   >Confirm Password</label
                 >
                 <i class="bx bxs-low-vision confirm-password-show"></i>

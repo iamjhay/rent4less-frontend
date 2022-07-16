@@ -68,16 +68,17 @@
               </li>
 
               <li class="nav__item">
-                <a href="#about" class="nav__link">
-                  <i class="bx bx-message-square-dots"></i>
-                  <span>About</span>
+                <a href="/cart.html" class="nav__link">
+                  <i class="bx bxs-cart"></i>
+                  <span>Cart</span>
+                  <span class="ml-auto cart-quantity">2</span>
                 </a>
               </li>
 
               <li class="nav__item">
-                <a href="/city.html" class="nav__link">
-                  <i class="bx bx-search-alt"></i>
-                  <span>Search</span>
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
                 </a>
               </li>
 
@@ -96,7 +97,34 @@
               </li>
             </ul>
 
+            <ul class="nav__list nav__list--active">
+              <i class="bx bxs-bell bx-tada"></i>
+              <li class="nav__item">
+                <a href="/login.html" class="nav__link">
+                  <i class="bx bxs-user-pin"></i>
+                  <span>Become a tenant</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="/login.html" class="nav__link">
+                  <i class="bx bx-building-house"></i>
+                  <span>List Your Property</span>
+                </a>
+              </li>
+            </ul>
+
             <div class="nav__theme" id="nav__theme">
+              <a href="#" class="user-profile">
+                <img
+                  src="asset/img/realtor-1.jpeg"
+                  class="user-profile-img"
+                  alt="user"
+                />
+                <div class="user-profile-title">
+                  <h5>welcome back!</h5>
+                  <p>Johnny</p>
+                </div>
+              </a>
               <i class="bx bx-moon change-theme" id="theme-button"></i>
             </div>
 
@@ -105,18 +133,19 @@
         </div>
 
         <ul class="secondary__nav--lists">
-          <li class="secondary__nav--list">
+          <!-- <li class="secondary__nav--list">
             <a
               href="https://wa.me/message/DPX4GUMWGJ7SC1"
               class="skype-link"
               target="_blank"
             >
               <span class="whatsapp">
-                <!-- whatsapp-icon /> -->
+                whatsapp-icon />
                 <i class="bx bxl-whatsapp"></i>
               </span>
             </a>
-          </li>
+          </li> -->
+
           <li class="secondary__nav--list dropdown">
             <div>
               <div class="secondary__nav--list contact">
@@ -131,38 +160,9 @@
                   <ul class="secondary__nav--lists dropdown__lists">
                     <li class="secondary__nav--list">
                       <a
-                        href="https://wa.me/message/DPX4GUMWGJ7SC1"
-                        class="secondary__nav--link dropdown__item"
-                        ><span class="whatsapp">
-                          <i class="bx bxl-whatsapp"></i></span
-                        >+234 8121825297</a
-                      >
-                    </li>
-                    <li class="secondary__nav--list">
-                      <a
                         href="tel:+234 812 182 5297"
                         class="secondary__nav--link dropdown__item"
                         ><span class="secondary__nav--icon"
-                          ><i class="bx bxs-phone"></i></span
-                        >+234 8121825297</a
-                      >
-                    </li>
-                    <li class="secondary__nav--list">
-                      <a
-                        href="tel:+234 812 182 5297"
-                        class="secondary__nav--link dropdown__item"
-                      >
-                        <span class="secondary__nav--icon"
-                          ><i class="bx bxs-phone"></i></span
-                        >+234 8121825297</a
-                      >
-                    </li>
-                    <li class="secondary__nav--list">
-                      <a
-                        href="tel:+234 812 182 5297"
-                        class="secondary__nav--link dropdown__item"
-                      >
-                        <span class="secondary__nav--icon"
                           ><i class="bx bxs-phone"></i></span
                         >+234 8121825297</a
                       >
@@ -312,7 +312,9 @@
               <span>166 welling street, collingwood, vic 3066</span>
             </div>
             <div class="price">
-              <h3 class="price__data text-uppercase">₦13.000/Mo</h3>
+              <h3 class="price__data text-uppercase">
+                &#8358;12k - &#8358;5M /mo
+              </h3>
             </div>
           </div>
           <div class="section single__description">
@@ -509,21 +511,16 @@
             <div class="single__sidebar--content single__sidebar--header">
               <div class="single__sidebar--header--title">
                 <figure>
-                  <img
-                    src="asset/img/Alpha-Mead-Group-Logo.png"
-                    alt="agent-1"
-                  />
+                  <i class="bx bxs-phone-call"></i>
                 </figure>
               </div>
               <div class="single__sidebar--header--agent-info">
-                <h4 class="text-capitalize letter-spacing-1">Rent4Less</h4>
+                <p class="text-capitalize letter-spacing-1">
+                  Have any issues with your booking? Call
+                </p>
                 <div>
                   <i class="bx bx-phone-call"></i>
-                  <a href="#">+234 813-813-813</a>
-                </div>
-                <div>
-                  <i class="bx bx-envelope"></i>
-                  <a href="#">info@rent4less.com</a>
+                  <a href="#">0700-25742-6323</a>
                 </div>
               </div>
             </div>
@@ -543,21 +540,6 @@
                 <a id="start__booking" class="text-capitalize">
                   continue Booking
                 </a>
-              </div>
-
-              <div class="single__sidebar--subheader">
-                <h3 class="letter-spacing-2">Your Choices</h3>
-                <ul>
-                  <li class="text-uppercase letter-spacing-1">
-                    <i class="bx bxs-badge-check"></i> flexible to reschedule
-                  </li>
-                  <li class="text-uppercase letter-spacing-1">
-                    <i class="bx bxs-badge-check"></i> free cancellation
-                  </li>
-                  <li class="text-uppercase letter-spacing-1">
-                    <i class="bx bxs-badge-check"></i> No Prepayment Needed
-                  </li>
-                </ul>
               </div>
 
               <!-- End here -->
@@ -584,6 +566,173 @@
         </div>
       </div>
     </main>
+
+    <!--==================== HOT ESTATE DEALS ====================-->
+    <section class="city__estate section container">
+      <span class="section__subtitle"
+        >A selection of the best Estate deals, only available today</span
+      >
+      <h2 class="section__title">Top Estate Deals <span>.</span></h2>
+
+      <div class="city__estate--wrapper">
+        <a href="/" class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a href="/" class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
 
     <!-- =============== SLIDING WIDGET ============= -->
     <div class="sliding__widget" id="showBookings">
@@ -617,10 +766,9 @@
             >Search Apartment</span
           >
         </div>
-        <!-- SLIDING WIDGET FILTER FOR SEARCH ROOMS & APT -->
+        <!-- END SLIDING WIDGET FILTER FOR SEARCH ROOMS & APT -->
 
-        <!-- SLIDING WIDGET CONTENT-->
-
+        <!-- SLIDING WIDGET CONTAINER-->
         <div class="sliding__widget--container">
           <!-- SLIDING WIDGET SHARED ROOMS -->
           <div
@@ -634,6 +782,14 @@
                 <div class="room__type--content-main">
                   <a href="#popup" class="room-img">
                     <img src="asset/img/popular1.jpg" alt="single-img" />
+                    <div class="card__discount">
+                      <div>
+                        <p class="estate-discount text-uppercase">
+                          <span>13%</span>off
+                        </p>
+                        <div class="slant"></div>
+                      </div>
+                    </div>
                   </a>
                   <div class="room__details">
                     <h5 class="text-capitalize mb-5">
@@ -1160,6 +1316,7 @@
           </div>
           <!-- END SLIDING WIDGET EXCLUSIVE APT -->
         </div>
+        <!-- END SLIDING WIDGET CONTAINER-->
       </div>
       <i class="bx bx-x close-btn" id="close-btn"></i>
       <!-- END SLIDING SIDEBAR -->

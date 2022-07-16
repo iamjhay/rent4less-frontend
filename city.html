@@ -69,16 +69,17 @@
               </li>
 
               <li class="nav__item">
-                <a href="#about" class="nav__link">
-                  <i class="bx bx-message-square-dots"></i>
-                  <span>About</span>
+                <a href="/cart.html" class="nav__link">
+                  <i class="bx bxs-cart"></i>
+                  <span>Cart</span>
+                  <span class="ml-auto cart-quantity">2</span>
                 </a>
               </li>
 
               <li class="nav__item">
-                <a href="/city.html" class="nav__link">
-                  <i class="bx bx-search-alt"></i>
-                  <span>Search</span>
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
                 </a>
               </li>
 
@@ -97,7 +98,34 @@
               </li>
             </ul>
 
+            <ul class="nav__list nav__list--active">
+              <i class="bx bxs-bell bx-tada"></i>
+              <li class="nav__item">
+                <a href="/login.html" class="nav__link">
+                  <i class="bx bxs-user-pin"></i>
+                  <span>Become a tenant</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="/login.html" class="nav__link">
+                  <i class="bx bx-building-house"></i>
+                  <span>List Your Property</span>
+                </a>
+              </li>
+            </ul>
+
             <div class="nav__theme" id="nav__theme">
+              <a href="#" class="user-profile">
+                <img
+                  src="asset/img/realtor-1.jpeg"
+                  class="user-profile-img"
+                  alt="user"
+                />
+                <div class="user-profile-title">
+                  <h5>welcome back!</h5>
+                  <p>Johnny</p>
+                </div>
+              </a>
               <i class="bx bx-moon change-theme" id="theme-button"></i>
             </div>
 
@@ -109,8 +137,12 @@
 
         <div class="sign">
           <div class="sign-content">
-            <a href="/signup.html" class="nav__button">Become A landlord</a>
-            <a href="/signup.html" class="nav__button">Become A Tenant</a>
+            <a href="/signup.html" class="nav__button text-capitalize"
+              >Become A Tenant</a
+            >
+            <a href="/signup.html" class="nav__button text-capitalize"
+              >List You Property</a
+            >
           </div>
           <i class="bx bxs-widget color-light-black" id="nav-toggle"></i>
         </div>
@@ -289,7 +321,7 @@
       <h2 class="section__title">Cities <span>.</span></h2>
 
       <div class="city__list--wrapper">
-        <a href="" class="city__list--wrapper-article">
+        <a href="/listing.html" class="city__list--wrapper-article">
           <h4>Property in Ikeja</h4>
           <p>325 properties</p>
         </a>

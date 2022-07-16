@@ -32,17 +32,17 @@ const BrowserResize = () => {
 window.addEventListener("resize", BrowserResize);
 window.addEventListener("DOMContentLoaded", BrowserResize);
 
-let mixerProducts = mixitup(".listing__container", {
-  selectors: {
-    target: ".cards",
-  },
-  animation: {
-    duration: 300,
-  },
-});
+// let mixerProducts = mixitup(".listing__container", {
+//   selectors: {
+//     target: ".cards",
+//   },
+//   animation: {
+//     duration: 300,
+//   },
+// });
 
-// Default Filter Products
-mixerProducts.filter("all");
+// // Default Filter Products
+// mixerProducts.filter("all");
 
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
@@ -80,11 +80,11 @@ if (navTheme) {
 
       timer1 = setTimeout(() => {
         toast.classList.remove("active");
-      }, 5000); //1s = 1000 milliseconds
+      }, 2000); //1s = 1000 milliseconds
 
       timer2 = setTimeout(() => {
         progress.classList.remove("active");
-      }, 5300);
+      }, 2300);
     } else {
       let timer1, timer2;
       Message.textContent = "Light Mode Activated";
@@ -93,11 +93,11 @@ if (navTheme) {
 
       timer1 = setTimeout(() => {
         toast.classList.remove("active");
-      }, 5000); //1s = 1000 milliseconds
+      }, 2000); //1s = 1000 milliseconds
 
       timer2 = setTimeout(() => {
         progress.classList.remove("active");
-      }, 5300);
+      }, 2300);
     }
   });
 }

@@ -46,18 +46,44 @@ function closeModal() {
 closeBtn.addEventListener("click", closeModal);
 
 /*=============== COPY TEXT ===============*/
+
 const copyTextareaBtn = document.querySelector(".textareacopybtn");
+const instructionalText = document.querySelector(".instructional-text");
 
 copyTextareaBtn.addEventListener("click", function (event) {
   let copyTextarea = document.querySelector(".copytextarea");
   copyTextarea.focus();
   copyTextarea.select();
+  instructionalText.textContent =
+    "Copied! Now you can schedule a meeting by clicking the button ☝️.";
+  instructionalText.style.color = "green";
+  instructionalText.style.backgroundColor = `rgba(106, 186, 80, 0.10)`;
 
   try {
     const successful = document.execCommand("copy");
     const msg = successful ? "successful" : "unsuccessful";
-    console.log("Copying text command was " + msg);
+    Message.textContent = `Copy ${msg}`;
+    toast.classList.add("active");
+    progress.classList.add("active");
+
+    timer1 = setTimeout(() => {
+      toast.classList.remove("active");
+    }, 2000); //1s = 1000 milliseconds
+
+    timer2 = setTimeout(() => {
+      progress.classList.remove("active");
+    }, 2300);
   } catch (err) {
-    console.log("Oops, unable to copy");
+    Message.textContent = `Oops, unable to copy`;
+    toast.classList.add("active");
+    progress.classList.add("active");
+
+    timer1 = setTimeout(() => {
+      toast.classList.remove("active");
+    }, 2000); //1s = 1000 milliseconds
+
+    timer2 = setTimeout(() => {
+      progress.classList.remove("active");
+    }, 2300);
   }
 });

@@ -76,16 +76,17 @@
               </li>
 
               <li class="nav__item">
-                <a href="#about" class="nav__link">
-                  <i class="bx bx-message-square-dots"></i>
-                  <span>About</span>
+                <a href="/cart.html" class="nav__link">
+                  <i class="bx bxs-cart"></i>
+                  <span>Cart</span>
+                  <span class="ml-auto cart-quantity">2</span>
                 </a>
               </li>
 
               <li class="nav__item">
-                <a href="/city.html" class="nav__link">
-                  <i class="bx bx-search-alt"></i>
-                  <span>Search</span>
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
                 </a>
               </li>
 
@@ -104,7 +105,34 @@
               </li>
             </ul>
 
+            <ul class="nav__list nav__list--active">
+              <i class="bx bxs-bell bx-tada"></i>
+              <li class="nav__item">
+                <a href="/signup.html" class="nav__link">
+                  <i class="bx bxs-user-pin"></i>
+                  <span>Become a tenant</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="/landlord.html" class="nav__link">
+                  <i class="bx bx-building-house"></i>
+                  <span>List Your Property</span>
+                </a>
+              </li>
+            </ul>
+
             <div class="nav__theme" id="nav__theme">
+              <a href="#" class="user-profile">
+                <img
+                  src="asset/img/realtor-1.jpeg"
+                  class="user-profile-img"
+                  alt="user"
+                />
+                <div class="user-profile-title">
+                  <h5>welcome back!</h5>
+                  <p>Johnny</p>
+                </div>
+              </a>
               <i class="bx bx-moon change-theme" id="theme-button"></i>
             </div>
 
@@ -116,8 +144,12 @@
 
         <div class="sign">
           <div class="sign-content">
-            <a href="/signup.html" class="nav__button">Become A landlord</a>
-            <a href="/signup.html" class="nav__button">Become A Tenant</a>
+            <a href="/signup.html" class="nav__button text-capitalize"
+              >Become A Tenant</a
+            >
+            <a href="/landlord.html" class="nav__button text-capitalize"
+              >List your property</a
+            >
           </div>
           <i class="bx bxs-widget" id="nav-toggle"></i>
         </div>
@@ -149,22 +181,26 @@
           </form>
 
           <div class="header__value">
-            <img src="asset/img/realtor-1.jpeg" alt="realtors" />
-            <img src="asset/img/realtor-2.jpeg" alt="realtors" />
-            <img src="asset/img/realtor-3.jpeg" alt="realtors" />
-            <img src="asset/img/realtor-3.jpeg" alt="realtors" />
-            <img src="asset/img/realtor-3.jpeg" alt="realtors" />
-            <img src="asset/img/realtor-4.jpg" alt="realtors" />
-            <img src="asset/img/realtor-5.jpg" alt="realtors" />
+            <img src="asset/img/face-6.jpg" alt="realtors" />
+            <img src="asset/img/face-7.jpg" alt="realtors" />
+            <img src="asset/img/face-3.jpg" alt="realtors" />
+            <img src="asset/img/face-5.jpg" alt="realtors" />
+            <img src="asset/img/face-2.jpg" alt="realtors" />
+            <img src="asset/img/face-4.jpg" alt="realtors" />
+            <img src="asset/img/face-1.jpg" alt="realtors" />
             <span class="header__value-description">+25K</span>
           </div>
 
           <div class="header__followers">
-            <p>25,000+ people already joined the rent4less rental platform.</p>
-            <a href="/signup.html">Get started today!</a>
-            <a href="/signup.html"
-              ><i class="bx bxl-youtube"></i> Watch Video</a
-            >
+            <p>Join over 100+ Subscribers on Rent4Less Today.</p>
+            <div class="header__followers--link">
+              <!-- <a href="/signup.html" class="text-capitalize secondary-button">
+                <span><i class="bx bxl-youtube"></i> Watch Video</span>
+              </a> -->
+              <a href="/signup.html" class="text-capitalize"
+                >Get started today!</a
+              >
+            </div>
           </div>
         </div>
 
@@ -235,7 +271,11 @@
                 <li>No Commission Payment</li>
                 <li>Just Pay & Pack In</li>
               </div>
+              <div>
+                <a href="/signup.html" class="btn button">Be a Tenant</a>
+              </div>
             </div>
+
             <div class="deal__content landlords">
               <h3>Sit back. Relax. Let Your Money do the Work</h3>
               <p>
@@ -245,13 +285,11 @@
                 rest. From getting tenants to verifying their profiles and
                 maintaining your property, we’ve got you covered.
               </p>
-              <div class="lists"></div>
+              <div>
+                <a href="/landlord.html" class="btn button">Get Started</a>
+              </div>
             </div>
           </div>
-
-          <!-- start tenants / landlord button -->
-          <a href="/signup.html" class="btn button">Get started</a>
-          <!-- start tenants / landlord button -->
         </div>
       </div>
 
