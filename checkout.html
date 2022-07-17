@@ -22,6 +22,25 @@
     <title>Rent4Less</title>
   </head>
   <body>
+    <!--==================== SPINNER ====================-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- ======= TOAST ANIMATION ====== -->
+    <div class="toast">
+      <div class="toast-content">
+        <i class="bx bxs-check-circle check"></i>
+        <div class="message">
+          <span class="message-text text-1"></span>
+        </div>
+      </div>
+      <i class="bx bx-x close"></i>
+
+      <div class="progress"></div>
+    </div>
+    <!-- ======= END TOAST ANIMATION ====== -->
+
     <!--==================== NAVBAR ====================-->
     <div class="navbar scroll-navbar" id="navbar">
       <nav class="nav container">
@@ -619,6 +638,16 @@
       </main>
     </div>
 
+    <!-- ================ INLINE SCRIPT =============== -->
+    <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script>
     <script src="asset/js/navigation.js"></script>
     <script src="asset/js/checkout.js"></script>
   </body>
