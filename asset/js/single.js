@@ -52,17 +52,14 @@ slidingFilterItem.forEach((l) => l.addEventListener("click", activeLists));
 
 //Function to show sliderWidget when Clicking the startbooking button
 const mainSingle = document.getElementById("main__single");
-const startBooking = document.getElementById("start__booking");
-const startBookingMobile = document.getElementById("start__booking-mobile");
+const startBookings = document.querySelectorAll(".start__booking");
 const sliderWidget = document.querySelector(".sliding__widget");
 const closeBtn = document.getElementById("close-btn");
 
-startBooking.addEventListener("click", () => {
-  sliderWidget.classList.add("sliding__widget--active");
-});
-
-startBookingMobile.addEventListener("click", () => {
-  sliderWidget.classList.add("sliding__widget--active");
+startBookings.forEach((startBooking) => {
+  startBooking.addEventListener("click", () => {
+    sliderWidget.classList.add("sliding__widget--active");
+  });
 });
 
 closeBtn.addEventListener("click", () => {
@@ -123,7 +120,6 @@ popupFilterImage.addEventListener("click", removePopupModeActivated);
 //LAZY LOADING IMAGES
 const popupTargets = document.querySelectorAll(".popup__images");
 const popupImg = document.querySelector(".popup__images img");
-console.log(popupTargets);
 
 popupTargets.forEach((popuptarget) => {
   //Remove the observer after image is loaded
@@ -131,3 +127,20 @@ popupTargets.forEach((popuptarget) => {
     popuptarget.classList.remove("lazy");
   });
 });
+
+let cartQantity = document.querySelector(".cart-quantity");
+let bookingLabel = document.getElementById("start__booking-mobile");
+const containsItem = document.querySelector(".cart-items");
+const noItem = document.querySelector(".no-cart-items");
+
+if (cartQantity.innerText == 0) {
+  noItem.style.display = "block";
+  containsItem.style.display = "none";
+  bookingLabel.innerText = "start booking";
+}
+
+if (cartQantity.innerText > 0) {
+  noItem.style.display = "none";
+  containsItem.style.display = "block";
+  bookingLabel.innerText = "Continue booking";
+}

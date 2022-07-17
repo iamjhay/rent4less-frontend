@@ -20,9 +20,6 @@
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
 
-    <!--=============== LIGHTBOX CSS ===============-->
-    <link rel="stylesheet" href="asset/css/lightbox.css" />
-
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="asset/css/style.css" />
 
@@ -111,42 +108,6 @@
                 >
               </fieldset>
             </div>
-            <!-- this is for radio buttons -->
-            <!-- <div class="process__form-container mb-2">
-              <p class="process__form--radio-text">
-                Select which service you are looking at:
-              </p>
-
-              <div class="process__form--radio-group-container">
-                <div class="process__form--radio-group">
-                  <input
-                    type="radio"
-                    checked
-                    class="process__form--radio-input"
-                    id="tenant"
-                    name="size"
-                    required
-                  />
-                  <label for="tenant" class="process__form--radio-label">
-                    <span class="process__form--radio-button"></span>
-                    Tenant
-                  </label>
-                </div>
-                <div class="process__form--radio-group">
-                  <input
-                    type="radio"
-                    class="process__form--radio-input"
-                    id="Landlord"
-                    name="size"
-                    required
-                  />
-                  <label for="Landlord" class="process__form--radio-label">
-                    <span class="process__form--radio-button"></span>
-                    Landlord
-                  </label>
-                </div>
-              </div>
-            </div> -->
             <fieldset class="process__form-div">
               <input
                 type="text"
@@ -204,32 +165,6 @@
     <!--================ INLINE SCRIPT ===============-->
     <script>
       const spinnerWrapper = document.querySelector(".spinner-wrapper");
-      const showPassword = document.querySelector(".password-show");
-      const showConfirmPassword = document.querySelector(
-        ".confirm-password-show"
-      );
-      const passwordInput = document.querySelector(".password");
-      const ConfirmpasswordInput = document.querySelector(".confirm-password");
-
-      showPassword.addEventListener("click", () => {
-        if (passwordInput.type === "password") {
-          passwordInput.type = "text";
-          showPassword.classList.replace("bxs-low-vision", "bxs-show");
-        } else {
-          passwordInput.type = "password";
-          showPassword.classList.replace("bxs-show", "bxs-low-vision");
-        }
-      });
-
-      showConfirmPassword.addEventListener("click", () => {
-        if (ConfirmpasswordInput.type === "password") {
-          ConfirmpasswordInput.type = "text";
-          showConfirmPassword.classList.replace("bxs-low-vision", "bxs-show");
-        } else {
-          ConfirmpasswordInput.type = "password";
-          showConfirmPassword.classList.replace("bxs-show", "bxs-low-vision");
-        }
-      });
 
       window.addEventListener("DOMContentLoaded", () => {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -237,5 +172,7 @@
         spinnerWrapper.parentElement.removeChild(spinnerWrapper);
       });
     </script>
+
+    <script src="asset/js/signup.js"></script>
   </body>
 </html>

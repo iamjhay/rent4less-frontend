@@ -27,16 +27,121 @@
     <title>Rent4Less</title>
   </head>
   <body>
-    <div class="checkout">
-      <main class="main">
-        <div class="section cart__header">
-          <a href="/cart.html" class="mb-3 checkout__button">
-            <i class="bx bx-chevron-left"></i> <span>Back to Cart</span>
-          </a>
+    <!--==================== NAVBAR ====================-->
+    <div class="navbar scroll-navbar" id="navbar">
+      <nav class="nav container">
+        <a href="/" class="nav__logo">
+          <img
+            src="asset/img/rent4less-logo-small.png"
+            alt="rent4less-logo-small"
+          />
+        </a>
 
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu--lists">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bxs-dashboard"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/cart.html" class="nav__link">
+                  <i class="bx bxs-cart"></i>
+                  <span>Cart</span>
+                  <span class="ml-auto cart-quantity">2</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  <i class="bx bxs-news"></i>
+                  <span>Blogs</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="bx bxs-contact"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav__list nav__list--active">
+              <i class="bx bxs-bell bx-tada"></i>
+              <li class="nav__item">
+                <a href="/signup.html" class="nav__link">
+                  <i class="bx bxs-user-pin"></i>
+                  <span>Become a tenant</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="/landlord.html" class="nav__link">
+                  <i class="bx bx-building-house"></i>
+                  <span>List Your Property</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__theme" id="nav__theme">
+              <a href="#" class="user-profile">
+                <img
+                  src="asset/img/realtor-1.jpeg"
+                  class="user-profile-img"
+                  alt="user"
+                />
+                <div class="user-profile-title">
+                  <h5>welcome back!</h5>
+                  <p>Johnny</p>
+                </div>
+              </a>
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </div>
+
+            <i class="bx bx-x nav__close" id="nav-close"></i>
+          </div>
+        </div>
+
+        <!-- Theme Change Button -->
+
+        <div class="sign">
+          <div class="sign-content">
+            <a href="/signup.html" class="nav__button text-capitalize"
+              >Become A Tenant</a
+            >
+            <a href="/landlord.html" class="nav__button text-capitalize"
+              >List your property</a
+            >
+          </div>
+          <i class="bx bxs-widget" id="nav-toggle"></i>
+        </div>
+      </nav>
+    </div>
+
+    <!--==================== CHECKOUT ====================-->
+    <div class="checkout">
+      <main class="main main__cart">
+        <div class="section cart__header">
           <!-- this is if you have any reservation in your cart -->
           <div class="cart__header-content">
-            <h2>Proceed to reserve your Booking</h2>
+            <h2>You are a few clicks away...</h2>
             <p>
               By placing this order, you agree to our company
               <a href="#" class="letter-spacing-1">Privacy Policy</a> and
@@ -44,123 +149,425 @@
             </p>
           </div>
         </div>
+
         <div class="main__wrapper">
-          <!-- the style for this page can be foun in cart.scss -->
+          <!-- the style for this page can be found in cart.scss -->
 
+          <!-- the booking information form -->
           <div class="checkout__main section">
-            <h2 class="checkout__main-title text-capitalize">
-              Booking information
-            </h2>
-            <form class="checkout__form">
-              <h4 class="checkout__form-title">
-                <i class="bx bx-radio-circle-marked"></i> Add New Address
-              </h4>
-
-              <div class="checkout__form-container">
-                <div class="checkout__form-div">
-                  <input
-                    type="text"
-                    class="checkout__form-input"
-                    placeholder=" "
-                    required
-                  />
-                  <label for="first name" class="checkout__form-label"
-                    >First Name</label
-                  >
-                </div>
-                <div class="checkout__form-div">
-                  <input
-                    type="text"
-                    class="checkout__form-input"
-                    placeholder=" "
-                    required
-                  />
-                  <label for="last name" class="checkout__form-label"
-                    >Last Name</label
-                  >
-                </div>
-              </div>
-
-              <div class="checkout__form-div">
-                <input
-                  type="email"
-                  class="checkout__form-input"
-                  placeholder=" "
-                  required
-                />
-                <label for="email" class="checkout__form-label"
-                  >Email Address</label
-                >
-              </div>
-
-              <div class="checkout__form-div">
-                <input
-                  type="text"
-                  class="checkout__form-input"
-                  placeholder=" "
-                  required
-                />
-                <label for="address" class="checkout__form-label"
-                  >Street Address</label
-                >
-              </div>
-
-              <div class="checkout__form-container">
-                <div class="checkout__form-div">
-                  <input
-                    type="text"
-                    class="checkout__form-input"
-                    placeholder=" "
-                    required
-                  />
-                  <label for="city" class="checkout__form-label">City</label>
-                </div>
-                <div class="checkout__form-div">
-                  <input
-                    type="text"
-                    class="checkout__form-input"
-                    placeholder=" "
-                    required
-                  />
-                  <label for="state" class="checkout__form-label">state</label>
-                </div>
-                <div class="checkout__form-div">
-                  <input
-                    type="number"
-                    class="checkout__form-input"
-                    placeholder=" "
-                  />
-                  <label for="zip code" class="checkout__form-label"
-                    >Postal Code</label
-                  >
-                </div>
-              </div>
-            </form>
-
-            <div class="checkout__main-select">
-              <h4 class="checkout__form-title">
-                <i class="bx bx-radio-circle-marked"></i> Payment Mode
-              </h4>
-
-              <div class="checkout__main-select-container">
-                <button>1 month</button>
-                <button>Quarterly</button>
-                <button>6 months</button>
-                <button>Annually</button>
-              </div>
+            <div class="checkout-info">
+              <h2 class="checkout__main-title text-capitalize">
+                Booking information
+              </h2>
+              <p class="mb-3 checkout__main-subtitle">
+                Kindly provide us with the below information to complete your
+                booking.
+              </p>
             </div>
+
+            <form action="">
+              <div class="checkout__main checkout__mask">
+                <div class="process__form">
+                  <h4 class="process__form-title">
+                    <i class="bx bx-radio-circle-marked"></i> Personal
+                    Information
+                  </h4>
+
+                  <div class="process__form-container">
+                    <div class="process__form-div">
+                      <input
+                        type="text"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="first name" class="process__form-label"
+                        >First Name</label
+                      >
+                    </div>
+                    <div class="process__form-div">
+                      <input
+                        type="text"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="last name" class="process__form-label"
+                        >Last Name</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="process__form-container">
+                    <div class="process__form-div">
+                      <input
+                        type="email"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="email" class="process__form-label"
+                        >Email Address</label
+                      >
+                    </div>
+
+                    <div class="process__form-div">
+                      <input
+                        type="tel"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="tel" class="process__form-label"
+                        >Phone Number</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="process__form-div">
+                    <input
+                      type="text"
+                      class="process__form-input"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="address" class="process__form-label"
+                      >Street Address</label
+                    >
+                  </div>
+
+                  <div class="process__form-container">
+                    <div class="process__form-div">
+                      <input
+                        type="text"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="city" class="process__form-label">City</label>
+                    </div>
+                    <div class="process__form-div">
+                      <input
+                        type="text"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="state" class="process__form-label"
+                        >state</label
+                      >
+                    </div>
+                    <div class="process__form-div">
+                      <input
+                        type="number"
+                        class="process__form-input"
+                        placeholder=" "
+                      />
+                      <label for="zip code" class="process__form-label"
+                        >Postal Code</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="process__form-container">
+                    <div class="process__form-container mb-2">
+                      <p class="process__form--radio-text">
+                        Valid Means of Identification:
+                      </p>
+
+                      <div class="process__form--radio-group-container">
+                        <div class="process__form--radio-group">
+                          <input
+                            type="radio"
+                            checked
+                            class="process__form--radio-input"
+                            id="bvn"
+                            name="size"
+                            required
+                          />
+                          <label for="bvn" class="process__form--radio-label">
+                            <span class="process__form--radio-button"></span>
+                            BVN
+                          </label>
+                        </div>
+                        <div class="process__form--radio-group">
+                          <input
+                            type="radio"
+                            class="process__form--radio-input"
+                            id="nin"
+                            name="size"
+                            required
+                          />
+                          <label for="nin" class="process__form--radio-label">
+                            <span class="process__form--radio-button"></span>
+                            NIN
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="process__form-div">
+                      <input
+                        type="number"
+                        id="verify"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label
+                        for="verify"
+                        id="verification"
+                        class="process__form-label"
+                        >Enter BVN Number</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout__main checkout__mask">
+                <div class="process__form">
+                  <h4 class="process__form-title">
+                    <i class="bx bx-radio-circle-marked"></i> Employer
+                    Information
+                  </h4>
+
+                  <div class="process__form-container">
+                    <div class="process__form-div">
+                      <input
+                        type="text"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="first name" class="process__form-label"
+                        >Name of Employer</label
+                      >
+                    </div>
+                    <div class="process__form-div">
+                      <input
+                        type="text"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="last name" class="process__form-label"
+                        >Employer Address</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="process__form-container">
+                    <div class="process__form-div">
+                      <input
+                        type="email"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="email" class="process__form-label"
+                        >Email Address</label
+                      >
+                    </div>
+                    <div class="process__form-div">
+                      <input
+                        type="tel"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="phone" class="process__form-label"
+                        >Phone Number</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout__main checkout__mask">
+                <div class="process__form">
+                  <h4 class="process__form-title">
+                    <i class="bx bx-radio-circle-marked"></i> Guarantor
+                    Information
+                  </h4>
+
+                  <div class="process__form-container">
+                    <div class="process__form-div">
+                      <input
+                        type="text"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="first name" class="process__form-label"
+                        >Name of Guarantor</label
+                      >
+                    </div>
+                    <div class="process__form-div">
+                      <input
+                        type="text"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="last name" class="process__form-label"
+                        >Occupation</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="process__form-div">
+                    <input
+                      type="text"
+                      class="process__form-input"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="text" class="process__form-label"
+                      >Guarantor Address</label
+                    >
+                  </div>
+
+                  <div class="process__form-container">
+                    <div class="process__form-div">
+                      <input
+                        type="email"
+                        class="process__form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label for="email" class="process__form-label"
+                        >Email Address</label
+                      >
+                    </div>
+                    <div class="process__form-div">
+                      <input
+                        type="number"
+                        class="process__form-input"
+                        placeholder=" "
+                      />
+                      <label for="number" class="process__form-label"
+                        >Phone number</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout__main-select checkout__mask">
+                <div class="process__form">
+                  <h4 class="process__form-title">
+                    <i class="bx bx-radio-circle-marked"></i> Payment Mode
+                  </h4>
+
+                  <div class="process__form-select">
+                    <button
+                      class="process__form-select--button"
+                      id="select-button"
+                    >
+                      <span id="select-label"
+                        >Please Select a Payment Method</span
+                      >
+                      <div class="select-arrow"></div>
+                    </button>
+                    <div
+                      id="select-dropdown"
+                      class="process__form-select--dropdown dropdown--hidden"
+                    >
+                      <fieldset class="process__form-div--options">
+                        <label for="monthly" class="select-item">Monthly</label>
+                        <input
+                          type="radio"
+                          name="payment-mode"
+                          value="1"
+                          id="monthly"
+                          class="process__form-option"
+                        />
+                      </fieldset>
+
+                      <fieldset class="process__form-div--options">
+                        <label for="quaterly" class="select-item"
+                          >Quaterly</label
+                        >
+                        <input
+                          type="radio"
+                          name="payment-mode"
+                          value="3"
+                          id="quaterly"
+                          class="process__form-option"
+                        />
+                      </fieldset>
+
+                      <fieldset class="process__form-div--options">
+                        <label for="biannually" class="select-item"
+                          >Biannually</label
+                        >
+                        <input
+                          type="radio"
+                          name="payment-mode"
+                          value="6"
+                          id="biannually"
+                          class="process__form-option"
+                        />
+                      </fieldset>
+
+                      <fieldset class="process__form-div--options">
+                        <label for="annually" class="select-item"
+                          >Annually</label
+                        >
+                        <input
+                          type="radio"
+                          name="payment-mode"
+                          value="12"
+                          id="annually"
+                          class="process__form-option"
+                        />
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout__main-select checkout__mask">
+                <div class="process__form">
+                  <h4 class="process__form-title">
+                    <i class="bx bx-radio-circle-marked"></i> Additional
+                    Occupants
+                  </h4>
+                  <fieldset class="process__form-div--checkbox">
+                    <input
+                      type="checkbox"
+                      name="additional-occupant"
+                      value="1"
+                      id="occupant"
+                      class="process__form-checkbox"
+                    />
+                    <label for="occupant" class="process__form-checkbox-label"
+                      >Tick here if there will be additional people living in
+                      the property who WILL NOT be applying as a joint or
+                      invited applicant to be on the lease
+                    </label>
+                  </fieldset>
+                  <span class="example-label mt-2">e.g Children</span>
+                </div>
+              </div>
+
+              <button id="submitButton" class="checkout__main-button">
+                Proceed to Checkout
+              </button>
+            </form>
           </div>
 
-          <div class="cart__side">
+          <!-- The Billing Summary -->
+          <div class="cart__side checkout__side">
             <div class="cart__side-checkout">
               <p class="cart__side-checkout-title text-capitalize">
-                Order Summary
+                Billing Summary
               </p>
               <div class="cart__side-checkout-main">
                 <div
                   class="cart__side-checkout-main-content justify-between pb-0"
                 >
-                  <span class="text-capitalize">subtotal :</span>
+                  <span class="text-capitalize">Rent :</span>
                   <p class="cart__price-actual">
                     <sup>&#8358;</sup>
                     15,750
@@ -170,6 +577,15 @@
                   class="cart__side-checkout-main-content justify-between pb-0"
                 >
                   <span class="text-capitalize">Service fee :</span>
+                  <p class="cart__price-actual">
+                    <sup>&#8358;</sup>
+                    5000
+                  </p>
+                </div>
+                <div
+                  class="cart__side-checkout-main-content justify-between pb-0"
+                >
+                  <span class="text-capitalize">Power charge :</span>
                   <p class="cart__price-actual">
                     <sup>&#8358;</sup>
                     5000
@@ -193,14 +609,15 @@
                   </p>
                 </div>
 
-                <div class="cart__side-checkout-main-button">
-                  <button class="order-button">Proceed to Checkout</button>
-                </div>
+                <div class="cart__side-checkout-main-button"></div>
               </div>
             </div>
           </div>
         </div>
       </main>
     </div>
+
+    <script src="asset/js/navigation.js"></script>
+    <script src="asset/js/checkout.js"></script>
   </body>
 </html>

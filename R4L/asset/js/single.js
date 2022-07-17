@@ -51,11 +51,17 @@ function activeLists() {
 slidingFilterItem.forEach((l) => l.addEventListener("click", activeLists));
 
 //Function to show sliderWidget when Clicking the startbooking button
+const mainSingle = document.getElementById("main__single");
 const startBooking = document.getElementById("start__booking");
+const startBookingMobile = document.getElementById("start__booking-mobile");
 const sliderWidget = document.querySelector(".sliding__widget");
 const closeBtn = document.getElementById("close-btn");
 
 startBooking.addEventListener("click", () => {
+  sliderWidget.classList.add("sliding__widget--active");
+});
+
+startBookingMobile.addEventListener("click", () => {
   sliderWidget.classList.add("sliding__widget--active");
 });
 
@@ -65,6 +71,9 @@ closeBtn.addEventListener("click", () => {
 
 // CREATING ANIMATED CART BUTTON
 const cartButtons = document.querySelectorAll(".room-button");
+// toast = document.querySelector(".toast"),
+// closeIcon = document.querySelector(".close"),
+// progress = document.querySelector(".progress");
 
 cartButtons.forEach((button) => {
   button.addEventListener("click", cartClick);
@@ -72,10 +81,53 @@ cartButtons.forEach((button) => {
 
 function cartClick() {
   let button = this;
+  let timer1, timer2;
   button.classList.add("clicked");
   button.classList.add("disabled");
+  toast.classList.add("active");
+  progress.classList.add("active");
+
+  timer1 = setTimeout(() => {
+    toast.classList.remove("active");
+  }, 2000); //1s = 1000 milliseconds
+
+  timer2 = setTimeout(() => {
+    progress.classList.remove("active");
+  }, 2300);
+
   setTimeout(() => {
     button.classList.remove("clicked");
     button.classList.remove("disabled");
-  }, 3000);
+  }, 2300);
 }
+
+// POPUP
+const popupContent = document.querySelector(".popup__content");
+const popupFilterImage = document.querySelector(".popup__filter--image");
+const popupFilterDescription = document.querySelector(
+  ".popup__filter--description"
+);
+
+// function for popupModeActivated
+function popupModeActivated() {
+  popupContent.classList.add("popup__activated");
+}
+
+function removePopupModeActivated() {
+  popupContent.classList.remove("popup__activated");
+}
+
+popupFilterDescription.addEventListener("click", popupModeActivated);
+popupFilterImage.addEventListener("click", removePopupModeActivated);
+
+//LAZY LOADING IMAGES
+const popupTargets = document.querySelectorAll(".popup__images");
+const popupImg = document.querySelector(".popup__images img");
+console.log(popupTargets);
+
+popupTargets.forEach((popuptarget) => {
+  //Remove the observer after image is loaded
+  popupImg.addEventListener("load", () => {
+    popuptarget.classList.remove("lazy");
+  });
+});

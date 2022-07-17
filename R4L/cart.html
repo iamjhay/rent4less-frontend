@@ -25,11 +25,53 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="asset/css/style.css" />
 
+    <!-- Calendly badge widget begin -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Calendly.initBadgeWidget({
+          url: "https://calendly.com/jhaydrille75/schedule-an-inspection?hide_gdpr_banner=1&primary_color=7ed56f",
+          text: "Schedule Inspection",
+          color: "#7ed56f",
+          textColor: "#ffffff",
+          branding: false,
+        });
+      };
+    </script>
+    <!-- Calendly badge widget end -->
+
     <title>Rent4Less</title>
   </head>
   <body>
+    <!--==================== SPINNER ====================-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- ======= TOAST ANIMATION ====== -->
+    <div class="toast">
+      <div class="toast-content">
+        <i class="bx bxs-check-circle check"></i>
+        <div class="message">
+          <span class="message-text text-1"></span>
+        </div>
+      </div>
+      <i class="bx bx-x close"></i>
+
+      <div class="progress"></div>
+    </div>
+    <!-- ======= END TOAST ANIMATION ====== -->
+    <!-- =============== SECONDARY NAV ============= -->
     <div class="secondary__nav">
-      <nav class="secondary__navigation">
+      <nav class="nav secondary__navigation">
         <a href="/" class="secondary__nav--logo">
           <img
             src="asset/img/rent4less-logo-small.png"
@@ -37,37 +79,89 @@
           />
         </a>
 
-        <!-- <ul class="secondary__nav--lists">
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Home</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">About</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Faq</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Gallery</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Contact</a>
-          </li>
-        </ul> -->
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu--lists">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bxs-dashboard"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/cart.html" class="nav__link">
+                  <i class="bx bxs-cart"></i>
+                  <span>Cart</span>
+                  <span class="ml-auto cart-quantity">2</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  <i class="bx bxs-news"></i>
+                  <span>Blogs</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="bx bxs-contact"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav__list nav__list--active">
+              <i class="bx bxs-bell bx-tada"></i>
+              <li class="nav__item">
+                <a href="/login.html" class="nav__link">
+                  <i class="bx bxs-user-pin"></i>
+                  <span>Become a tenant</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="/login.html" class="nav__link">
+                  <i class="bx bx-building-house"></i>
+                  <span>List Your Property</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__theme" id="nav__theme">
+              <a href="#" class="user-profile">
+                <img
+                  src="asset/img/realtor-1.jpeg"
+                  class="user-profile-img"
+                  alt="user"
+                />
+                <div class="user-profile-title">
+                  <h5>welcome back!</h5>
+                  <p>Johnny</p>
+                </div>
+              </a>
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </div>
+
+            <i class="bx bx-x nav__close" id="nav-close"></i>
+          </div>
+        </div>
 
         <ul class="secondary__nav--lists">
-          <li class="secondary__nav--list">
-            <a
-              href="https://wa.me/message/DPX4GUMWGJ7SC1"
-              class="skype-link"
-              target="_blank"
-            >
-              <span class="whatsapp">
-                <!-- whatsapp-icon /> -->
-                <i class="bx bxl-whatsapp"></i>
-              </span>
-            </a>
-          </li>
           <li class="secondary__nav--list dropdown">
             <div>
               <div class="secondary__nav--list contact">
@@ -89,35 +183,6 @@
                         >+234 8121825297</a
                       >
                     </li>
-                    <li class="secondary__nav--list">
-                      <a
-                        href="tel:+234 812 182 5297"
-                        class="secondary__nav--link dropdown__item"
-                        ><span class="secondary__nav--icon"
-                          ><i class="bx bxs-phone"></i></span
-                        >+234 8121825297</a
-                      >
-                    </li>
-                    <li class="secondary__nav--list">
-                      <a
-                        href="tel:+234 812 182 5297"
-                        class="secondary__nav--link dropdown__item"
-                      >
-                        <span class="secondary__nav--icon"
-                          ><i class="bx bxs-phone"></i></span
-                        >+234 8121825297</a
-                      >
-                    </li>
-                    <li class="secondary__nav--list">
-                      <a
-                        href="tel:+234 812 182 5297"
-                        class="secondary__nav--link dropdown__item"
-                      >
-                        <span class="secondary__nav--icon"
-                          ><i class="bx bxs-phone"></i></span
-                        >+234 8121825297</a
-                      >
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -131,6 +196,7 @@
               </span>
             </a>
           </li>
+
           <li class="secondary__nav--list account">
             <span class="secondary__nav--icon"
               ><i class="bx bxs-user-circle"></i
@@ -159,6 +225,10 @@
               </ul>
             </div>
           </li>
+
+          <div class="sign">
+            <i class="bx bxs-widget color-light-black" id="nav-toggle"></i>
+          </div>
         </ul>
       </nav>
     </div>
@@ -167,8 +237,8 @@
       <div class="section cart__header">
         <!-- this is if you have any reservation in your cart -->
         <div class="cart__header-content">
-          <h2>Your Reservations</h2>
-          <p>you have 4 items in your cart</p>
+          <h2>Review Reservation</h2>
+          <p>You are about to reserve 4 item(s)</p>
         </div>
 
         <!-- this is if you dont have any reservation in your cart -->
@@ -180,6 +250,7 @@
 
       <div class="main__wrapper">
         <div class="cart__main">
+          <!-- if there are no items in cart! -->
           <!-- <div class="search-widget">
             <div class="search-widget-header">
               <img src="/asset/img/empty-cart.png" alt="empty-cart" />
@@ -204,6 +275,7 @@
             </form>
           </div> -->
 
+          <!-- if there are items in cart! -->
           <div class="cart__container">
             <div class="cart__content">
               <div class="cart__images">
@@ -233,19 +305,13 @@
                   <option value="txt">Exclusive</option>
                 </select>
               </div>
-              <p class="cart__badge">Mini deal</p>
-              <p class="cart__badge">exclusive deal</p>
-              <p class="cart__badge">deluxe deal</p>
             </div>
             <div class="cart__price">
               <span>
-                <sup>&#8358;</sup>
+                &#8358;
                 <span>25,000</span>
               </span>
-              <p class="cart__price-actual">
-                <sup>&#8358;</sup>
-                15,750
-              </p>
+              <p class="cart__price-actual">&#8358;15,750</p>
             </div>
             <i class="bx bx-x"></i>
           </div>
@@ -278,14 +344,12 @@
                   <option value="txt">Exclusive</option>
                 </select>
               </div>
-              <p class="cart__badge">Mini deal</p>
-              <p class="cart__badge">exclusive deal</p>
             </div>
             <div class="cart__price">
-              <span>
+              <!-- <span>
                 <sup>&#8358;</sup>
                 <span>25,000</span>
-              </span>
+              </span> -->
               <p class="cart__price-actual">
                 <sup>&#8358;</sup>
                 15,750
@@ -322,13 +386,12 @@
                   <option value="txt">Exclusive</option>
                 </select>
               </div>
-              <p class="cart__badge">Mini deal</p>
             </div>
             <div class="cart__price">
-              <span>
+              <!-- <span>
                 <sup>&#8358;</sup>
                 <span>25,000</span>
-              </span>
+              </span> -->
               <p class="cart__price-actual">
                 <sup>&#8358;</sup>
                 15,750
@@ -365,13 +428,12 @@
                   <option selected value="txt">Exclusive</option>
                 </select>
               </div>
-              <p class="cart__badge">All deal</p>
             </div>
             <div class="cart__price">
-              <span>
+              <!-- <span>
                 <sup>&#8358;</sup>
                 <span>25,000</span>
-              </span>
+              </span> -->
               <p class="cart__price-actual">
                 <sup>&#8358;</sup>
                 15,750
@@ -379,9 +441,8 @@
             </div>
             <i class="bx bx-x"></i>
           </div>
-
-          -->
         </div>
+
         <div class="cart__side">
           <div class="cart__side-checkout">
             <p class="cart__side-checkout-title text-capitalize">
@@ -407,7 +468,12 @@
               </div>
 
               <div class="cart__side-checkout-main-button">
-                <button class="order-button">Confirm Order</button>
+                <a
+                  href="checkout.html"
+                  class="order-button order-button-secondary"
+                  >Confirm Order</a
+                >
+                <a id="open-modal" class="order-button">Schedule Inspection</a>
               </div>
             </div>
           </div>
@@ -416,10 +482,7 @@
 
       <section class="featured section" id="featured">
         <div class="featured__wrapper">
-          <span class="section__subtitle"
-            >Handpicked TopNotch Properties By Our Team.</span
-          >
-          <h2 class="section__title">Featured Properties<span>.</span></h2>
+          <h2 class="section__title">Featured Properties</h2>
 
           <div class="featured__container swiper">
             <div class="swiper-wrapper">
@@ -554,6 +617,43 @@
       </section>
     </div>
 
+    <div class="modal">
+      <div class="modal__container" id="modal-container">
+        <div class="modal__content">
+          <div class="modal__close close-modal" title="Close">
+            <i class="bx bx-x"></i>
+          </div>
+
+          <img
+            src="asset/img/property-inspection.png"
+            alt=""
+            class="modal__img"
+          />
+
+          <div class="modal__data">
+            <span class="instructional-text">
+              *INSTRUCTION: Please copy the booking detail below as you would
+              need it to complete your Inspection</span
+            >
+            <div class="modal__data--text">
+              <button class="textareacopybtn text-capitalize">
+                <i class="bx bx-copy"></i>Click Here to Copy Detail
+              </button>
+
+              <input
+                class="copytextarea"
+                type="text"
+                readonly
+                value="Hello Im some text and I not selectable. Hello you are a good mann"
+              />
+
+              <span class="address-text text-capitalize">Booking detail :</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--==================== FOOTER ====================-->
     <footer class="footer section">
       <div class="container">
@@ -608,6 +708,17 @@
       </div>
     </footer>
 
+    <!-- ================ INLINE SCRIPT =============== -->
+    <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script>
+
     <!--========== SCROLL UP ==========-->
     <a href="#" class="scrollup" id="scroll-up">
       <i class="bx bx-chevrons-up"></i>
@@ -615,6 +726,9 @@
 
     <!--=============== SWIPER JS ===============-->
     <script src="asset/js/swiper-bundle.min.js"></script>
+
+    <!--=============== NAVIGATION JS ===============-->
+    <script src="asset/js/navigation.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="asset/js/cart.js"></script>

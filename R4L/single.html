@@ -35,9 +35,14 @@
     <title>Rent4Less</title>
   </head>
   <body>
+    <!--==================== SPINNER ====================-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
     <!-- =============== SECONDARY NAV ============= -->
     <div class="secondary__nav">
-      <nav class="secondary__navigation">
+      <nav class="nav secondary__navigation">
         <a href="/" class="secondary__nav--logo">
           <img
             src="asset/img/rent4less-logo-small.png"
@@ -45,37 +50,102 @@
           />
         </a>
 
-        <!-- <ul class="secondary__nav--lists">
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Home</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">About</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Faq</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Gallery</a>
-          </li>
-          <li class="secondary__nav--list">
-            <a href="#" class="secondary__nav--link">Contact</a>
-          </li>
-        </ul> -->
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu--lists">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bxs-dashboard"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/cart.html" class="nav__link">
+                  <i class="bx bxs-cart"></i>
+                  <span>Cart</span>
+                  <span class="ml-auto cart-quantity">2</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  <i class="bx bxs-news"></i>
+                  <span>Blogs</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="bx bxs-contact"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav__list nav__list--active">
+              <i class="bx bxs-bell bx-tada"></i>
+              <li class="nav__item">
+                <a href="/login.html" class="nav__link">
+                  <i class="bx bxs-user-pin"></i>
+                  <span>Become a tenant</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="/login.html" class="nav__link">
+                  <i class="bx bx-building-house"></i>
+                  <span>List Your Property</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__theme" id="nav__theme">
+              <a href="#" class="user-profile">
+                <img
+                  src="asset/img/realtor-1.jpeg"
+                  class="user-profile-img"
+                  alt="user"
+                />
+                <div class="user-profile-title">
+                  <h5>welcome back!</h5>
+                  <p>Johnny</p>
+                </div>
+              </a>
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </div>
+
+            <i class="bx bx-x nav__close" id="nav-close"></i>
+          </div>
+        </div>
 
         <ul class="secondary__nav--lists">
-          <li class="secondary__nav--list">
+          <!-- <li class="secondary__nav--list">
             <a
               href="https://wa.me/message/DPX4GUMWGJ7SC1"
               class="skype-link"
               target="_blank"
             >
               <span class="whatsapp">
-                <!-- whatsapp-icon /> -->
+                whatsapp-icon />
                 <i class="bx bxl-whatsapp"></i>
               </span>
             </a>
-          </li>
+          </li> -->
+
           <li class="secondary__nav--list dropdown">
             <div>
               <div class="secondary__nav--list contact">
@@ -90,38 +160,9 @@
                   <ul class="secondary__nav--lists dropdown__lists">
                     <li class="secondary__nav--list">
                       <a
-                        href="https://wa.me/message/DPX4GUMWGJ7SC1"
-                        class="secondary__nav--link dropdown__item"
-                        ><span class="whatsapp">
-                          <i class="bx bxl-whatsapp"></i></span
-                        >+234 8121825297</a
-                      >
-                    </li>
-                    <li class="secondary__nav--list">
-                      <a
                         href="tel:+234 812 182 5297"
                         class="secondary__nav--link dropdown__item"
                         ><span class="secondary__nav--icon"
-                          ><i class="bx bxs-phone"></i></span
-                        >+234 8121825297</a
-                      >
-                    </li>
-                    <li class="secondary__nav--list">
-                      <a
-                        href="tel:+234 812 182 5297"
-                        class="secondary__nav--link dropdown__item"
-                      >
-                        <span class="secondary__nav--icon"
-                          ><i class="bx bxs-phone"></i></span
-                        >+234 8121825297</a
-                      >
-                    </li>
-                    <li class="secondary__nav--list">
-                      <a
-                        href="tel:+234 812 182 5297"
-                        class="secondary__nav--link dropdown__item"
-                      >
-                        <span class="secondary__nav--icon"
                           ><i class="bx bxs-phone"></i></span
                         >+234 8121825297</a
                       >
@@ -139,6 +180,7 @@
               </span>
             </a>
           </li>
+
           <li class="secondary__nav--list account">
             <span class="secondary__nav--icon"
               ><i class="bx bxs-user-circle"></i
@@ -167,20 +209,47 @@
               </ul>
             </div>
           </li>
+
+          <div class="sign">
+            <i class="bx bxs-widget color-light-black" id="nav-toggle"></i>
+          </div>
         </ul>
       </nav>
     </div>
 
     <!-- =============== MAIN ============= -->
     <main class="main main__single">
+      <div class="single__sidebar--footer">
+        <i class="bx bxs-bookmark-minus bx-tada"></i>
+        <a
+          href="#showBookings"
+          id="start__booking-mobile"
+          class="text-capitalize"
+        >
+          start Booking
+        </a>
+      </div>
       <div class="main__wrapper">
         <!-- SINGLE PHOTOS -->
         <div class="section single">
+          <!-- SWIPER -->
+
+          <!-- MAIN SWIPER -->
           <div class="swiper single__slider mainSwiper">
             <div class="single__slider--description">
-              <figure>
-                <img src="asset/img/profile-pics.jpeg" alt="profile-pics" />
+              <figure class="estate-agent">
+                <!-- if agent has an image use this -->
+                <!-- <img src="asset/img/user.png" alt="profile-pics" /> -->
+
+                <!-- if no image, use this -->
+                <i class="bx bxs-user-circle"></i>
               </figure>
+              <div class="estate-name">
+                <h3 class="title text-capitalize letter-spacing-1">
+                  Luxury Family Home
+                </h3>
+                <span>166 welling street, collingwood, vic 3066</span>
+              </div>
             </div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -206,7 +275,9 @@
               <i class="bx bx-chevron-left"></i>
             </div>
           </div>
+          <!-- END MAIN SWIPER -->
 
+          <!-- THUMB SWIPER -->
           <div thumbsSlider="" class="swiper single__thumb thumbSwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -226,7 +297,11 @@
               </div>
             </div>
           </div>
+          <!-- THUMB SWIPER -->
+
+          <!-- END SWIPER -->
         </div>
+
         <!-- SINGLE DATA -->
         <div class="single__data">
           <div class="single__detail">
@@ -237,7 +312,9 @@
               <span>166 welling street, collingwood, vic 3066</span>
             </div>
             <div class="price">
-              <h3 class="price__data text-uppercase">₦13.000/Mo</h3>
+              <h3 class="price__data text-uppercase">
+                &#8358;12k - &#8358;5M /mo
+              </h3>
             </div>
           </div>
           <div class="section single__description">
@@ -427,32 +504,28 @@
             </div>
           </div>
         </div>
+
         <!-- SINGLE SIDEBAR -->
         <div class="single__sidebar section">
           <div class="single__sidebar--wrapper">
-            <div class="single__sidebar--header">
+            <div class="single__sidebar--content single__sidebar--header">
               <div class="single__sidebar--header--title">
                 <figure>
-                  <img
-                    src="asset/img/Alpha-Mead-Group-Logo.png"
-                    alt="agent-1"
-                  />
+                  <i class="bx bxs-phone-call"></i>
                 </figure>
               </div>
               <div class="single__sidebar--header--agent-info">
-                <h4 class="text-capitalize letter-spacing-1">Rent4Less</h4>
+                <p class="text-capitalize letter-spacing-1">
+                  Have any issues with your booking? Call
+                </p>
                 <div>
                   <i class="bx bx-phone-call"></i>
-                  <a href="#">+234 813-813-813</a>
-                </div>
-                <div>
-                  <i class="bx bx-envelope"></i>
-                  <a href="#">info@rent4less.com</a>
+                  <a href="#">0700-25742-6323</a>
                 </div>
               </div>
             </div>
 
-            <div class="single__sidebar--body">
+            <div class="single__sidebar--content single__sidebar--body">
               <!-- If you have an Item in your cart display this -->
               <div class="single__sidebar--body-empty">
                 <div class="img-full">
@@ -469,21 +542,6 @@
                 </a>
               </div>
 
-              <div class="single__sidebar--subheader">
-                <h3 class="letter-spacing-2">Your Choices</h3>
-                <ul>
-                  <li class="text-uppercase letter-spacing-1">
-                    <i class="bx bxs-badge-check"></i> flexible to reschedule
-                  </li>
-                  <li class="text-uppercase letter-spacing-1">
-                    <i class="bx bxs-badge-check"></i> free cancellation
-                  </li>
-                  <li class="text-uppercase letter-spacing-1">
-                    <i class="bx bxs-badge-check"></i> No Prepayment Needed
-                  </li>
-                </ul>
-              </div>
-
               <!-- End here -->
 
               <!-- If you have no item in your cart display this-->
@@ -494,7 +552,11 @@
                 <h4>No Bookings yet</h4>
                 <p>You currently do not have any bookings.</p>
 
-                <a id="start__booking" class="text-capitalize">
+                <a
+                  href="#showBookings"
+                  id="start__booking"
+                  class="text-capitalize"
+                >
                   start Booking
                 </a>
               </div> -->
@@ -505,23 +567,210 @@
       </div>
     </main>
 
+    <!--==================== HOT ESTATE DEALS ====================-->
+    <section class="city__estate section container">
+      <span class="section__subtitle"
+        >A selection of the best Estate deals, only available today</span
+      >
+      <h2 class="section__title">Top Estate Deals <span>.</span></h2>
+
+      <div class="city__estate--wrapper">
+        <a href="/" class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a href="/" class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+        </a>
+        <a class="city__estate--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h3>Luxury Palace</h3>
+            <p>Ogudu, Lagos</p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <!-- =============== SLIDING WIDGET ============= -->
     <div class="sliding__widget" id="showBookings">
+      <!-- ======= TOAST ANIMATION ====== -->
+      <div class="toast">
+        <div class="toast-content">
+          <i class="bx bxs-check-circle check"></i>
+          <div class="message">
+            <span class="text text-1">Success</span>
+            <span class="text text-2">Your booking is added to cart</span>
+          </div>
+        </div>
+        <i class="bx bx-x close"></i>
+
+        <div class="progress"></div>
+      </div>
+      <!-- ======= END TOAST ANIMATION ====== -->
+
+      <!-- SLIDING SIDEBAR -->
       <div class="sliding__widget--wrapper">
+        <!-- SLIDING WIDGET FILTER FOR SEARCH ROOMS & APT -->
         <div class="sliding__widget--filters">
           <span
             data-filter=".shared-single"
             class="sliding__widget--filter-item letter-spacing-1 text-capitalize active"
-            >Shared</span
+            >Search Rooms</span
           >
           <span
             data-filter=".exclusives-single"
             class="sliding__widget--filter-item letter-spacing-1 text-capitalize"
-            >Exclusive</span
+            >Search Apartment</span
           >
         </div>
+        <!-- END SLIDING WIDGET FILTER FOR SEARCH ROOMS & APT -->
 
+        <!-- SLIDING WIDGET CONTAINER-->
         <div class="sliding__widget--container">
+          <!-- SLIDING WIDGET SHARED ROOMS -->
           <div
             class="sliding__widget--container-item sliding__widget--container-shared shared-single"
           >
@@ -531,14 +780,22 @@
               </h3>
               <div class="room__type--content shared-single">
                 <div class="room__type--content-main">
-                  <div class="room-img">
+                  <a href="#popup" class="room-img">
                     <img src="asset/img/popular1.jpg" alt="single-img" />
-                  </div>
+                    <div class="card__discount">
+                      <div>
+                        <p class="estate-discount text-uppercase">
+                          <span>13%</span>off
+                        </p>
+                        <div class="slant"></div>
+                      </div>
+                    </div>
+                  </a>
                   <div class="room__details">
                     <h5 class="text-capitalize mb-5">
                       <a href="#">Mini</a>
                       <span class="room__type--remaining"
-                        ><i class="bx bx-radio-circle-marked"></i> 4 property
+                        ><i class="bx bx-radio-circle-marked"></i> 4 rooms
                         remaining</span
                       >
                     </h5>
@@ -576,11 +833,16 @@
                     </div>
                   </div>
 
-                  <div class="room-button">
-                    <span class="add-to-cart">Select Room</span>
-                    <span class="added">Added To Cart</span>
-                    <i class="bx bxs-cart-alt cart-icon"></i>
-                    <i class="bx bx-shopping-bag cart-item"></i>
+                  <div class="room-buttons">
+                    <div class="room-button">
+                      <span class="add-to-cart">Select Room</span>
+                      <span class="added">Added To Cart</span>
+                      <i class="bx bxs-cart-alt cart-icon"></i>
+                      <i class="bx bx-shopping-bag cart-item"></i>
+                    </div>
+                    <a href="#popup" class="room-view text-capitalize"
+                      >view Room</a
+                    >
                   </div>
                 </div>
               </div>
@@ -598,7 +860,7 @@
                     <h5 class="text-capitalize mb-5">
                       <a href="#">Mini</a>
                       <span class="room__type--remaining"
-                        ><i class="bx bx-radio-circle-marked"></i> 5 property
+                        ><i class="bx bx-radio-circle-marked"></i> 5 rooms
                         remaining</span
                       >
                     </h5>
@@ -651,7 +913,7 @@
                     <h5 class="text-capitalize mb-5">
                       <a href="#">Deluxe</a>
                       <span class="room__type--remaining"
-                        ><i class="bx bx-radio-circle-marked"></i> 5 property
+                        ><i class="bx bx-radio-circle-marked"></i> 5 rooms
                         remaining</span
                       >
                     </h5>
@@ -711,7 +973,7 @@
                     <h5 class="text-capitalize mb-5">
                       <a href="#">Mini</a>
                       <span class="room__type--remaining"
-                        ><i class="bx bx-radio-circle-marked"></i> 15 property
+                        ><i class="bx bx-radio-circle-marked"></i> 15 rooms
                         remaining</span
                       >
                     </h5>
@@ -764,7 +1026,7 @@
                     <h5 class="text-capitalize mb-5">
                       <a href="#">Deluxe</a>
                       <span class="room__type--remaining"
-                        ><i class="bx bx-radio-circle-marked"></i> 5 property
+                        ><i class="bx bx-radio-circle-marked"></i> 5 rooms
                         remaining</span
                       >
                     </h5>
@@ -817,7 +1079,7 @@
                     <h5 class="text-capitalize mb-5">
                       <a href="#">Executive</a>
                       <span class="room__type--remaining"
-                        ><i class="bx bx-radio-circle-marked"></i> 6 property
+                        ><i class="bx bx-radio-circle-marked"></i> 6 rooms
                         remaining</span
                       >
                     </h5>
@@ -865,6 +1127,9 @@
               </div>
             </div>
           </div>
+          <!-- END SLIDING WIDGET SHARED ROOMS -->
+
+          <!-- SLIDING WIDGET EXCLUSIVE APT -->
           <div
             class="sliding__widget--container-item sliding__widget--container-exclusive exclusives-single"
           >
@@ -881,7 +1146,7 @@
                     <h5 class="text-capitalize mb-5">
                       <a href="#">Exclusive</a>
                       <span class="room__type--remaining"
-                        ><i class="bx bx-radio-circle-marked"></i> 25 property
+                        ><i class="bx bx-radio-circle-marked"></i> 25 units
                         remaining</span
                       >
                     </h5>
@@ -941,7 +1206,7 @@
                     <h5 class="text-capitalize mb-5">
                       <a href="#">Deluxe</a>
                       <span class="room__type--remaining"
-                        ><i class="bx bx-radio-circle-marked"></i> 5 property
+                        ><i class="bx bx-radio-circle-marked"></i> 5 units
                         remaining</span
                       >
                     </h5>
@@ -1001,7 +1266,7 @@
                     <h5 class="text-capitalize mb-5">
                       <a href="#">Exclusive</a>
                       <span class="room__type--remaining"
-                        ><i class="bx bx-radio-circle-marked"></i> 5 property
+                        ><i class="bx bx-radio-circle-marked"></i> 5 units
                         remaining</span
                       >
                     </h5>
@@ -1049,11 +1314,173 @@
               </div>
             </div>
           </div>
+          <!-- END SLIDING WIDGET EXCLUSIVE APT -->
         </div>
+        <!-- END SLIDING WIDGET CONTAINER-->
       </div>
       <i class="bx bx-x close-btn" id="close-btn"></i>
+      <!-- END SLIDING SIDEBAR -->
     </div>
 
+    <!-- POPUP ANIMATION -->
+    <div class="popup" id="popup">
+      <div class="popup__content" id="popup-content">
+        <div class="popup__content--header">
+          <div class="popup__filter">
+            <div class="popup__filter--image">view Image</div>
+            <div class="popup__filter--description">View Description</div>
+          </div>
+          <a href="#showBookings" class="popup__close">
+            <span>Close </span>
+            <i class="bx bx-x"></i>
+          </a>
+        </div>
+        <div class="popup__content--body">
+          <div class="popup__left">
+            <div class="popup__left--main">
+              <div class="popup__images lazy">
+                <img src="asset/img/single-1.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/single-2.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/single-3.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/single-4.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/single-6.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/place-2.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/gal-6.jpeg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/gal-9.jpeg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/log-1.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/log-2.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/place-6.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/Rectangle-1.png" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/place-7.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/hotel-1.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/popular1.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/popular2.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/popular2.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/popular3.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/popular4.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/city4.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/city4.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/city4.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/city4.jpg" alt="property" />
+              </div>
+              <div class="popup__images lazy">
+                <img src="asset/img/city4.jpg" alt="property" />
+              </div>
+            </div>
+          </div>
+          <div class="popup__right">
+            <div class="popup__right--header">
+              <i class="bx bx-bell bx-tada"></i>
+              <h3>Description</h3>
+            </div>
+            <div class="popup__right--text">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                quod accusantium maxime, commodi praesentium officia? Sapiente
+                odio velit officiis doloremque fuga expedita quia repellendus
+                dolore reprehenderit quas tempora voluptas, enim optio quam
+                asperiores eaque nostrum reiciendis error placeat inventore
+                libero id, voluptate iusto ipsa! Deserunt natus odio repellat
+                ipsum fugit qui architecto dolorum ratione, cupiditate, iste
+                vel, aliquam eveniet consectetur modi voluptatem animi incidunt
+                ab deleniti adipisci! Voluptatibus esse ad corporis praesentium
+                adipisci reprehenderit magnam, similique earum asperiores
+                deserunt deleniti ducimus dolore distinctio, rerum natus eos
+                illo tempore et dicta doloremque consequuntur at? Accusantium
+                voluptatibus officia natus perferendis dolorum, neque itaque
+                culpa facere dolore reprehenderit temporibus. Cupiditate quo
+                asperiores, eos qui labore nostrum laboriosam ad, quas non
+                deserunt officiis nesciunt temporibus, maiores reiciendis
+                necessitatibus omnis nam praesentium ea voluptas harum!
+                Consequuntur odio perspiciatis maiores voluptates aliquid
+                eveniet nihil at, fugit autem laborum repudiandae nisi
+                similique, unde esse pariatur est quia cupiditate nesciunt quam
+                repellendus sequi necessitatibus rem sit explicabo! Mollitia
+                incidunt doloribus quod vero possimus facere quaerat, delectus
+                aspernatur corporis quibusdam eius quis at quia impedit quidem
+                cupiditate aut voluptates corrupti molestias fuga facilis fugit
+                blanditiis tenetur! Ullam minima, dignissimos iure vitae optio
+                excepturi ad dolore fuga pariatur velit exercitationem!
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                quod accusantium maxime, commodi praesentium officia? Sapiente
+                odio velit officiis doloremque fuga expedita quia repellendus
+                dolore reprehenderit quas tempora voluptas, enim optio quam
+                asperiores eaque nostrum reiciendis error placeat inventore
+                libero id, voluptate iusto ipsa! Deserunt natus odio repellat
+                ipsum fugit qui architecto dolorum ratione, cupiditate, iste
+                vel, aliquam eveniet consectetur modi voluptatem animi incidunt
+                ab deleniti adipisci! Voluptatibus esse ad corporis praesentium
+                adipisci reprehenderit magnam, similique earum asperiores
+                deserunt deleniti ducimus dolore distinctio, rerum natus eos
+                illo tempore et dicta doloremque consequuntur at? Accusantium
+                voluptatibus officia natus perferendis dolorum, neque itaque
+                culpa facere dolore reprehenderit temporibus. Cupiditate quo
+                asperiores, eos qui labore nostrum laboriosam ad, quas non
+                deserunt officiis nesciunt temporibus, maiores reiciendis
+                necessitatibus omnis nam praesentium ea voluptas harum!
+                Consequuntur odio perspiciatis maiores voluptates aliquid
+                eveniet nihil at, fugit autem laborum repudiandae nisi
+                similique, unde esse pariatur est quia cupiditate nesciunt quam
+                repellendus sequi necessitatibus rem sit explicabo! Mollitia
+                incidunt doloribus quod vero possimus facere quaerat, delectus
+                aspernatur corporis quibusdam eius quis at quia impedit quidem
+                cupiditate aut voluptates corrupti molestias fuga facilis fugit
+                blanditiis tenetur! Ullam minima, dignissimos iure vitae optio
+                excepturi ad dolore fuga pariatur velit exercitationem!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--================ INLINE PROPERTYTEXT SCRIPT ===============-->
     <script>
       let propertyText = document.querySelectorAll(".room__type--remaining");
       propertyText.forEach((element) => {
@@ -1070,6 +1497,19 @@
       });
     </script>
 
+    <!--================ INLINE SPINNER SCRIPT ===============-->
+    <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script>
+
+    <!--=================== CALENDLY ===============-->
+
     <!--=============== SWIPER JS ===============-->
     <script src="asset/js/swiper-bundle.min.js"></script>
 
@@ -1078,5 +1518,8 @@
 
     <!--=============== SINGLE JS ===============-->
     <script src="asset/js/single.js"></script>
+
+    <!--=============== NAVIGATION JS ===============-->
+    <script src="asset/js/navigation.js"></script>
   </body>
 </html>

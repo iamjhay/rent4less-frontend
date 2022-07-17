@@ -29,6 +29,25 @@
     <title>Rent4Less</title>
   </head>
   <body>
+    <!--==================== SPINNER ====================-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- ======= TOAST ANIMATION ====== -->
+    <div class="toast">
+      <div class="toast-content">
+        <i class="bx bxs-check-circle check"></i>
+        <div class="message">
+          <span class="message-text text-1"></span>
+        </div>
+      </div>
+      <i class="bx bx-x close"></i>
+
+      <div class="progress"></div>
+    </div>
+    <!-- ======= END TOAST ANIMATION ====== -->
+
     <!--==================== NAVBAR ====================-->
     <div class="navbar" id="navbar">
       <nav class="nav container">
@@ -39,44 +58,100 @@
           />
         </a>
 
-        <div class="nav__menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="/index.html" class="nav__link">
-                <i class="bx bx-home-alt-2"></i>
-                <span>Home</span>
-              </a>
-            </li>
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu--lists">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
 
-            <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="bx bx-building-house"></i>
-                <span>About</span>
-              </a>
-            </li>
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bxs-dashboard"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
 
-            <li class="nav__item">
-              <a href="#faq" class="nav__link">
-                <i class="bx bx-award"></i>
-                <span>Faq</span>
-              </a>
-            </li>
+              <li class="nav__item">
+                <a href="/cart.html" class="nav__link">
+                  <i class="bx bxs-cart"></i>
+                  <span>Cart</span>
+                  <span class="ml-auto cart-quantity">2</span>
+                </a>
+              </li>
 
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="bx bx-phone"></i>
-                <span>Contact</span>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  <i class="bx bxs-news"></i>
+                  <span>Blogs</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="bx bxs-contact"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav__list nav__list--active">
+              <i class="bx bxs-bell bx-tada"></i>
+              <li class="nav__item">
+                <a href="/signup.html" class="nav__link">
+                  <i class="bx bxs-user-pin"></i>
+                  <span>Become a tenant</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="/landlord.html" class="nav__link">
+                  <i class="bx bx-building-house"></i>
+                  <span>List Your Property</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__theme" id="nav__theme">
+              <a href="#" class="user-profile">
+                <img
+                  src="asset/img/realtor-1.jpeg"
+                  class="user-profile-img"
+                  alt="user"
+                />
+                <div class="user-profile-title">
+                  <h5>welcome back!</h5>
+                  <p>Johnny</p>
+                </div>
               </a>
-            </li>
-          </ul>
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </div>
+
+            <i class="bx bx-x nav__close" id="nav-close"></i>
+          </div>
         </div>
 
         <!-- Theme Change Button -->
 
         <div class="sign">
-          <a href="#" class="nav__button">Sign Up</a>
-          <a href="#" class="nav__button nav__button--outlined">Log In</a>
-          <i class="bx bx-moon change-theme" id="theme-button"></i>
+          <div class="sign-content">
+            <a href="/signup.html" class="nav__button text-capitalize"
+              >Become A Tenant</a
+            >
+            <a href="/landlord.html" class="nav__button text-capitalize"
+              >List your property</a
+            >
+          </div>
+          <i class="bx bxs-widget" id="nav-toggle"></i>
         </div>
       </nav>
     </div>
@@ -86,13 +161,13 @@
       <div class="header__container container grid">
         <div class="header__data">
           <h1 class="header__title">
-            discover<br />
-            Most <span>Suitable</span> <br />
-            Property
+            Welcome to the <br />
+            #1 <span>Monthly</span> <br />
+            Rental Platform
           </h1>
           <p class="header__description">
-            Find a variety of properties that suit you very easily, forget all
-            difficulties in finding a residence for you.
+            You can hear comfort and flexibility call your name when you open
+            our doors.
           </p>
 
           <form action="" class="header__search">
@@ -102,31 +177,29 @@
               placeholder="Search by location..."
               class="header__search-input"
             />
-            <button href="#" class="btn button">Search</button>
+            <a href="/city.html" class="btn button">Search</a>
           </form>
 
           <div class="header__value">
-            <div>
-              <h1 class="header__value-number">9K <span>+</span></h1>
-              <span class="header__value-description">
-                Premium <br />
-                Product
-              </span>
-            </div>
-            <div>
-              <h1 class="header__value-number">2K <span>+</span></h1>
-              <span class="header__value-description">
-                Happy <br />
-                Customer
-              </span>
-            </div>
+            <img src="asset/img/face-6.jpg" alt="realtors" />
+            <img src="asset/img/face-7.jpg" alt="realtors" />
+            <img src="asset/img/face-3.jpg" alt="realtors" />
+            <img src="asset/img/face-5.jpg" alt="realtors" />
+            <img src="asset/img/face-2.jpg" alt="realtors" />
+            <img src="asset/img/face-4.jpg" alt="realtors" />
+            <img src="asset/img/face-1.jpg" alt="realtors" />
+            <span class="header__value-description">+25K</span>
+          </div>
 
-            <div>
-              <h1 class="header__value-number">28K <span>+</span></h1>
-              <span class="header__value-description">
-                Awards <br />
-                Winning
-              </span>
+          <div class="header__followers">
+            <p>Join over 100+ Subscribers on Rent4Less Today.</p>
+            <div class="header__followers--link">
+              <!-- <a href="/signup.html" class="text-capitalize secondary-button">
+                <span><i class="bx bxl-youtube"></i> Watch Video</span>
+              </a> -->
+              <a href="/signup.html" class="text-capitalize"
+                >Get started today!</a
+              >
             </div>
           </div>
         </div>
@@ -134,7 +207,12 @@
         <div class="header__images">
           <div class="header__orbe"></div>
           <div class="header__img">
-            <img src="asset/img/home.jpg" alt="header__img" />
+            <img
+              src="asset/img/home-small.jpg"
+              data-src="asset/img/home.jpg"
+              alt="header__img"
+              class="home-img lazy-img"
+            />
           </div>
         </div>
       </div>
@@ -142,16 +220,94 @@
 
     <!--==================== MAIN ====================-->
     <main class="main">
-      <!--==================== DESTINATION ====================-->
-      <section class="destination section">
-        <div class="destination__wrapper">
-          <span class="section__subtitle"
-            >Which City Do You Want To Book A Property?</span
-          >
-          <h2 class="section__title">Explore City <span>.</span></h2>
+      <!--==================== BECOME A TENANT / LANDLORD ====================-->
+      <div class="section deals">
+        <div class="deals__img--container">
+          <img
+            src="asset/img/dancing-small.jpg"
+            data-src="asset/img/dancing-their-way.jpg"
+            class="lazy-img"
+            alt="home"
+          />
+          <div class="deal__wrapper deal__wrapper--1">
+            <div class="deal__wrapper--1-icon">
+              <i class="bx bx-play-circle"></i>
+            </div>
+            <div class="deal__wrapper--text">
+              <p class="letter-spacing-1">Find the best deals</p>
+              <span>browse thousands of properties</span>
+            </div>
+          </div>
+          <div class="deal__wrapper deal__wrapper--2">
+            <div class="deal__wrapper--text">
+              <p class="letter-spacing-1">Find the best deals</p>
+              <span>browse thousands of properties</span>
+            </div>
+            <div class="deal__wrapper--2-icon">
+              <i class="bx bx-home-circle"></i>
+            </div>
+          </div>
+        </div>
+        <div class="deals__detail--container">
+          <div class="deal__pills">
+            <ul>
+              <li data-filter=".tenants" class="deal__pills--item">
+                For tenants
+              </li>
+              <li data-filter=".landlords" class="deal__pills--item">
+                For landlords
+              </li>
+            </ul>
+          </div>
+          <div class="deal__pills--wrapper">
+            <div class="deal__content tenants">
+              <h3>Join the Community of Tenants who Pay Rent Monthly</h3>
+              <p>
+                Indulge in a wholesome living experience where you get all you
+                need in a stress-free manner. You also get:
+              </p>
+              <div class="lists">
+                <li>No Agency Fee</li>
+                <li>No Commission Payment</li>
+                <li>Just Pay & Pack In</li>
+              </div>
+              <div>
+                <a href="/signup.html" class="btn button">Be a Tenant</a>
+              </div>
+            </div>
 
-          <div class="destination__container">
-            <!-- start loop from here -->
+            <div class="deal__content landlords">
+              <h3>Sit back. Relax. Let Your Money do the Work</h3>
+              <p>
+                Explore the endless possibilities of consistent earnings by
+                getting on our Guaranteed Rental Income Programme (GRIP) Today.
+                All you need do is list your property while we take care of the
+                rest. From getting tenants to verifying their profiles and
+                maintaining your property, we’ve got you covered.
+              </p>
+              <div>
+                <a href="/landlord.html" class="btn button">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--==================== DESTINATION ====================-->
+      <section class="destination section border-sm">
+        <div
+          class="destination__wrapper d-flex justify-between align-items-center"
+        >
+          <div class="destination__wrapper--title">
+            <span class="section__subtitle color-white text-center"
+              >Which City Do You Want To Book A Property?</span
+            >
+            <h2 class="section__title color-white mb-0">
+              Explore City <span>.</span>
+            </h2>
+          </div>
+
+          <!-- <div class="destination__container">
             <a href="/city.html" class="destination__item">
               <div class="destination__img">
                 <img src="asset/img/city4.jpg" alt="destination" />
@@ -161,7 +317,6 @@
                 <p class="destination__description">70 Properties</p>
               </div>
             </a>
-            <!-- stop loop from here -->
 
             <div class="destination__item">
               <div class="destination__img">
@@ -228,11 +383,11 @@
                 <p class="destination__description">60 Properties</p>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- start explore city button -->
-          <a href="/city.html" class="btn button__outlined destination__button"
-            >Explore City</a
+          <a href="/city.html" class="btn button destination__button mt-0"
+            >Explore Cities</a
           >
           <!-- end explore city button -->
         </div>
@@ -254,8 +409,8 @@
 
                 <div class="popular__data">
                   <h3 class="popular__title">
-                    <span><i class="bx bx-home-circle"></i></span> Garden City
-                    Assat
+                    <span><i class="bx bx-home-circle"></i></span> Chevy View
+                    Estate
                   </h3>
                   <p class="popular__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
@@ -272,8 +427,8 @@
 
                 <div class="popular__data">
                   <h3 class="popular__title">
-                    <span><i class="bx bx-home-circle"></i></span>Gables
-                    Luxurious House
+                    <span><i class="bx bx-home-circle"></i></span>FBN, Marion
+                    Court, Estate
                   </h3>
                   <p class="popular__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
@@ -288,8 +443,8 @@
 
                 <div class="popular__data">
                   <h3 class="popular__title">
-                    <span><i class="bx bx-home-circle"></i></span>Garden Orchard
-                    City
+                    <span><i class="bx bx-home-circle"></i></span>Lekki Serviced
+                    Flats
                   </h3>
                   <p class="popular__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
@@ -304,8 +459,7 @@
 
                 <div class="popular__data">
                   <h3 class="popular__title">
-                    <span><i class="bx bx-home-circle"></i></span>Luxurious City
-                    Garden
+                    <span><i class="bx bx-home-circle"></i></span>Ashton Court
                   </h3>
                   <p class="popular__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
@@ -346,7 +500,7 @@
           <span class="section__subtitle"
             >Handpicked TopNotch Properties By Our Team.</span
           >
-          <h2 class="section__title">Featured Properties<span>.</span></h2>
+          <h2 class="section__title">Hot Deals<span>.</span></h2>
 
           <div class="featured__container swiper">
             <div class="swiper-wrapper">
@@ -361,10 +515,9 @@
 
                 <div class="featured__data">
                   <div>
-                    <h3 class="featured__title">Garden City Assat</h3>
+                    <h3 class="featured__title">Chevy View Estate</h3>
                     <p class="featured__description">
-                      Street The Garden City Of Miraflores, Lima - Perú Av. Sol
-                      #9876
+                      12 Chevy view, Lima - Perú Av. Sol #9876
                     </p>
                   </div>
                   <ul class="featured__content">
@@ -394,7 +547,7 @@
                 </div>
 
                 <div class="featured__data">
-                  <h3 class="featured__title">Gables Luxurious House</h3>
+                  <h3 class="featured__title">FBN, Marion Court, Estate</h3>
                   <p class="featured__description">
                     Street The Garden City Of Miraflores, Lima - Perú Av. Sol
                     #9876
@@ -481,7 +634,8 @@
       </section>
 
       <!--==================== EXCLUSIVE PICKS ====================-->
-      <section class="exclusive section" id="exclusive">
+
+      <!-- <section class="exclusive section" id="exclusive">
         <div class="exclusive__wrapper">
           <span class="section__subtitle"
             >Most Exclusive Properties By Our Team.</span
@@ -575,25 +729,33 @@
             >See All Exclusive Deals</a
           >
         </div>
-      </section>
+      </section> -->
 
       <!--==================== ABOUT ====================-->
       <section class="about section" id="about">
         <div class="about__img">
           <div class="about__img-1">
-            <img src="asset/img/gal-2.jpeg" alt="about" class="about__images" />
+            <img
+              src="asset/img/video-overlay-small.jpg"
+              data-src="asset/img/video-overlay.jpg"
+              alt="about"
+              class="about__images lazy-img"
+            />
           </div>
           <div class="about__img-2">
-            <img src="asset/img/gal-3.jpeg" alt="about" class="about__images" />
+            <img
+              src="asset/img/young-millennials-small.jpg"
+              data-src="asset/img/young-millennials.jpg"
+              alt="about"
+              class="about__images lazy-img"
+            />
           </div>
         </div>
         <div class="about__content">
           <span class="section__subtitle letter-spacing-2 text-uppercase"
             >About Us</span
           >
-          <h2 class="section__title about__title">
-            The Most Preferred Real Esate Realtors in West Africa<span>.</span>
-          </h2>
+          <h2 class="section__title about__title">WHO WE ARE<span>.</span></h2>
           <p class="section__description">
             Rent4Less by Alpha Mead is a rental scheme designed to provide a
             flexible and convenient option for middle income Nigerians to rent
@@ -609,29 +771,36 @@
       <!--==================== JOIN TODAY ====================-->
       <section class="join section" id="join">
         <div class="join__wrapper">
-          <div class="join__content">
-            <span class="section__subtitle">Join Our Community Today.</span>
-            <h2 class="section__title join__title">Join Today<span>.</span></h2>
-            <p class="join__description">
-              Join our growing community. Pay rent monthly.
-            </p>
-            <ul class="join__description">
-              <li><i class="bx bx-cross"></i>No Agency Fee</li>
-              <li><i class="bx bx-cross"></i>No Commission</li>
-              <li><i class="bx bx-cross"></i>Pay & Pack In</li>
-            </ul>
-            <a href="#" class="btn button__outlined join__button">
-              Sign Up Now
-            </a>
+          <div class="join__content--wrapper">
+            <div class="join__content">
+              <span class="section__subtitle">Join Our Community Today.</span>
+              <h2 class="section__title join__title">
+                Join Today<span>.</span>
+              </h2>
+              <p class="join__description">
+                Join our growing community. Pay rent monthly.
+              </p>
+              <ul class="join__description">
+                <li><i class="bx bx-cross"></i>No Agency Fee</li>
+                <li><i class="bx bx-cross"></i>No Commission</li>
+                <li><i class="bx bx-cross"></i>Pay & Pack In</li>
+              </ul>
+              <a href="#" class="btn join__button"> Sign Up Now </a>
+            </div>
           </div>
           <div class="join__img">
-            <img src="asset/img/place-4.jpg" alt="join__img" />
+            <img
+              src="asset/img/place-4-small.jpg"
+              data-src="asset/img/place-4.jpg"
+              class="lazy-img"
+              alt="join__img"
+            />
           </div>
         </div>
       </section>
 
       <!--==================== GALLERY ====================-->
-      <section class="gallery section" id="gallery">
+      <!-- <section class="gallery section" id="gallery">
         <div class="gallery__wrapper">
           <span class="section__subtitle"
             >Most Exclusive Properties that suits your budget.</span
@@ -809,7 +978,8 @@
             </a>
           </div>
         </div>
-      </section>
+      </section> -->
+
       <!--==================== Faq ====================-->
       <section class="faq section" id="faq">
         <div class="faq__container">
@@ -922,10 +1092,11 @@
             <li><a href="#"> About </a></li>
             <li><a href="#"> Gallery </a></li>
             <li><a href="#"> Faq </a></li>
-            <li><a href="#"> Our Vison & Mission </a></li>
             <li><a href="#"> Contact Us </a></li>
-            <li><a href="#"> Terms & Condition </a></li>
             <li><a href="#"> Property </a></li>
+            <li><a href="#"> Tenancy Terms </a></li>
+            <li><a href="#"> Privacy Terms </a></li>
+            <li><a href="#"> Terms & Condition </a></li>
           </ul>
         </div>
         <div class="footer__item footer__location">
@@ -973,16 +1144,35 @@
       <i class="bx bx-chevrons-up"></i>
     </a>
 
-    <!--=============== SCROLLREVEAL ===============-->
+    <!-- ================ INLINE SCRIPT =============== -->
+    <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script>
+
+    <!-- =============== SCROLLREVEAL =============== -->
     <script src="asset/js/scrollreveal.min.js"></script>
+
+    <!--=============== MIXITUP JS ===============-->
+    <script src="asset/js/mixitup.js"></script>
 
     <!--=============== SWIPER JS ===============-->
     <script src="asset/js/swiper-bundle.min.js"></script>
 
-    <!--=============== NAVIGATION JS ===============-->
+    <!--=============== lIGHTBOX ===============-->
     <script src="asset/js/lightbox.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="asset/js/main.js"></script>
+
+    <script
+      src="//code.tidio.co/gobd0ylyixf3p6qfl2mkxjksrybphifl.js"
+      async
+    ></script>
   </body>
 </html>

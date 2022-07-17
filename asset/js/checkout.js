@@ -43,11 +43,9 @@ function setSelectTitle(e) {
 }
 
 const switches = document.querySelectorAll(".process__form--radio-input");
-console.log(switches);
 
 switches.forEach(function (verify) {
   verify.addEventListener("click", function (e) {
-    console.log(e.target.id);
     if (e.target.id == "bvn" || e.target.id == "nin") {
       setTextContent(e);
     }

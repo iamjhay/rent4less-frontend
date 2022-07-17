@@ -1,3 +1,12 @@
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+function scrollHeader() {
+  const navbar = document.getElementById("navbar");
+  // When the scroll is greater than 50 viewport height, add the scroll-navbar class to the header tag
+  if (this.scrollY >= 50) navbar.classList.add("scroll-navbar");
+  else navbar.classList.remove("scroll-navbar");
+}
+window.addEventListener("scroll", scrollHeader);
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
@@ -25,7 +34,6 @@ if (navClose) {
 if (navTheme) {
   navTheme.addEventListener("click", () => {
     navMenu.classList.remove("show__menu");
-    console.log(navTheme.childNodes[1].classList.value);
     if (navTheme.childNodes[1].classList.contains("bx-sun")) {
       let timer1, timer2;
       Message.textContent = "Dark Mode Activated";

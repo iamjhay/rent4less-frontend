@@ -17,17 +17,8 @@
       rel="stylesheet"
     />
 
-    <!--=============== FONTAWESOME ===============-->
-    <script
-      src="https://kit.fontawesome.com/c4547e53d0.js"
-      crossorigin="anonymous"
-    ></script>
-
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
-
-    <!--=============== LIGHTBOX CSS ===============-->
-    <link rel="stylesheet" href="asset/css/lightbox.css" />
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="asset/css/style.css" />
@@ -68,10 +59,24 @@
               </li>
 
               <li class="nav__item">
+                <a href="/properties.html" class="nav__link">
+                  <i class="bx bxs-landmark"></i>
+                  <span>All Properties</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/city.html" class="nav__link">
+                  <i class="bx bxs-city"></i>
+                  <span>Cities</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
                 <a href="/cart.html" class="nav__link">
                   <i class="bx bxs-cart"></i>
                   <span>Cart</span>
-                  <span class="ml-auto cart-quantity">2</span>
+                  <span class="ml-auto cart-quantity">0</span>
                 </a>
               </li>
 
@@ -79,13 +84,6 @@
                 <a href="#about" class="nav__link">
                   <i class="bx bx-message-square-dots"></i>
                   <span>About</span>
-                </a>
-              </li>
-
-              <li class="nav__item">
-                <a href="/" class="nav__link">
-                  <i class="bx bxs-news"></i>
-                  <span>Blogs</span>
                 </a>
               </li>
 
@@ -176,7 +174,7 @@
             <a href="cart.html">
               <span class="secondary__nav--icon">
                 <i class="bx bx-cart cart"></i>
-                <span>2</span>
+                <span class="cart-quantity">2</span>
               </span>
             </a>
           </li>
@@ -219,12 +217,12 @@
 
     <!-- =============== MAIN ============= -->
     <main class="main main__single">
-      <div class="single__sidebar--footer">
+      <div class="single__sidebar--footer no-cart-item">
         <i class="bx bxs-bookmark-minus bx-tada"></i>
         <a
           href="#showBookings"
           id="start__booking-mobile"
-          class="text-capitalize"
+          class="start__booking text-capitalize"
         >
           start Booking
         </a>
@@ -527,7 +525,7 @@
 
             <div class="single__sidebar--content single__sidebar--body">
               <!-- If you have an Item in your cart display this -->
-              <div class="single__sidebar--body-empty">
+              <div class="single__sidebar--body-empty cart-items">
                 <div class="img-full">
                   <img src="asset/img/add-to-cart.png" alt="empty-booking" />
                 </div>
@@ -537,15 +535,18 @@
                   <a class="text-capitalize" href="cart.html">go to cart</a>
                 </p>
 
-                <a id="start__booking" class="text-capitalize">
+                <a
+                  href="#showBookings"
+                  id="start__booking"
+                  class="start__booking text-capitalize"
+                >
                   continue Booking
                 </a>
               </div>
-
               <!-- End here -->
 
               <!-- If you have no item in your cart display this-->
-              <!-- <div class="single__sidebar--body-empty">
+              <div class="single__sidebar--body-empty no-cart-items">
                 <div class="img-empty">
                   <img src="/asset/img/empty-booking.png" alt="empty-booking" />
                 </div>
@@ -555,11 +556,11 @@
                 <a
                   href="#showBookings"
                   id="start__booking"
-                  class="text-capitalize"
+                  class="start__booking text-capitalize"
                 >
                   start Booking
                 </a>
-              </div> -->
+              </div>
               <!-- end here -->
             </div>
           </div>
@@ -1318,7 +1319,9 @@
         </div>
         <!-- END SLIDING WIDGET CONTAINER-->
       </div>
-      <i class="bx bx-x close-btn" id="close-btn"></i>
+      <a href="#" class="popup__close">
+        <i class="bx bx-x close-btn" id="close-btn"></i>
+      </a>
       <!-- END SLIDING SIDEBAR -->
     </div>
 
@@ -1507,8 +1510,6 @@
         spinnerWrapper.parentElement.removeChild(spinnerWrapper);
       });
     </script>
-
-    <!--=================== CALENDLY ===============-->
 
     <!--=============== SWIPER JS ===============-->
     <script src="asset/js/swiper-bundle.min.js"></script>

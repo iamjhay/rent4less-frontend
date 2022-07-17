@@ -1,4 +1,73 @@
+/*=============== SHOW MENU ===============*/
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navTheme = document.getElementById("nav__theme"),
+  toast = document.querySelector(".toast"),
+  Message = document.querySelector(".message-text"),
+  progress = document.querySelector(".progress"),
+  navClose = document.getElementById("nav-close");
 
+/*===== MENU SHOW ======*/
+// validate if constant exist
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show__menu");
+  });
+}
+
+/*===== MENU HIDDEN ======*/
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show__menu");
+  });
+}
+
+if (navTheme) {
+  navTheme.addEventListener("click", () => {
+    navMenu.classList.remove("show__menu");
+    console.log(navTheme.childNodes[1].classList.value);
+    if (navTheme.childNodes[1].classList.contains("bx-sun")) {
+      let timer1, timer2;
+      Message.textContent = "Dark Mode Activated";
+      toast.classList.add("active");
+      progress.classList.add("active");
+
+      timer1 = setTimeout(() => {
+        toast.classList.remove("active");
+      }, 2000); //1s = 1000 milliseconds
+
+      timer2 = setTimeout(() => {
+        progress.classList.remove("active");
+      }, 2300);
+    } else {
+      let timer1, timer2;
+      Message.textContent = "Light Mode Activated";
+      toast.classList.add("active");
+      progress.classList.add("active");
+
+      timer1 = setTimeout(() => {
+        toast.classList.remove("active");
+      }, 2000); //1s = 1000 milliseconds
+
+      timer2 = setTimeout(() => {
+        progress.classList.remove("active");
+      }, 2300);
+    }
+  });
+}
+
+/*=============== REMOVE MOBILE MENU ===============*/
+const navLink = document.querySelectorAll(".nav__link");
+
+function linkAction() {
+  const navMenu = document.getElementById("nav-menu");
+  //when we click on each nav__link, we remove the show__menu class
+  navMenu.classList.remove("show__menu");
+}
+
+navLink.forEach((n) => {
+  n.addEventListener("click", linkAction);
+});
 
 /*=============== SHOW SCROLL UP ===============*/
 function scrollUp() {
@@ -53,9 +122,27 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
-/*=============== SWIPER POPULAR ===============*/
 
-/*==================== SWIPER JS ====================*/
+/*=============== START TENANT / LANDLORD ===============*/
+// MixitUp query for the "TENANTS & LANDLORDS" filters
+let mixerSingles = mixitup(".deal__pills--wrapper", {
+  selectors: {
+    target: ".deal__content",
+  },
+  animation: {
+    duration: 100,
+    effects: "fade",
+    reverseOut: true,
+    nudge: false,
+  },
+});
+
+// Default Filter Single when page loads
+mixerSingles.filter(".tenants");
+
+/*=============== END TENANT / LANDLORD ===============*/
+
+/*==================== START SWIPER JS ====================*/
 
 //  Popular Container
 const swiperPopular = new Swiper(".popular__container", {
@@ -90,6 +177,8 @@ const swiperFeatured = new Swiper(".featured__container", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+/*==================== END SWIPER JS ====================*/
 
 /*=============== VALUE ACCORDION ===============*/
 const accordionItems = document.querySelectorAll(".faq__accordion-item");
@@ -135,6 +224,7 @@ sr.reveal(`.header__title, .popular__container`);
 sr.reveal(`.header__description`, { delay: 500 });
 sr.reveal(`.header__search`, { delay: 600 });
 sr.reveal(`.header__value`, { delay: 700 });
+sr.reveal(`.header__followers`, { delay: 750 });
 sr.reveal(`.header__images`, { delay: 800, origin: "bottom" });
 sr.reveal(`.destination__item`, {
   origin: "top",
@@ -146,3 +236,30 @@ sr.reveal(`.destination__button`, {
 });
 sr.reveal(`.faq__images`, { origin: "left" });
 sr.reveal(`.faq__content`, { origin: "right" });
+
+//LAZY LOADING IMAGES
+const imgTargets = document.querySelectorAll("img[data-src]");
+console.log(imgTargets);
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  //Remove the data-src attribute to load the image
+  entry.target.src = entry.target.dataset.src;
+
+  //Remove the observer after image is loaded
+  entry.target.addEventListener("load", () => {
+    entry.target.classList.remove("lazy-img");
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+});
+
+imgTargets.forEach((img) => imgObserver.observe(img));

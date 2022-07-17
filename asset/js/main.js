@@ -25,7 +25,6 @@ if (navClose) {
 if (navTheme) {
   navTheme.addEventListener("click", () => {
     navMenu.classList.remove("show__menu");
-    console.log(navTheme.childNodes[1].classList.value);
     if (navTheme.childNodes[1].classList.contains("bx-sun")) {
       let timer1, timer2;
       Message.textContent = "Dark Mode Activated";
@@ -239,7 +238,6 @@ sr.reveal(`.faq__content`, { origin: "right" });
 
 //LAZY LOADING IMAGES
 const imgTargets = document.querySelectorAll("img[data-src]");
-console.log(imgTargets);
 
 const loadImg = function (entries, observer) {
   const [entry] = entries;
