@@ -457,15 +457,10 @@
             <h6 class="text-capitalize description__heading">Location</h6>
             <div class="single__map">
               <figure>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5541760635338!2d3.4236494147405936!3d6.451234095332785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5e023e3f347%3A0x5722f3fab5122e8f!2s6%20Mobolaji%20Johnson%20Ave%2C%20Ikoyi%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1654209000359!5m2!1sen!2sng"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <p class="address mb-1 text-capitalize">
+                  24 adeshina street , ijeshatedo, surulere, lagos
+                </p>
+                <div class="map-holder" id="map" style="height: 100vh"></div>
               </figure>
             </div>
           </div>
@@ -1523,6 +1518,16 @@
         spinnerWrapper.parentElement.removeChild(spinnerWrapper);
       });
     </script>
+
+    <!--=============== GOOGLE APIs ===============-->
+    <script
+      async
+      nonce="{script value}"
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdsL3VPe9gzNi99bh16jfCs3k_jRT2OBs&callback=initMap"
+    ></script>
+
+    <script nonce="{script value}" src="asset/js/googleapis.js"></script>
 
     <!--=============== SWIPER JS ===============-->
     <script src="asset/js/swiper-bundle.min.js"></script>
