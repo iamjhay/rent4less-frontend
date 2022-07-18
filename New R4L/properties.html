@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="asset/img/favicon.png"
+      type="image/x-icon"
+    />
+    <!--=============== BOXICONS ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="asset/css/style.css" />
+
+    <title>Rent4Less</title>
+  </head>
+  <body>
+    <!--==================== SPINNER ====================-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- ======= TOAST ANIMATION ====== -->
+    <div class="toast">
+      <div class="toast-content">
+        <i class="bx bxs-check-circle check"></i>
+        <div class="message">
+          <span class="message-text text-1"></span>
+        </div>
+      </div>
+      <i class="bx bx-x close"></i>
+
+      <div class="progress"></div>
+    </div>
+    <!-- ======= END TOAST ANIMATION ====== -->
+
+    <!--==================== NAVBAR ====================-->
+    <div class="navbar" id="navbar">
+      <nav class="nav container">
+        <a href="/" class="nav__logo">
+          <img
+            src="asset/img/rent4less-logo-small.png"
+            alt="rent4less-logo-small"
+          />
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu--lists">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/index.html" class="nav__link">
+                  <i class="bx bxs-dashboard"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/properties.html" class="nav__link">
+                  <i class="bx bxs-landmark"></i>
+                  <span>All Properties</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/city.html" class="nav__link">
+                  <i class="bx bxs-city"></i>
+                  <span>Cities</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="/cart.html" class="nav__link">
+                  <i class="bx bxs-cart"></i>
+                  <span>Cart</span>
+                  <span class="ml-auto cart-quantity">2</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  <i class="bx bx-message-square-dots"></i>
+                  <span>About</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="bx bxs-contact"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav__list nav__list--active">
+              <i class="bx bxs-bell bx-tada"></i>
+              <li class="nav__item">
+                <a href="/signup.html" class="nav__link">
+                  <i class="bx bxs-user-pin"></i>
+                  <span>Become a tenant</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="/landlord.html" class="nav__link">
+                  <i class="bx bx-building-house"></i>
+                  <span>List Your Property</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__theme" id="nav__theme">
+              <a href="#" class="user-profile">
+                <img
+                  src="asset/img/realtor-1.jpeg"
+                  class="user-profile-img"
+                  alt="user"
+                />
+                <div class="user-profile-title">
+                  <h5>welcome back!</h5>
+                  <p>Johnny</p>
+                </div>
+              </a>
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </div>
+
+            <i class="bx bx-x nav__close" id="nav-close"></i>
+          </div>
+        </div>
+
+        <!-- Theme Change Button -->
+
+        <div class="sign">
+          <div class="sign-content">
+            <a href="/signup.html" class="nav__button text-capitalize"
+              >Become A Tenant</a
+            >
+            <a href="/landlord.html" class="nav__button text-capitalize"
+              >List your property</a
+            >
+          </div>
+          <i class="bx bxs-widget" id="nav-toggle"></i>
+        </div>
+      </nav>
+    </div>
+
+    <!--==================== ALL PROPERTIES ====================-->
+    <section class="property section container section mt-5">
+      <span class="section__subtitle"
+        >A selection of the best Estate deals, only available today</span
+      >
+      <h2 class="section__title">Top Estate Deals <span>.</span></h2>
+
+      <div class="property--wrapper">
+        <a href="/" class="property--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h4 class="text-capitalize mb-1">3 bedroom apartment</h4>
+            <span>24 adeshina street, off ijeshatedo, surulere, Lagos</span>
+            <span class="card__content--estate">Chevy Hills Estate</span>
+            <p class="price__data text-uppercase mt-1 mb-1">
+              &#8358;12k - &#8358;5M /mo
+            </p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a href="/" class="property--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h4 class="text-capitalize mb-1">3 bedroom apartment</h4>
+            <span>24 adeshina street, off ijeshatedo, surulere, Lagos</span>
+            <span class="card__content--estate">Chevy Hills Estate</span>
+            <p class="price__data text-uppercase mt-1 mb-1">
+              &#8358;12k - &#8358;5M /mo
+            </p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a href="/" class="property--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h4 class="text-capitalize mb-1">3 bedroom apartment</h4>
+            <span>24 adeshina street, off ijeshatedo, surulere, Lagos</span>
+            <span class="card__content--estate">Chevy Hills Estate</span>
+            <p class="price__data text-uppercase mt-1 mb-1">
+              &#8358;12k - &#8358;5M /mo
+            </p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a href="/" class="property--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h4 class="text-capitalize mb-1">3 bedroom apartment</h4>
+            <span>24 adeshina street, off ijeshatedo, surulere, Lagos</span>
+            <span class="card__content--estate">Chevy Hills Estate</span>
+            <p class="price__data text-uppercase mt-1 mb-1">
+              &#8358;12k - &#8358;5M /mo
+            </p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a href="/" class="property--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h4 class="text-capitalize mb-1">3 bedroom apartment</h4>
+            <span>24 adeshina street, off ijeshatedo, surulere, Lagos</span>
+            <span class="card__content--estate">Chevy Hills Estate</span>
+            <p class="price__data text-uppercase mt-1 mb-1">
+              &#8358;12k - &#8358;5M /mo
+            </p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a href="/" class="property--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h4 class="text-capitalize mb-1">3 bedroom apartment</h4>
+            <span>24 adeshina street, off ijeshatedo, surulere, Lagos</span>
+            <span class="card__content--estate">Chevy Hills Estate</span>
+            <p class="price__data text-uppercase mt-1 mb-1">
+              &#8358;12k - &#8358;5M /mo
+            </p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a href="/" class="property--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h4 class="text-capitalize mb-1">3 bedroom apartment</h4>
+            <span>24 adeshina street, off ijeshatedo, surulere, Lagos</span>
+            <span class="card__content--estate">Chevy Hills Estate</span>
+            <p class="price__data text-uppercase mt-1 mb-1">
+              &#8358;12k - &#8358;5M /mo
+            </p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+        <a href="/" class="property--wrapper-card">
+          <div class="card__image">
+            <img src="asset/img/place-1.jpg" alt="estate" />
+          </div>
+          <div class="card__content">
+            <h4 class="text-capitalize mb-1">3 bedroom apartment</h4>
+            <span>24 adeshina street, off ijeshatedo, surulere, Lagos</span>
+            <span class="card__content--estate">Chevy Hills Estate</span>
+            <p class="price__data text-uppercase mt-1 mb-1">
+              &#8358;12k - &#8358;5M /mo
+            </p>
+          </div>
+          <div class="card__discount">
+            <div>
+              <p class="estate-discount text-uppercase">
+                up to <span>13%</span>off
+              </p>
+              <div class="slant"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+      <div class="container">
+        <div class="footer__item">
+          <ul class="footer__list">
+            <li><a href="#"> About </a></li>
+            <li><a href="#"> Gallery </a></li>
+            <li><a href="#"> Faq </a></li>
+            <li><a href="#"> Contact Us </a></li>
+            <li><a href="#"> Property </a></li>
+            <li><a href="#"> Tenancy Terms </a></li>
+            <li><a href="#"> Privacy Terms </a></li>
+            <li><a href="#"> Terms & Condition </a></li>
+          </ul>
+        </div>
+        <div class="footer__item footer__location">
+          <div class="footer__location--logo">
+            <img src="asset/img/rent4less-logo-small.png" alt="logo" />
+          </div>
+          <div class="footer__location--address">
+            <i class="bx bxs-map-alt"></i>
+            <span>6 Mobolaji Johnson avenue, Ikoyi , Lagos. Nigeria</span>
+          </div>
+          <div class="footer__location--address">
+            <i class="bx bx-phone"></i>
+            <span>+234 90 8456 3508, +234 81 2182 5297</span>
+          </div>
+          <div class="footer__location--address">
+            <i class="bx bxs-map-alt"></i>
+            <span>sales@rent4less.com, reservation@rent4less.com</span>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__subscribe">
+            <span class="section__subtitle letter-spacing-3 text-uppercase"
+              >Newsletter</span
+            >
+            <p class="footer__subscribe--description">
+              Subscribe to our email newsletter to receive updates and news on
+              special offers.
+            </p>
+            <form class="footer__subscribe--form">
+              <input type="email" placeholder="Email address" />
+              <button><i class="bx bx-send"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__copyright">
+          <p>Copyright © 2022 Rent4Less</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-chevrons-up"></i>
+    </a>
+
+    <!-- ================ INLINE SCRIPT =============== -->
+    <script>
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+    </script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="asset/js/navigation.js"></script>
+
+    <script
+      src="//code.tidio.co/gobd0ylyixf3p6qfl2mkxjksrybphifl.js"
+      async
+    ></script>
+  </body>
+</html>
