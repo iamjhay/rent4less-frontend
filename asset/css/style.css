@@ -218,7 +218,7 @@
   position: fixed;
   top: 4rem;
   right: 3rem;
-  border-radius: 1.2rem;
+  border-radius: 1rem;
   background: #fff;
   padding: 1.5rem 2rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -227,7 +227,7 @@
   visibility: hidden;
   transform: translateX(calc(100% + 30px));
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
-  z-index: 2000; }
+  z-index: 10000; }
   .toast.active {
     transform: translateX(0%);
     visibility: visible; }
@@ -324,6 +324,11 @@ html {
   @media only screen and (max-width: 25em) {
     html {
       font-size: 50%; } }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
 
 .spinner-wrapper {
   z-index: 2000;
@@ -1969,7 +1974,7 @@ button {
     color: #fff;
     position: absolute;
     top: 60px;
-    left: 37%;
+    left: 37.5%;
     height: 50px;
     padding: 1rem;
     padding-left: 0.5rem;
@@ -1984,10 +1989,10 @@ button {
     border-bottom-left-radius: 5px; }
     @media only screen and (max-width: 62.5em) {
       .sliding__widget .close-btn {
-        left: 16%; } }
+        left: 16.5%; } }
     @media only screen and (max-width: 50em) {
       .sliding__widget .close-btn {
-        left: 14%; } }
+        left: 15.5%; } }
     @media only screen and (max-width: 37.5em) {
       .sliding__widget .close-btn {
         z-index: 10;
@@ -2002,7 +2007,7 @@ button {
       background-color: #7ed56f;
       transform: scale(1.1); }
   .sliding__widget--container {
-    margin: 5rem 0; }
+    margin: 5rem 0 2rem 0; }
     .sliding__widget--container .room__type {
       margin: 1rem 0;
       border-bottom: 1px solid #eaeaea; }
@@ -2275,6 +2280,17 @@ button {
           .sliding__widget--container .room__type--features li i {
             font-size: 1.8rem;
             color: #6aba50; }
+    .sliding__widget--container .room__type--full {
+      height: 80vh;
+      width: 100%;
+      display: grid;
+      place-items: center; }
+      .sliding__widget--container .room__type--full p {
+        font-size: 1.6rem;
+        font-weight: 400; }
+      .sliding__widget--container .room__type--full span {
+        font-size: 1.4rem;
+        font-weight: 400; }
 
 .about {
   grid-column: 1 / -1;
@@ -2940,24 +2956,50 @@ button {
       align-items: center;
       gap: 1rem;
       text-decoration: none; }
-      .nav__theme .user-profile-title h5 {
-        font-size: 1.3rem;
-        font-weight: 300;
-        color: #999;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem; }
-      .nav__theme .user-profile-title p {
-        font-size: 1.4rem;
-        font-weight: 300;
-        color: #6aba50;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem; }
-        @media only screen and (max-width: 25em) {
-          .nav__theme .user-profile-title p {
-            font-size: 1.2rem; } }
+      .nav__theme .user-profile-title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem; }
+        .nav__theme .user-profile-title h5 {
+          font-size: 1rem;
+          font-weight: 300;
+          color: #999;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          margin-bottom: 0rem; }
+        .nav__theme .user-profile-title h6 {
+          font-size: 1.1rem;
+          font-weight: 300;
+          color: #999;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          margin-bottom: 0rem; }
+        .nav__theme .user-profile-title p {
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: #6aba50;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem; }
+          @media only screen and (max-width: 25em) {
+            .nav__theme .user-profile-title p {
+              font-size: 1.2rem; } }
+        .nav__theme .user-profile-title .user-logout {
+          font-size: 1rem !important;
+          padding: 0.25rem 0.4rem;
+          max-width: max-content;
+          background-color: red;
+          font-weight: 400;
+          color: #fff; }
+        .nav__theme .user-profile-title .user-login {
+          font-size: 1.1rem !important;
+          padding: 0.3rem 0.8rem;
+          max-width: max-content;
+          background-color: #7ed56f;
+          font-weight: 300;
+          color: #fff; }
       .nav__theme .user-profile-img {
-        width: 5rem;
-        height: 5rem;
+        width: 5.5rem;
+        height: 5.5rem;
         border-radius: 50%; }
     .nav__theme .change-theme {
       font-size: 2rem;
@@ -3010,7 +3052,7 @@ button {
       font-size: 1.6rem;
       color: #38322e; }
       .secondary__nav--list a:hover {
-        color: #7ed56f; }
+        color: #fff; }
     .secondary__nav--list .whatsapp,
     .secondary__nav--list .secondary__nav--icon {
       text-align: center;

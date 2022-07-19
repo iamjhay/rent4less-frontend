@@ -81,6 +81,7 @@ function cartClick() {
   let timer1, timer2;
   button.classList.add("clicked");
   button.classList.add("disabled");
+  Message.textContent = "item added to cart";
   toast.classList.add("active");
   progress.classList.add("active");
 

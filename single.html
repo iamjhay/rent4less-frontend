@@ -125,17 +125,23 @@
             </ul>
 
             <div class="nav__theme" id="nav__theme">
-              <a href="#" class="user-profile">
+              <!-- <div href="#" class="user-profile">
                 <img
                   src="asset/img/realtor-1.jpeg"
                   class="user-profile-img"
                   alt="user"
                 />
                 <div class="user-profile-title">
+                  <a class="user-logout" href="/">Logout</a>
                   <h5>welcome back!</h5>
                   <p>Johnny</p>
                 </div>
-              </a>
+              </div> -->
+              <div href="#" class="user-profile-title">
+                <p>Hi, &#128515;</p>
+                <h5>Welcome to R4L!</h5>
+                <a class="user-login" href="/login.html">Login</a>
+              </div>
               <i class="bx bx-moon change-theme" id="theme-button"></i>
             </div>
 
@@ -732,21 +738,6 @@
 
     <!-- =============== SLIDING WIDGET ============= -->
     <div class="sliding__widget" id="showBookings">
-      <!-- ======= TOAST ANIMATION ====== -->
-      <div class="toast">
-        <div class="toast-content">
-          <i class="bx bxs-check-circle check"></i>
-          <div class="message">
-            <span class="text text-1">Success</span>
-            <span class="text text-2">Your booking is added to cart</span>
-          </div>
-        </div>
-        <i class="bx bx-x close"></i>
-
-        <div class="progress"></div>
-      </div>
-      <!-- ======= END TOAST ANIMATION ====== -->
-
       <!-- SLIDING SIDEBAR -->
       <div class="sliding__widget--wrapper">
         <!-- SLIDING WIDGET FILTER FOR SEARCH ROOMS & APT -->
@@ -788,7 +779,7 @@
                     </div>
                   </a>
                   <div class="room__details">
-                    <h5 class="text-capitalize mb-5">
+                    <h5 class="text-capitalize mb-51">
                       <a href="#">Mini</a>
                       <span class="room__type--remaining"
                         ><i class="bx bx-radio-circle-marked"></i> 4 rooms
@@ -853,7 +844,7 @@
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
                   <div class="room__details">
-                    <h5 class="text-capitalize mb-5">
+                    <h5 class="text-capitalize mb-1">
                       <a href="#">Mini</a>
                       <span class="room__type--remaining"
                         ><i class="bx bx-radio-circle-marked"></i> 5 rooms
@@ -906,7 +897,7 @@
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
                   <div class="room__details">
-                    <h5 class="text-capitalize mb-5">
+                    <h5 class="text-capitalize mb-1">
                       <a href="#">Deluxe</a>
                       <span class="room__type--remaining"
                         ><i class="bx bx-radio-circle-marked"></i> 5 rooms
@@ -966,7 +957,7 @@
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
                   <div class="room__details">
-                    <h5 class="text-capitalize mb-5">
+                    <h5 class="text-capitalize mb-1">
                       <a href="#">Mini</a>
                       <span class="room__type--remaining"
                         ><i class="bx bx-radio-circle-marked"></i> 15 rooms
@@ -1019,7 +1010,7 @@
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
                   <div class="room__details">
-                    <h5 class="text-capitalize mb-5">
+                    <h5 class="text-capitalize mb-1">
                       <a href="#">Deluxe</a>
                       <span class="room__type--remaining"
                         ><i class="bx bx-radio-circle-marked"></i> 5 rooms
@@ -1072,7 +1063,7 @@
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
                   <div class="room__details">
-                    <h5 class="text-capitalize mb-5">
+                    <h5 class="text-capitalize mb-1">
                       <a href="#">Executive</a>
                       <span class="room__type--remaining"
                         ><i class="bx bx-radio-circle-marked"></i> 6 rooms
@@ -1139,7 +1130,7 @@
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
                   <div class="room__details">
-                    <h5 class="text-capitalize mb-5">
+                    <h5 class="text-capitalize mb-1">
                       <a href="#">Exclusive</a>
                       <span class="room__type--remaining"
                         ><i class="bx bx-radio-circle-marked"></i> 25 units
@@ -1179,7 +1170,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="room-button">
                     <span class="add-to-cart">Select Room</span>
                     <span class="added">Added To Cart</span>
@@ -1199,7 +1189,7 @@
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
                   <div class="room__details">
-                    <h5 class="text-capitalize mb-5">
+                    <h5 class="text-capitalize mb-1">
                       <a href="#">Deluxe</a>
                       <span class="room__type--remaining"
                         ><i class="bx bx-radio-circle-marked"></i> 5 units
@@ -1259,7 +1249,7 @@
                     <img src="asset/img/popular1.jpg" alt="single-img" />
                   </div>
                   <div class="room__details">
-                    <h5 class="text-capitalize mb-5">
+                    <h5 class="text-capitalize mb-1">
                       <a href="#">Exclusive</a>
                       <span class="room__type--remaining"
                         ><i class="bx bx-radio-circle-marked"></i> 5 units
@@ -1307,6 +1297,15 @@
                     <i class="bx bx-shopping-bag cart-item"></i>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="room__type--full">
+              <div class="text-center">
+                <div class="img-empty">
+                  <img src="/asset/img/empty-booking.png" alt="empty-booking" />
+                </div>
+                <p>Ooops... No Apartment Available</p>
+                <span>Please check back later!</span>
               </div>
             </div>
           </div>
