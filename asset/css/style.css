@@ -437,6 +437,7 @@ body {
       background-color: #eee; }
     body.dark-theme .process__form-textarea:focus,
     body.dark-theme .process__form-input:focus + .process__form-label,
+    body.dark-theme .process__form-input:read-only + .process__form-label,
     body.dark-theme .process__formtextarea:focus + .process__formlabel,
     body.dark-theme .process__forminput:not(:placeholder-shown).process__form-input:not(:focus)
 + .process__formlabel,
@@ -445,6 +446,8 @@ body {
       background: #252424 !important;
       color: #f2f2f2 !important;
       padding: 0.25 0.85rem !important; }
+    body.dark-theme .search-widget-header-content p {
+      color: #999; }
     body.dark-theme .single__description .show__more::after {
       background: linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.5) 97%); }
     body.dark-theme .card__content {
@@ -1141,8 +1144,12 @@ button {
     color: #6aba50;
     font-weight: 400;
     z-index: 10; }
+  .process__form-input:read-only + .process__form-label-abs {
+    top: -1.1rem;
+    left: 0.8rem; }
   .process__form-input:not(:placeholder-shown).process__form-input:not(:focus) + .process__form-label,
-  .process__form-textarea:not(:placeholder-shown).process__form-textarea:not(:focus) + .process__form-label {
+  .process__form-textarea:not(:placeholder-shown).process__form-textarea:not(:focus) + .process__form-label,
+  .process__form-input:read-only + .process__form-label {
     top: -1.1rem;
     left: 0.8rem;
     background-color: #fff;
@@ -3728,14 +3735,33 @@ button {
             height: 5rem; } }
   .city__description {
     color: #38322e;
-    font-size: 1.6rem;
-    margin-bottom: 2rem; }
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    max-width: 400px; }
     @media screen and (min-width: 37.5em) {
       .city__description {
+        margin-bottom: 2rem;
         max-width: 450px; } }
     @media screen and (min-width: 75em) {
       .city__description {
         max-width: 550px; } }
+  .city__button {
+    display: inline-block;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #eee;
+    background-color: #6aba50;
+    border-radius: 2rem;
+    text-align: center;
+    transition: all 0.4s; }
+    @media screen and (max-width: 37.5em) {
+      .city__button {
+        padding: 1rem 2rem;
+        border-radius: 1.6rem;
+        font-size: 1.4rem; } }
+    .city__button:hover {
+      background-color: #7ed56f; }
   .city__images {
     position: relative; }
     .city__images .tooltip {
@@ -5101,7 +5127,7 @@ button {
 
 .property {
   margin-top: 12rem;
-  grid-column: full-start / full-end; }
+  grid-column: center-start / center-end; }
   .property__button {
     margin-top: 5rem;
     display: flex;
@@ -5394,9 +5420,6 @@ button {
   color: #000; }
   @media only screen and (max-width: 37.5em) {
     .single__description {
-      padding-top: 3rem; } }
-  @media only screen and (max-width: 25em) {
-    .single__description {
       padding-top: 1rem; } }
   .single__description .description__heading {
     color: #6aba50;
@@ -5463,6 +5486,10 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem; }
+  @media screen and (max-width: 37.5em) {
+    .single__info {
+      grid-template-columns: 1fr;
+      gap: 3rem; } }
   .single__info ul li {
     font-size: 1.4rem;
     color: #38322e; }
@@ -5553,12 +5580,12 @@ button {
   position: relative;
   border: 1px solid #eaeaea;
   padding: 6px; }
+  .single__map .address {
+    font-size: 1.4rem;
+    font-weight: 400; }
   .single__map figure {
     height: 46.8rem;
     overflow: hidden; }
-    .single__map figure .address {
-      font-size: 1.4rem;
-      font-weight: 400; }
     @media only screen and (max-width: 37.5em) {
       .single__map figure {
         height: 30.5rem; } }
